@@ -1,0 +1,199 @@
+$grid-padding: 28;
+$grid-margin: 3;
+.grid-container {
+  padding: 0px;
+
+  .grid {
+    font-size:7vw;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+    &-filters {
+      .filter {
+        cursor:pointer;
+        font-weight: 900;
+        color: $light-grey;
+        @include transition(all 250ms ease-in-out);
+        padding: 10px 60px;
+        border-bottom:3px solid $light-grey;
+        &.active {
+          color: $blue;
+          border-bottom:3px solid $blue;
+        }
+      }
+    }
+    &-item{
+      padding:3px;
+      position: relative;
+      @include opacity(0);
+      -webkit-pointer-events: none;
+      pointer-events: none;
+      //float: left;
+      @for $i from 1 through 5 {
+        $self: 20 * $i;
+        &.grid-h-#{$i} {
+          height: #{$self}vw;
+        }
+        &.grid-w-#{$i} {
+          width: percentage($self/100);
+          font-size:percentage($self/100);
+        }
+      }
+
+      &.loaded {
+        animation-name: fadeIn;
+        -webkit-animation-name: fadeIn;
+        animation-duration: 500ms;
+        -webkit-animation-duration: 500ms;
+        animation-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+        -webkit-animation-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+        -webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+        animation-fill-mode: forwards;
+        -webkit-pointer-events: auto;
+        pointer-events: auto;
+      }
+      &.filtered {
+        display: none;
+      }
+      .content {
+        background: $primary;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        img {
+          max-width: 100%;
+          height:100%;
+        }
+        .hover-content {
+          visibility: hidden;
+          opacity: 0;
+          position: absolute;
+          top:0;
+          @include scale(0.9);
+          @include transition(all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+
+          height: 100%;
+          width: 100%;
+          background: rgba(0,0,0,0.9);
+          .hover-title {
+            color:white;
+            font-weight: 900;
+          }
+          .hover-subtitle {
+          }
+        }
+      }
+      &.c-{
+        &1 .content {
+          color:$primary;
+          background: $primary;
+          .hover-content {
+            color:$primary;
+          }
+        }
+        &2 .content {
+          color:$blue;
+          background: $blue;
+          .hover-content {
+            color:$blue;
+          }
+        }
+        &3 .content {
+          color:$pink;
+          background: $pink;
+          .hover-content {
+            color:$pink;
+          }
+        }
+        &4 .content {
+          color:$green;
+          background: $green;
+          .hover-content {
+            color:$green;
+          }
+        }
+      }
+      &:hover {
+        .content {
+          .hover-content {
+            @include scale(1);
+            visibility: visible;
+            opacity: 1;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &-sizer{
+      width: 20%;
+    }
+    @media (min-width: $xlg){
+      &-sizer{
+        width: 16.6667%;
+      }
+      &-item {
+        @for $i from 1 through 5 {
+          $self: 16.6667 * $i;
+          &.grid-h-#{$i} {
+            height: #{$self}vw;
+          }
+          &.grid-w-#{$i} {
+            width: percentage($self/100);
+          }
+        }
+      }
+    }
+    @media (max-width: $lg){
+      &-sizer{
+        width: 20%;
+      }
+      &-item {
+        @for $i from 1 through 5 {
+          $self: 20 * $i;
+          &.grid-h-#{$i} {
+            height: #{$self}vw;
+          }
+          &.grid-w-#{$i} {
+            width: percentage($self/100);
+          }
+        }
+      }
+    }
+    @media (max-width: $md){
+      &-sizer{
+        width: 25%;
+      }
+      &-item {
+        @for $i from 1 through 5 {
+          $self: 25 * $i;
+          &.grid-h-#{$i} {
+            height: #{$self}vw;
+          }
+          &.grid-w-#{$i} {
+            width: percentage($self/100);
+          }
+        }
+      }
+    }
+    @media (max-width: $sm){
+      &-sizer{
+        width: 50%;
+      }
+      &-item {
+        @for $i from 1 through 5 {
+          $self: 50 * $i;
+          &.grid-h-#{$i} {
+            height: #{$self}vw;
+          }
+          &.grid-w-#{$i} {
+            width: percentage($self/100);
+          }
+        }
+      }
+    }
+  }
+}
