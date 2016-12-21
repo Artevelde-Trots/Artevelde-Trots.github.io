@@ -46,6 +46,9 @@ $title-font-size: 72;
     &.sm {
       font-size: $title-font-size*0.5+px;
     }
+    &.smd {
+      font-size: $title-font-size*0.625+px;
+    }
     &.md {
       font-size: $title-font-size*0.75+px;
     }

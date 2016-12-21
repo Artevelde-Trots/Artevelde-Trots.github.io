@@ -30,11 +30,69 @@
 
 .navigation {
   z-index: 10;
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   height:100%;
   width: 100%;
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  background-color: #f2f2f2;
+  @include scale(0.9);
+  @include transition(opacity 0s ease-in-out, visibility 0s ease-in-out);
+  &.active{
+    opacity: 1;
+    visibility: visible;
+    @include scale(1);
+    @include transition(opacity 250ms 250ms ease-in-out, visibility 0s 0.25s ease-in-out);
+  }
+  .menu-toggle.nav{
+    background: transparent;
+  }
+  .nav-container {
+    .nav-block {
+      width: 100%;
+      padding: 10px 40px;
+      border-bottom:4px solid $mid-grey;
+      text-align: center;
+      text-transform: uppercase;
+      color: $mid-grey;
+      .big-block {
+        padding: 20px 0;
+        display: block;
+        &:hover {
+          text-decoration: none;
+        }
+        .nav-title {
+
+        }
+        .nav-subtitle {
+          margin-top: -7px;
+          color: $dark-grey;
+          font-weight: normal;
+        }
+      }
+      .small-block {
+        a {
+          display: block;
+          width: 50%;
+          color: $light-grey;
+          font-weight: 500;
+          @include transition(all 250ms ease-in-out);
+          &:hover {
+            text-decoration: none;
+            color: $blue;
+          }
+          &.active {
+            color: $dark-grey;
+          }
+        }
+      }
+    }
+  }
+  .ahs__rainbow {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+  }
 }

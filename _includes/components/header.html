@@ -5,16 +5,59 @@
         <div class="part pink"></div>
         <div class="part green"></div>
     </div>
-    <button class="menu-toggle menu" data-state="false">
+    <button class="menu-toggle menu">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
     </button>
 </header>
-<nav class="navigation nav flex">
-    <div class="nav-container flex-child stretch">
-
+<nav class="navigation flex justified-c">
+    <button class="menu-toggle nav">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </button>
+    <div class="nav-container flex column centered justified-c">
+        <div class="nav-block">
+            <div class="small-block flex">
+                <a class='{% if page.url == "/" %}active{% endif %}'  href="/">Home</a>
+                <a class='{% if page.url == "/detail.html" %}active{% endif %}' href="/contact">Contact</a>
+            </div>
+        </div>
+        <div class="nav-block">
+            <a class="big-block">
+                <h3 class="ahs__title nav-title orange">CMO</h3>
+                <h5 class="ahs__title smd nav-subtitle">
+                    Story
+                </h5>
+            </a>
+        </div>
+        <div class="nav-block">
+            <a class="big-block">
+                <h3 class="ahs__title nav-title blue">MMP</h3>
+                <h5 class="ahs__title smd nav-subtitle">
+                    Story
+                </h5>
+            </a>
+        </div>
+        <div class="nav-block">
+            <a class="big-block">
+                <h3 class="ahs__title nav-title pink">GMB</h3>
+                <h5 class="ahs__title smd nav-subtitle">
+                    Story
+                </h5>
+            </a>
+        </div>
+        <div class="nav-block">
+            <a class="big-block">
+                <h3 class="ahs__title nav-title green">Externe</h3>
+                <h5 class="ahs__title smd nav-subtitle">
+                    Projecten
+                </h5>
+            </a>
+        </div>
     </div>
     <div class="ahs__rainbow flex">
         <div class="part orange"></div>

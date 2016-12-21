@@ -22,6 +22,10 @@ html {
 body {
   background-color: white;
   min-height: 100vh;
+  height: 100vh;
+  &.nav-open {
+    overflow: hidden;
+  }
 }
 .wrapper {
   min-height: 100vh;
