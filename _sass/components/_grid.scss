@@ -24,6 +24,11 @@ $grid-margin: 3;
           border-bottom:3px solid $blue;
         }
       }
+      @media (max-width: $md){
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
     }
     &-item{
       padding:3px;
@@ -136,13 +141,14 @@ $grid-margin: 3;
         width: 16.6667%;
       }
       &-item {
-        @for $i from 1 through 5 {
+        @for $i from 1 through 3 {
           $self: 16.6667 * $i;
           &.grid-h-#{$i} {
             height: #{$self}vw;
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
+            font-size:percentage($self/100);
           }
         }
       }
@@ -152,13 +158,14 @@ $grid-margin: 3;
         width: 20%;
       }
       &-item {
-        @for $i from 1 through 5 {
+        @for $i from 1 through 3 {
           $self: 20 * $i;
           &.grid-h-#{$i} {
             height: #{$self}vw;
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
+            font-size:percentage($self/100);
           }
         }
       }
@@ -168,13 +175,14 @@ $grid-margin: 3;
         width: 25%;
       }
       &-item {
-        @for $i from 1 through 5 {
+        @for $i from 1 through 3 {
           $self: 25 * $i;
           &.grid-h-#{$i} {
             height: #{$self}vw;
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
+            font-size:percentage($self/100);
           }
         }
       }
@@ -184,13 +192,61 @@ $grid-margin: 3;
         width: 50%;
       }
       &-item {
-        @for $i from 1 through 5 {
+        @for $i from 1 through 3 {
           $self: 50 * $i;
           &.grid-h-#{$i} {
             height: #{$self}vw;
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
+            font-size:percentage($self/100);
+          }
+        }
+        &.grid-w-3 {
+          width: 100%;
+          @for $i from 1 through 3 {
+            $self: 33.33334 * $i;
+            &.grid-h-#{$i} {
+              height: #{$self}vw;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: $xsm){
+      &-sizer{
+        width: 100%;
+      }
+      &-item {
+        &.grid-w-1 {
+          width: 100%;
+          font-size:100%;
+          @for $i from 1 through 3 {
+            $self: 100 * $i;
+            &.grid-h-#{$i} {
+              height: #{$self}vw;
+            }
+          }
+        }
+        &.grid-w-2 {
+          width: 100%;
+          font-size:100%;
+          @for $i from 1 through 3 {
+            $self: 50 * $i;
+            &.grid-h-#{$i} {
+              height: #{$self}vw;
+            }
+          }
+        }
+        &.grid-w-3 {
+          width: 100%;
+          font-size:100%;
+          @for $i from 1 through 3 {
+            $self: 33.33334 * $i;
+            &.grid-h-#{$i} {
+              height: #{$self}vw;
+            }
           }
         }
       }

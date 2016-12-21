@@ -5,29 +5,36 @@
 .header {
   position: relative;
   z-index: 5;
-  .ahs__rainbow{
-    height:10px;
-    .part{
-      width:25%;
-      &.orange{
-        background-color:$primary;
-      }
-      &.blue{
-        background-color:$blue;
+}
+.ahs__rainbow{
+  height:10px;
+  .part{
+    width:25%;
+    &.orange{
+      background-color:$primary;
+    }
+    &.blue{
+      background-color:$blue;
 
-      }
-      &.pink{
-        background-color:$pink;
+    }
+    &.pink{
+      background-color:$pink;
 
-      }
-      &.green{
-        background-color:$green;
+    }
+    &.green{
+      background-color:$green;
 
-      }
     }
   }
 }
 
 .navigation {
-
+  z-index: 10;
+  position: absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
 }
