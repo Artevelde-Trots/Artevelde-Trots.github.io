@@ -82,6 +82,10 @@
       transition-delay: 250ms;
     }
   }
+  &.active {
+    background: #f2f2f2;
+    box-shadow: none;
+  }
 }
 
 .menu-toggle.active .line:nth-child(1),

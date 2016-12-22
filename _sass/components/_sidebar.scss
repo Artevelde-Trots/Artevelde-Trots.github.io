@@ -76,7 +76,7 @@
     width: calc(100% - 20px);
     padding: 5% 1%;
     margin: 10px;
-    background-color: $light-grey;
+    background-color: #f2f2f2;
     .content {
       margin: 0 28px;
       h2 {
@@ -111,12 +111,15 @@
     right: -12px;
     top: 50%;
     margin-top: -25px;
-    background-color: $light-grey;
+    background-color: #f2f2f2;
     border-radius: 100%;
     -webkit-transition: all 250ms ease-in-out;
     -moz-transition: all 250ms ease-in-out;
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
+    &:hover {
+      background-color: $light-grey;
+    }
     .line {
       height: 3px;
       width: 20px;
@@ -150,9 +153,8 @@
     -o-transition: all 250ms ease-in-out;
     transition: all 250ms ease-in-out;
     height:100%;
-    height:calc(100% - 80px);
     position: fixed;
-    background: $light-grey;
+    background: #f2f2f2;
 
     .share-container {
       position: absolute;
@@ -194,6 +196,18 @@
       -moz-transition: all 250ms ease-in-out;
       -o-transition: all 250ms ease-in-out;
       transition: all 250ms ease-in-out;
+      &:hover {
+        background: $primary;
+
+        .line {
+          &:nth-child(1) {
+            transform: translate(11px, 19px) rotate(-30deg);
+          }
+          &:nth-child(2) {
+            transform: translate(11px, 25px) rotate(30deg);
+          }
+        }
+      }
       .line {
         &:nth-child(1) {
           transform: translate(11px, 18px) rotate(-45deg);
@@ -214,8 +228,9 @@
   }
   .shrink {
     -webkit-transition: width 250ms ease-in-out;
-    width: 50px;
-    background: $light-grey;
+    width: 3px;
+    border-right:3px solid $primary;
+    background: #f2f2f2;
     cursor:pointer;
     .menu {
       align-self: flex-start;
@@ -227,12 +242,26 @@
       transition: opacity 0s ease-in-out, visibility 0s ease-in-out;
     }
     .sidebar-toggle {
+      right:-22px;
+      background: $primary;
+      &:hover {
+        background: shade($primary,20);
+
+        .line {
+          &:nth-child(1) {
+            transform: translate(20px, 19px) rotate(30deg);
+          }
+          &:nth-child(2) {
+            transform: translate(20px, 25px) rotate(-30deg);
+          }
+        }
+      }
       .line {
         &:nth-child(1) {
-          transform: translate(15px, 17px) rotate(45deg);
+          transform: translate(20px, 17px) rotate(45deg);
         }
         &:nth-child(2) {
-          transform: translate(15px, 27px) rotate(-45deg);
+          transform: translate(20px, 27px) rotate(-45deg);
         }
       }
     }

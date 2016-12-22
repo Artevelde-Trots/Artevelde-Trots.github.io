@@ -4,7 +4,7 @@
 
 .header {
   position: relative;
-  z-index: 5;
+  z-index: 11;
 }
 .ahs__rainbow{
   height:10px;
@@ -33,6 +33,7 @@
   position: fixed;
   top:0;
   left:0;
+  padding: 10px 0;
   height:100%;
   width: 100%;
   opacity: 0;
@@ -46,17 +47,27 @@
     @include scale(1);
     @include transition(opacity 250ms 250ms ease-in-out, visibility 0s 0.25s ease-in-out);
   }
-  .menu-toggle.nav{
-    background: transparent;
-  }
   .nav-container {
+    max-height: 100%;
+    width: 100%;
+    overflow: auto;
+    padding: 50px 0;
+    .nav-container-sub {
+      -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+      align-self: flex-start;
+    }
     .nav-block {
-      width: 100%;
+      //width: 100%;
       padding: 10px 40px;
       border-bottom:4px solid $mid-grey;
       text-align: center;
       text-transform: uppercase;
       color: $mid-grey;
+      &:first-child {
+      }
+      &:last-child {
+      }
       .big-block {
         padding: 20px 0;
         display: block;
