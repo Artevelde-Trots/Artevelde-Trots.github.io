@@ -3,12 +3,11 @@
 {% include components/head.html %}
 <body class="flex column">
 {% include components/header.html %}
-<div class="wrapper">
-    {% include components/sidebar.html %}
+<div class="wrapper flex-child stretch flex column">
     <main id="main" role="main" class="flex column flex-child stretch">
-        <div class="detail-page-container">
+        <div class="contact-page-container flex-child stretch">
             {{ content }}
-            {% include components/share.html %}
+            {% include components/contact.html %}
         </div>
     </main>
     {% include components/footer.html %}
