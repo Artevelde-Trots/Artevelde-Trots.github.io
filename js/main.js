@@ -27,21 +27,31 @@ ready(function(){
                 var icon = document.querySelector('.menu-toggle.menu');
                 var body = document.querySelector('body');
                 var navigation = document.querySelector('.navigation');
-                icon.addEventListener("click", function () {
-                    var self = this;
-                    if (App.nav.state) {
-                        icon.classList.remove("active");
-                        body.classList.remove("nav-open");
-                        navigation.classList.remove("active");
-                        App.nav.state = false;
-                    } else {
-                        body.classList.add("nav-open");
-                        icon.classList.add("active");
-                        navigation.classList.add("active");
+                if(mobileAndTabletcheck()) {
+                    icon.addEventListener("touchstart", function () {
+                        var self = this;
+                        App.nav.toggleNavigation();
+                    });
+                } else {
+                    icon.addEventListener("click", function () {
+                        var self = this;
+                        App.nav.toggleNavigation();
+                    });
+                }
+            },
+            'toggleNavigation':function(){
+                if (App.nav.state) {
+                    icon.classList.remove("active");
+                    body.classList.remove("nav-open");
+                    navigation.classList.remove("active");
+                    App.nav.state = false;
+                } else {
+                    body.classList.add("nav-open");
+                    icon.classList.add("active");
+                    navigation.classList.add("active");
 
-                        App.nav.state = true;
-                    }
-                });
+                    App.nav.state = true;
+                }
             }
         },
         "sidebar":{
@@ -80,7 +90,7 @@ ready(function(){
                     }
                 });
                 if(mobileAndTabletcheck()){
-                    shareToggle.addEventListener("mouseenter", function () {
+                    shareToggle.addEventListener("touchstart", function () {
                         var timout;
                         if (!App.sidebar.shareState) {
                             shareToggle.classList.add('active');
