@@ -25,8 +25,6 @@ ready(function(){
             },
             "bindEventListeners":function(){
                 var icon = document.querySelector('.menu-toggle.menu');
-                var body = document.querySelector('body');
-                var navigation = document.querySelector('.navigation');
                 if(mobileAndTabletcheck()) {
                     icon.addEventListener("touchstart", function () {
                         var self = this;
@@ -40,6 +38,9 @@ ready(function(){
                 }
             },
             'toggleNavigation':function(){
+                var icon = document.querySelector('.menu-toggle.menu');
+                var body = document.querySelector('body');
+                var navigation = document.querySelector('.navigation');
                 if (App.nav.state) {
                     icon.classList.remove("active");
                     body.classList.remove("nav-open");
