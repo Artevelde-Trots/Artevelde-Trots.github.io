@@ -32,6 +32,13 @@ kramdown:
   syntax_highlighter: rouge
 sass:
   style: compressed
+collections:
+  projects:
+    output: true
+    permalink: /project/:title/
+    defaults:
+      values:
+        layout: detail
 exclude:
   - Gemfile
   - LICENSE

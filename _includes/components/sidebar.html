@@ -8,17 +8,29 @@
     </button>
 
     <div class="content stretch">
-        <h2 class="ahs__title sm blue">Facebook banner</h2>
-        <p>De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.</p>
+        <h2 class="ahs__title sm blue">{{ page.title }}</h2>
+        <p>{{ page.description }}</p>
+
         <blockquote>
-                <span>Jonas Dermul</span>
-            <br>
-                Cross-Media Ontwerp
-            <br>
-                Graphic Design
-            <br>
-                2e Schijf
-    </blockquote>
+        {% for member in page.members %}
+            {% assign memberIndex = {{forloop.index}} %}
+            {% if member.name %}
+                <span>{{member.name}}</span>
+            {% endif %}
+            {% if member.direction %}
+                <br>{{member.direction}}
+            {% endif %}
+            {% if member.subdirection %}
+                <br>{{member.subdirection}}
+            {% endif %}
+            {% if member.disk %}
+                <br>{{member.disk}}
+            {% endif %}
+            {% if memberIndex < forloop.length %}
+            <br><br>
+            {% endif %}
+        {% endfor %}
+        </blockquote>
     </div>
     <div class="sidebar-toggle">
         <span class="line"></span>

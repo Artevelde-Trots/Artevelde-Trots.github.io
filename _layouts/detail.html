@@ -8,6 +8,16 @@
     <main id="main" role="main" class="flex column flex-child stretch">
         <div class="detail-page-container">
             {{ content }}
+            {% for image in page.images %}
+            <div class="detail-item-container">
+                <img src="/assets/img/projects/{{ image.url }}" alt="{{ image.alt }}">
+                {% if image.alt %}
+                <p class="detail-item-text">
+                    {{ image.alt }}
+                </p>
+                {% endif %}
+            </div>
+            {% endfor %}
             {% include components/share.html %}
             {% include components/footer.html %}
         </div>
