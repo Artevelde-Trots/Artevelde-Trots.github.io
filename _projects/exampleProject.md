@@ -1,5 +1,4 @@
 ---
-layout: detail
 title: Example Project
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 
@@ -11,6 +10,9 @@ members:
 thumbnail:
     url: "fb-banner/1.gif"
     alt: ""
+    height: 1
+    width: 1
+    color: 2
 images:
     - url: "fb-banner/1.gif"
       alt: "Started with an idea, worked out a sketch and digitalized it."

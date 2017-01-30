@@ -36,9 +36,16 @@ collections:
   projects:
     output: true
     permalink: /project/:title/
-    defaults:
+defaults:
+    - scope:
+        path: ""
+        type: projects
       values:
-        layout: detail
+        layout: "detail"
+        thumbnail:
+            height: 1
+            width: 1
+            color: 1
 exclude:
   - Gemfile
   - LICENSE

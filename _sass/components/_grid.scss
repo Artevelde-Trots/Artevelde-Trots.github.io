@@ -12,22 +12,110 @@ $grid-margin: 3;
       clear: both;
     }
     &-filters {
+      position: relative;
+      &-wrapper{
+        position: relative;
+      }
       .filter {
         cursor:pointer;
+        position: relative;
         font-weight: 900;
+        text-align: center;
         color: $light-grey;
         @include transition(all 250ms ease-in-out);
         padding: 10px 60px;
         border-bottom:3px solid $light-grey;
-        &.active {
+        &.active,
+        &:hover {
           color: $blue;
-          border-bottom:3px solid $blue;
+          //border-bottom:3px solid $blue;
         }
+        &:nth-child(1).active ~ .line-marker{
+          left:0;
+          width:168.43px;
+        }
+        &:nth-child(2).active ~ .line-marker{
+          left:168.43px;
+          width:291.84px;
+        }
+        &:nth-child(3).active ~ .line-marker{
+          width: 297.19px;
+          left:460.18px;
+        }
+        &:nth-child(1):hover ~ .line-marker{
+          left:0;
+          width:168.43px;
+        }
+        &:nth-child(2):hover ~ .line-marker{
+          left:168.43px;
+          width:291.84px;
+        }
+        &:nth-child(3):hover ~ .line-marker{
+          width: 297.19px;
+          left:460.18px;
+        }
+
+        @media (max-width: $lg){
+          padding: 10px 20px;
+          &:nth-child(1).active ~ .line-marker{
+            left:0;
+            width:88.34px;
+          }
+          &:nth-child(2).active ~ .line-marker{
+            left:88.34px;
+            width:211.84px;
+          }
+          &:nth-child(3).active ~ .line-marker{
+            width: 217.19px;
+            left:460.18px;
+          }
+          &:nth-child(1):hover ~ .line-marker{
+            left:0;
+            width:88.34px;
+          }
+          &:nth-child(2):hover ~ .line-marker{
+            left:88.34px;
+            width:211.84px;
+          }
+          &:nth-child(3):hover ~ .line-marker{
+            left:300.18px;
+            width: 217.19px;
+          }
+        }
+        @media (max-width: $md){
+          &.active,
+          &:hover {
+            border-bottom:3px solid $blue;
+          }
+        }
+        @media (max-width: $sm){
+          width: 100%;
+        }
+
+      }
+      .line-marker {
+        position: absolute;
+        height:3px;
+        bottom: 0px;
+        width: 168.43px;
+        background: $blue;
+        @include transition(all 250ms ease-in-out);
       }
       @media (max-width: $md){
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
+
+        .line-marker {
+          display: none;
+        }
+      }
+      @media (max-width: $sm){
+        &-wrapper{
+          -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+        }
       }
     }
     &-item{
@@ -136,7 +224,7 @@ $grid-margin: 3;
     &-sizer{
       width: 20%;
     }
-    @media (min-width: $xlg){
+    @media (min-width: $xxlg){
       &-sizer{
         width: 16.6667%;
       }
@@ -153,7 +241,7 @@ $grid-margin: 3;
         }
       }
     }
-    @media (max-width: $lg){
+    @media (max-width: $xlg){
       &-sizer{
         width: 20%;
       }
@@ -170,13 +258,30 @@ $grid-margin: 3;
         }
       }
     }
-    @media (max-width: $md){
+    @media (max-width: $lg){
       &-sizer{
         width: 25%;
       }
       &-item {
         @for $i from 1 through 3 {
           $self: 25 * $i;
+          &.grid-h-#{$i} {
+            height: #{$self}vw;
+          }
+          &.grid-w-#{$i} {
+            width: percentage($self/100);
+            font-size:percentage($self/100);
+          }
+        }
+      }
+    }
+    @media (max-width: $md){
+      &-sizer{
+        width: 33.333%;
+      }
+      &-item {
+        @for $i from 1 through 3 {
+          $self: 33.333 * $i;
           &.grid-h-#{$i} {
             height: #{$self}vw;
           }
