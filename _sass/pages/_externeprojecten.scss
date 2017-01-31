@@ -1,0 +1,53 @@
+@media screen and (min-width: 200px) {
+  .externe-page-container {
+    background-color: #6c6e71;
+    .externe {
+      margin: 60px 28px;
+      h1 {
+        span {
+          color: $dark-grey;
+        }
+      }
+      h2 {
+        color: $dark-grey;
+      }
+      &-detail {
+        .externe-section {
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .externe-page-container {
+     background-color: white;
+    .externe {
+      margin: 60px 230px;
+      h1 {
+        span {
+          color: $dark-grey;
+        }
+      }
+      &-details {
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        .externe-section {
+          padding: 0 20px;
+          &-image {
+            max-width: 100%;
+          }
+          &:last-of-type {
+            min-width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
