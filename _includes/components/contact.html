@@ -1,7 +1,7 @@
 <div class="container flex column">
     <div class="row flex column justified-c">
         <div class="contact-container">
-            <h1 class="ahs__title bold padded-bottom">Get in touch</h1>
+            <h1 class="ahs__title bold lg padded-bottom">Contact us</h1>
             <div class="contact-row row flex">
                 <div class="flex-child contact-section">
                     <div class="contact-header">
@@ -11,7 +11,7 @@
                         </h2>
                     </div>
                     <div class="contact-details">
-                        <h3 class=" ahs__title bold">Campus Mariakerke</h3>
+                        <h3 class="ahs__title bold">Campus Mariakerke</h3>
                         <span>Industrieweg </span><span>232</span><br>
                         <span>9030 </span><span>Gent-Mariakerke</span><br>
                         <a href="tel:+3292348600">09 / 234 86 00</a>
@@ -25,7 +25,20 @@
                         </h2>
                     </div>
                     <div class="contact-form">
-
+                        <form id="contact-form" action="#" method="POST" enctype="multipart/form-data">
+                            <div class="row">
+                                <input type="email" placeholder="E-mail" class="ahs__title xsm bold form-item">
+                            </div>
+                            <div class="row">
+                                <input type="text" placeholder="Subject" class="ahs__title xsm light form-item">
+                            </div>
+                            <div class="row">
+                                <textarea placeholder="Message" class="ahs__title xsm light form-item"></textarea>
+                            </div>
+                            <div class="row">
+                                <input class="btn form-btn" type="submit" value="Send email" />
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
