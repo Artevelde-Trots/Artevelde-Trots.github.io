@@ -17,6 +17,16 @@
       a {
         color: inherit;
       }
+      &:first-of-type {
+        background-image: url(../../assets/img/background/location.png);
+        background-repeat: no-repeat;
+        background-size: 120px;
+      }
+      &:nth-of-type(2) {
+        background-image: url(../../assets/img/background/message.png);
+        background-repeat: no-repeat;
+        background-size: 120px;
+      }
     }
     &-details {
       font-size: 1.5em;
@@ -72,9 +82,9 @@
       }
     }
     &-row {
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
     }
     &-header {
       padding: 30px 0;
