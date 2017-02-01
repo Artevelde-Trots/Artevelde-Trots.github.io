@@ -1,8 +1,8 @@
 @media screen and (min-width: 200px) {
   .externe-page-container {
-    background-color: #6c6e71;
+    background-color: white;
     .externe {
-      margin: 60px 28px;
+      margin: 60px 50px;
       h1 {
         span {
           color: $dark-grey;
@@ -11,11 +11,14 @@
       h2 {
         color: $dark-grey;
       }
-      &-detail {
+      &-details {
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+        flex-direction: column-reverse;
         .externe-section {
-          -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-          flex-direction: column;
+          &-image {
+            max-width: 100%;
+          }
         }
       }
     }
@@ -37,7 +40,7 @@
         -ms-flex-direction: row;
         flex-direction: row;
         .externe-section {
-          padding: 0 20px;
+          padding: 0 20px 0 0;
           &-image {
             max-width: 100%;
           }
