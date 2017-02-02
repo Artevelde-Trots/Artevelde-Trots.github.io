@@ -50,6 +50,7 @@
       @include transition(all 100ms ease-in-out);
       &.form-textarea {
         min-height: 150px;
+        resize: none;
       }
       &:focus {
         color:black;
@@ -85,15 +86,15 @@
 
     }
     .form-btn {
-      background-color: $blue;
       width: 100%;
+      margin: 30px 0;
     }
   }
 }
 @media screen and (max-width: $lg) {
   .contact {
-    &-container {
-      padding: 60px 28px 0;
+    &-page .contact-container {
+      height: auto;
     }
     &-row {
       -webkit-flex-direction: column;
@@ -101,7 +102,8 @@
       flex-direction: column;
     }
     &-section {
-      padding: 30px 50px;
+      padding: 10px 50px 30px;
+      width: 100%;
       a {
         color: inherit;
       }
@@ -117,22 +119,16 @@
         text-decoration: none;
       }
     }
-    &-header {
-      padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: $md) {
+  .contact {
+    &-container {
+      padding: 75px 30px 0;
     }
-    &-form {
-      .form-item {
-        background: none;
-        border: none;
-        border-bottom: 3px solid $dark-grey;
-        color: $mid-grey;
-        outline: none;
-        width: 100%;
-      }
-      .form-btn {
-        background-color: $blue;
-        width: 100%;
-      }
+    &-section {
+      padding: 10px 0 30px;
     }
   }
 }
