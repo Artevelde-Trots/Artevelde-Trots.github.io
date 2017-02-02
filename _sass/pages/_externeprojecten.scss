@@ -4,6 +4,9 @@
       color: $dark-grey;
     }
   }
+  h2 {
+    color: $dark-grey;
+  }
   &-details {
     padding: 50px 0 100px;
     -webkit-flex-direction: row;
@@ -13,6 +16,7 @@
       padding: 0 20px 0 0;
       width: 350px;
       &-image {
+        padding: 0 0 10px;
         max-width: 100%;
       }
       &:last-of-type {
@@ -21,17 +25,23 @@
     }
   }
 }
-
-@media screen and (min-width: $sm) {
+@media screen and (max-width: $lg){
   .externe {
-    h2 {
-      color: $dark-grey;
-    }
-    &-detail {
+    &-details {
+
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
       .externe-section {
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
+        order:2;
+        width: 100%;
+        &:last-of-type {
+          padding: 0;
+          order:1;
+        }
+        .ahs__paragraph {
+          padding-bottom: 50px;
+        }
       }
     }
   }

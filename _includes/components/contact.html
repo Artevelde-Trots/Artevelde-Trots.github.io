@@ -1,6 +1,6 @@
 <div class="container flex column">
-    <div class="row flex column justified-c">
-        <div class="contact-container">
+    <div class="row">
+        <div class="contact-container flex column justified-c">
             <h1 class="ahs__title bold lg padded-bottom">Contact us</h1>
             <div class="contact-row row flex">
                 <div class="flex-child contact-section">
@@ -26,14 +26,17 @@
                     </div>
                     <div class="contact-form">
                         <form id="contact-form" action="#" method="POST" enctype="multipart/form-data">
-                            <div class="row">
-                                <input type="email" placeholder="E-mail" class="ahs__title xsm bold form-item">
+                            <div class="form-item-row">
+                                <input type="email" placeholder="E-mail" class="ahs__title xsm light form-item">
+                                <div class="line"></div>
                             </div>
-                            <div class="row">
+                            <div class="form-item-row">
                                 <input type="text" placeholder="Subject" class="ahs__title xsm light form-item">
+                                <div class="line"></div>
                             </div>
-                            <div class="row">
-                                <textarea placeholder="Message" class="ahs__title xsm light form-item"></textarea>
+                            <div class="form-item-row form-textarea-row">
+                                <textarea placeholder="Message" class="ahs__title xsm light form-item form-textarea"></textarea>
+                                <div class="line"></div>
                             </div>
                             <div class="row">
                                 <input class="btn form-btn" type="submit" value="Send email" />

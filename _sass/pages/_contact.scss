@@ -1,8 +1,96 @@
 .contact-page-container {
-  background: #f2f2f2;
+  background:#f2f2f2;
 }
+.contact-page {
+  .contact-container {
+    height: calc(100vh - 110px);
+    min-height: 575px;
+  }
+}
+.contact {
+  &-container {
+    padding: 75px 75px 0;
+  }
+  &-section {
+    padding: 30px 50px;
+    width: 50%;
+    a {
+      color: inherit;
+    }
+  }
+  &-details {
+    font-size: 1.5em;
+    line-height: 1.5em;
+    h3 {
+      font-size: 1.2em;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+  &-row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  &-header {
+    padding: 30px 0;
+  }
+  &-form {
+    .form-item {
+      position: relative;
+      background: none;
+      border: none;
+      color: $mid-grey;
+      outline: none;
+      width: 100%;
+      padding:0;
+      min-height: 40px;
+      @include transition(all 100ms ease-in-out);
+      &.form-textarea {
+        min-height: 150px;
+      }
+      &:focus {
+        color:black;
+        font-weight: normal;
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+          color:black;
+        }
+        & + .line {
+          height: 4px;
+        }
+      }
+      &-row{
+        position: relative;
+        padding: 10px 0;
+        height:60px;
+        &.form-textarea-row {
+          height: auto;
+        }
+        @include transition(all 100ms ease-in-out);
+        .line {
+          position: absolute;
+          bottom:0;
+          width: 100%;
+          height:2px;
+          background: $dark-grey;
+          @include transition(all 100ms ease-in-out);
+        }
 
-@media screen and (min-width: 200px) {
+      }
+
+    }
+    .form-btn {
+      background-color: $blue;
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: $lg) {
   .contact {
     &-container {
       padding: 60px 28px 0;
@@ -28,53 +116,6 @@
         color: inherit;
         text-decoration: none;
       }
-    }
-    &-header {
-      padding: 30px 0;
-    }
-    &-form {
-      .form-item {
-        background: none;
-        border: none;
-        border-bottom: 3px solid $dark-grey;
-        color: $mid-grey;
-        outline: none;
-        width: 100%;
-      }
-      .form-btn {
-        background-color: $blue;
-        width: 100%;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: $lg) {
-  .contact {
-    &-container {
-      padding: 60px 28px 0;
-    }
-    &-section {
-      padding: 30px 50px;
-      a {
-        color: inherit;
-      }
-    }
-    &-details {
-      font-size: 1.5em;
-      line-height: 1.5em;
-      h3 {
-        font-size: 1.2em;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-    }
-    &-row {
-      -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-      flex-direction: row;
     }
     &-header {
       padding: 30px 0;

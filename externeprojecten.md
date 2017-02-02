@@ -11,7 +11,7 @@ title   : "Externe projecten"
         <p>Externe projecten zijn werken die we maken voor bedrijven. Als een echte ontwerpstudio kunnen de bedrijven ons contacteren met hun wensen. Wij vullen deze in zodat u bedrijf een zo uniek mogelijk profiel bekomt. Communicatie over alle mogelijke media is onze specialiteit en het is voor ons een must om u visie waar te maken. </p>
     </div>
     <div class="row flex externe-details">
-        <div class="externe-section flex-child">
+        <div class="externe-section flex-child flex column wrap">
             <img class="externe-section-image" src="assets/img/projects/externe/Noordzeevis.png">
             <img class="externe-section-image" src="assets/img/projects/externe/CharliesBagel.png">
         </div>
