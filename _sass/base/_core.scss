@@ -136,9 +136,9 @@ a {
     justify-content: center;
   }
 }
-$padded: 20;
+$padded: 25;
 $paddedXL: $padded * 2;
-$paddedXXL: $padded * 4;
+$paddedXXL: $padded * 3;
 .padded {
   &-top {
     padding-top: $padded+px;

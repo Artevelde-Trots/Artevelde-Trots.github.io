@@ -2,7 +2,7 @@ $grid-padding: 28;
 $grid-margin: 3;
 .grid-container {
   padding: 0px;
-
+  overflow: hidden;
   .grid {
     font-size:7vw;
 
