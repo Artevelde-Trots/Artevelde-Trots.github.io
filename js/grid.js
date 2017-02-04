@@ -11,18 +11,23 @@ if(document.querySelector('.grid')){
         }),
         "init":function() {
             Grid.bindEventListeners();
+            document.querySelector('.footer').classList.add('grid-footer')
         },
         "open":function(target){
 
         },
         "bindEventListeners":function(){
             //Filters
-            var filters = document.querySelectorAll('.grid-filters .filter');
+            var filters = document.querySelectorAll('.grid-filters-wrapper .filter');
             [].forEach.call(filters, function(filter) {
                 filter.addEventListener("click", function () {
                     console.log('Clicked a filter-button');
-                    document.querySelector('.grid-filters .filter[data-filter='+Grid.currentFilter+']').classList.remove('active');
-                    this.classList.add('active');
+                    document.querySelectorAll('.grid-filters-wrapper .filter[data-filter='+Grid.currentFilter+']').forEach(function(el) {
+                        el.classList.remove('active');
+                    });
+                    document.querySelectorAll('.grid-filters-wrapper .filter[data-filter='+this.dataset.filter+']').forEach(function(el) {
+                        el.classList.add('active');
+                    });
                     Grid.filter(this.dataset.filter);
                 });
             });
@@ -34,24 +39,29 @@ if(document.querySelector('.grid')){
                     item.classList.add('loaded');
                 });
             });
+
+            //Scroll listener for alternative filters
+            var lineFilters = document.querySelector('.grid-filters'),
+                scrollFilters = document.querySelector('.grid-filters-scroll');
+            window.addEventListener("scroll",function(){
+                var viewportOffset = lineFilters.getBoundingClientRect()
+                if(viewportOffset.top < 0){
+                    scrollFilters.classList.add('active');
+                } else {
+                    scrollFilters.classList.remove('active');
+                }
+            });
         },
         "filter":function(type){
             Grid.currentFilter = type;
             var items = document.querySelectorAll('.grid .grid-item');
             [].forEach.call(items, function(item) {
                 item.classList.remove('filtered');
+                if(type !== 'all' && item.dataset.type !== type){
+                    item.classList.add('filtered');
+                }
             });
 
-            switch(type){
-                case 'all':
-                    break;
-                default:
-                    var items = document.querySelectorAll('.grid .grid-item[data-type='+type+']');
-                    [].forEach.call(items, function(item) {
-                        item.classList.add('filtered');
-                    });
-                    break;
-            }
             Grid.msnry.layout();
         }
     }

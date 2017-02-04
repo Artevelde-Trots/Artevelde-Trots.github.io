@@ -118,6 +118,96 @@ $grid-margin: 3;
         }
       }
     }
+    &-filters-scroll{
+      height: 100px;
+      width: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+      position: fixed;
+      bottom: -100px;
+      opacity: 0;
+      -webkit-pointer-events: none;
+      pointer-events: none;
+      z-index: 9;
+      background-color: #f4f4f4;
+      border-top: 1px solid #ddd;
+
+      @media (max-width: $md){
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      @media (max-width: $sm){
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      @include transition(all 250ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      &.active {
+        bottom: 0px;
+        opacity: 1;
+        -webkit-pointer-events: auto;
+        pointer-events: auto;
+      }
+      .grid-filters-wrapper {
+        width: 100%;
+      }
+      .filter {
+        cursor:pointer;
+        position: relative;
+        font-size: 16px;
+        font-weight: 500;
+        text-align: center;
+        color: $light-grey;
+        background: #FCFCFC;
+        width: 33%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-left: 0px solid #ddd;
+        overflow: hidden;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-font-smoothing: antialiased;
+
+        box-shadow: 0 0 1px transparent;
+        @include transform(perspective(1px) translateZ(0));
+        @include transition(all 250ms ease-in-out);
+        &:first-child {
+          border-left: 1px solid #ddd;
+        }
+        &.active {
+          color: white;
+          background-color: $blue;
+          border: 1px solid $blue;
+          &::after {
+            background-color: white;
+          }
+          &:hover::after {
+            opacity: 0.2;
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $blue;
+          opacity:0;
+          border-radius: 100%;
+          @include scale(0.5);
+          @include transition(transform 250ms ease-out,opacity 200ms ease-out);
+        }
+        &:hover {
+          color:white;
+          &::after{
+            opacity: 0.9;
+            @include scale(2);
+            @include transition(transform 250ms ease-out,opacity 250ms ease-out);
+
+          }
+        }
+      }
+    }
     &-item{
       padding:3px;
       position: relative;
@@ -171,6 +261,7 @@ $grid-margin: 3;
 
           height: 100%;
           width: 100%;
+          padding: 10px;
           background: rgba(0,0,0,0.9);
           .hover-title {
             color:white;
@@ -309,6 +400,7 @@ $grid-margin: 3;
         }
         &.grid-w-3 {
           width: 100%;
+          font-size:100%;
           @for $i from 1 through 3 {
             $self: 33.33334 * $i;
             &.grid-h-#{$i} {

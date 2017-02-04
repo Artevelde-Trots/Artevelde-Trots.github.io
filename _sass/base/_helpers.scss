@@ -25,6 +25,15 @@
     max-width: $max-width;
     padding-left: 100px; /* 3 */
     padding-right: 100px; /* 3 */
+
+    @media (max-width: $md){
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @media (max-width: $sm){
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 }
 

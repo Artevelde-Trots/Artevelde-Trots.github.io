@@ -1,5 +1,5 @@
 ---
-title: Example Project
+title: Memorial Van Damme 40ste Editie
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 type: "extern"
 members:
@@ -8,11 +8,11 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "fb-banner/1.gif"
+    url: "memorial-van-damme/thumb.png"
     alt: ""
     height: 1
     width: 1
-    color: 2
+    color: 4
 images:
     - url: "fb-banner/1.gif"
       alt: "Started with an idea, worked out a sketch and digitalized it."
@@ -22,5 +22,5 @@ images:
       alt: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
     - url: "fb-banner/4.gif"
 created: 20/01/2017
-order: 9
+order: 4
 ---

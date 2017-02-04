@@ -13,6 +13,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
 }
 $title-font-size: 72;
+$title-font-size-md: 54;
+$title-font-size-sm: 36;
+$title-font-size-xsm: 24;
+
 .ahs__{
   &title {
     font-family: 'NeoSans';
@@ -69,6 +73,81 @@ $title-font-size: 72;
     }
     &.black {
       font-weight: 900;
+    }
+
+    @media (max-width: $md){
+
+      font-size: $title-font-size-md+px;
+
+      &.xxsm {
+        font-size: $title-font-size-md*0.10+px;
+      }
+      &.xsm {
+        font-size: $title-font-size-md*0.375+px;
+      }
+      &.sm {
+        font-size: $title-font-size-md*0.5+px;
+      }
+      &.smd {
+        font-size: $title-font-size-md*0.625+px;
+      }
+      &.md {
+        font-size: $title-font-size-md*0.75+px;
+      }
+      &.lg {
+        font-size: $title-font-size-md+px;
+      }
+      &.xl {
+        font-size: $title-font-size-md*1.25+px;
+      }
+    }
+    @media (max-width: $sm){
+      font-size: $title-font-size-sm+px;
+      &.xxsm {
+        font-size: $title-font-size-sm*0.10+px;
+      }
+      &.xsm {
+        font-size: $title-font-size-sm*0.375+px;
+      }
+      &.sm {
+        font-size: $title-font-size-sm*0.5+px;
+      }
+      &.smd {
+        font-size: $title-font-size-sm*0.625+px;
+      }
+      &.md {
+        font-size: $title-font-size-sm*0.75+px;
+      }
+      &.lg {
+        font-size: $title-font-size-sm+px;
+      }
+      &.xl {
+        font-size: $title-font-size-sm*1.25+px;
+      }
+    }
+    @media (max-width: $xsm){
+      font-size: $title-font-size-xsm+px;
+      &.xxsm {
+        font-size: $title-font-size-xsm*0.10+px;
+      }
+      &.xsm {
+        font-size: $title-font-size-xsm*0.375+px;
+      }
+      &.sm {
+        font-size: $title-font-size-xsm*0.5+px;
+      }
+      &.smd {
+        font-size: $title-font-size-xsm*0.625+px;
+      }
+      &.md {
+        font-size: $title-font-size-xsm*0.75+px;
+      }
+      &.lg {
+        font-size: $title-font-size-xsm+px;
+      }
+      &.xl {
+        font-size: $title-font-size-xsm*1.25+px;
+      }
     }
   }
   &paragraph {
