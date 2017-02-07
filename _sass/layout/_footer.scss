@@ -4,7 +4,7 @@
 .footer {
   z-index: 3;
   padding: 40px;
-  background:#a3a3a3;
+  background:#f6f6f6;
   height:80px;
   width: 100%;
   padding: 10px 28px;
@@ -26,12 +26,11 @@
     p,a {
       margin: 0;
       font-size: 14px;
-      color:white;
-      font-weight: 300;
+      color:$dark-grey;
+      font-weight: 400;
     }
     a {
       display: block;
-      font-weight: bold;
     }
   }
   @media screen and (max-width: $lg) {

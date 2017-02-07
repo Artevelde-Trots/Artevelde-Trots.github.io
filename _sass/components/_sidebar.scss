@@ -1,6 +1,7 @@
 .share-container {
   display: block;
   .share-cta {
+    padding: 10px 0 10px 3px;
     font-weight: 800;
     opacity: 1;
     visibility: visible;
@@ -105,18 +106,15 @@
 }
 @media screen and (min-width: $lg) {
   .sidebar-toggle {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     position: absolute;
-    right: -12px;
+    right: -25px;
     top: 50%;
-    margin-top: -25px;
+    margin-top: -30px;
     background-color: #f2f2f2;
     border-radius: 100%;
-    -webkit-transition: all 250ms ease-in-out;
-    -moz-transition: all 250ms ease-in-out;
-    -o-transition: all 250ms ease-in-out;
-    transition: all 250ms ease-in-out;
+    @include transition(all 250ms ease-in-out);
     &:hover {
       background-color: $light-grey;
     }
@@ -136,10 +134,7 @@
       -ms-transform-style: flat;
       -o-transform-style: flat;
       transform-style: flat;
-      -webkit-transition: all 250ms ease-in-out;
-      -moz-transition: all 250ms ease-in-out;
-      -o-transition: all 250ms ease-in-out;
-      transition: all 250ms ease-in-out;
+      @include transition(all 250ms ease-in-out);
     }
   }
   .sidebarContainer {
@@ -148,10 +143,7 @@
     z-index: 2;
     top: 0px;
     width: 25%;
-    -webkit-transition: all 250ms ease-in-out;
-    -moz-transition: all 250ms ease-in-out;
-    -o-transition: all 250ms ease-in-out;
-    transition: all 250ms ease-in-out;
+    @include transition(all 250ms ease-in-out);
     height:100%;
     position: fixed;
     background: #f2f2f2;
@@ -171,49 +163,47 @@
     }
 
     .content {
-      margin: 30px;
+      margin: 40px 30px;
       opacity: 1;
       visibility: visible;
-      transition: opacity 250ms 250ms ease-in-out, visibility 0s 0.25s ease-in-out;
+      @include transition(opacity 250ms 250ms ease-in-out, visibility 0ms 250ms ease-in-out);
       p {
-        font-size: 16px;
+        font-size: 14px;
         color: $text-color;
       }
       blockquote {
         color: $text-color;
-        font-size: 15px;
-        border-left: 3px solid $text-color;
-        padding-left: 21px;
+        font-size: 12px;
+        border-left: 1px solid $light-grey;
+        padding-left: 15px;
         margin-left: 0;
         span {
           color: $blue;
           font-weight: 800;
+          display: inline-block;
+          padding-bottom: 5px;
         }
       }
     }
     .sidebar-toggle {
-      -webkit-transition: all 250ms ease-in-out;
-      -moz-transition: all 250ms ease-in-out;
-      -o-transition: all 250ms ease-in-out;
-      transition: all 250ms ease-in-out;
+      @include transition(all 250ms ease-in-out);
       &:hover {
         background: $primary;
-
         .line {
           &:nth-child(1) {
-            transform: translate(11px, 19px) rotate(-30deg);
+            @include transform(translate(18px, 24px) rotate(-30deg));
           }
           &:nth-child(2) {
-            transform: translate(11px, 25px) rotate(30deg);
+            @include transform(translate(18px, 30px) rotate(30deg));
           }
         }
       }
       .line {
         &:nth-child(1) {
-          transform: translate(11px, 18px) rotate(-45deg);
+          @include transform(translate(18px, 22px) rotate(-45deg));
         }
         &:nth-child(2) {
-          transform: translate(11px, 27px) rotate(45deg);
+          @include transform(translate(18px, 32px) rotate(45deg));
         }
       }
       &:hover {
@@ -227,11 +217,11 @@
     }
   }
   .shrink {
-    -webkit-transition: width 250ms ease-in-out;
     width: 3px;
     border-right:3px solid $primary;
     background: #f2f2f2;
     cursor:pointer;
+    @include transition(width 250ms ease-in-out);
     .menu {
       align-self: flex-start;
       margin-left: 18%;
@@ -239,7 +229,7 @@
     .content {
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0s ease-in-out, visibility 0s ease-in-out;
+      @include transition(opacity 0ms ease-in-out, visibility 0ms ease-in-out);
     }
     .sidebar-toggle {
       right:-22px;
@@ -249,19 +239,19 @@
 
         .line {
           &:nth-child(1) {
-            transform: translate(20px, 19px) rotate(30deg);
+            @include transform(translate(31px, 24px) rotate(30deg));
           }
           &:nth-child(2) {
-            transform: translate(20px, 25px) rotate(-30deg);
+            @include transform(translate(31px, 30px) rotate(-30deg));
           }
         }
       }
       .line {
         &:nth-child(1) {
-          transform: translate(20px, 17px) rotate(45deg);
+          @include transform(translate(31px, 22px) rotate(45deg));
         }
         &:nth-child(2) {
-          transform: translate(20px, 27px) rotate(-45deg);
+          @include transform(translate(31px, 32px) rotate(-45deg));
         }
       }
     }
@@ -270,7 +260,7 @@
       .share-cta {
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0s ease-in-out, visibility 0s ease-in-out;
+        @include transition(opacity 0ms ease-in-out, visibility 0ms ease-in-out);
       }
       .share-toggle {
         display: block;
@@ -285,6 +275,7 @@
         -ms-flex-direction: column;
         flex-direction: column;
         margin-bottom: 60px;
+        margin-left: 15px;
 
         .share-link {
           opacity: 0;

@@ -41,11 +41,15 @@ $title-font-size-xsm: 24;
     .green{
       color: $green;
     }
+    &.white,
+    .white{
+      color: white;
+    }
     &.xxsm {
       font-size: $title-font-size*0.10+px;
     }
     &.xsm {
-      font-size: $title-font-size*0.375+px;
+      font-size: $title-font-size*0.25+px;
     }
     &.sm {
       font-size: $title-font-size*0.5+px;

@@ -6,11 +6,6 @@
     &page-container {
       max-width: 100%;
       padding: 10px;
-      img {
-        max-width: 100%;
-        width: 100%;
-        display: block;
-      }
       .share-container {
         display: block;
         margin: 10px 0 0;
@@ -20,11 +15,17 @@
     }
     &item-container{
       .detail-item-text{
-        padding: 20px;
+        padding: 100px 20px 80px;
         margin: 0;
         font-weight: bold;
         font-size: small;
         color:$mid-grey;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        display: block;
       }
     }
   }
@@ -32,29 +33,33 @@
 @media screen and (min-width: $lg) {
   .detail-{
     &page-container {
-      padding: 10px 10px 0;
+      padding: 10px 0px 0;
       max-width: 100%;
       margin-left: 25%;
-      -webkit-transition: all 250ms ease-in-out;
-      -moz-transition: all 250ms ease-in-out;
-      -o-transition: all 250ms ease-in-out;
-      transition: all 250ms ease-in-out;
+      @include transition(all 250ms ease-in-out);
 
       .share-container {
         display: none;
       }
     }
     &item-container{
-      padding:0 20px 20px;
+      padding:0 40px 20px;
       &:first-child {
         padding-top: 20px;
       }
       .detail-item-text{
-          padding: 20px 0 0 0;
-          margin: 0;
+          padding: 100px 0px 80px;
+          max-width: 980px;
+          margin: 0 auto;
           font-weight: bold;
+          line-height: 1.7em;
           font-size: small;
           color:$mid-grey;
+      }
+      img {
+        max-width: 100%;
+        width: 100%;
+        display: block;
       }
     }
   }

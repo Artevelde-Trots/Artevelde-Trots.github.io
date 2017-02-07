@@ -39,7 +39,7 @@ if(document.querySelector('.grid')){
                     item.classList.add('loaded');
                 });
             });
-
+            /*
             //Scroll listener for alternative filters
             var lineFilters = document.querySelector('.grid-filters'),
                 scrollFilters = document.querySelector('.grid-filters-scroll');
@@ -51,6 +51,7 @@ if(document.querySelector('.grid')){
                     scrollFilters.classList.remove('active');
                 }
             });
+            */
         },
         "filter":function(type){
             Grid.currentFilter = type;
