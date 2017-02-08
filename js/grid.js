@@ -7,7 +7,9 @@ if(document.querySelector('.grid')){
         "currentFilter":"all",
         "msnry":new Masonry( '.grid', {
             itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer'
+            columnWidth: '.grid-sizer',
+            gutter: 0,
+            percentPosition: true
         }),
         "init":function() {
             Grid.bindEventListeners();
@@ -39,19 +41,6 @@ if(document.querySelector('.grid')){
                     item.classList.add('loaded');
                 });
             });
-            /*
-            //Scroll listener for alternative filters
-            var lineFilters = document.querySelector('.grid-filters'),
-                scrollFilters = document.querySelector('.grid-filters-scroll');
-            window.addEventListener("scroll",function(){
-                var viewportOffset = lineFilters.getBoundingClientRect()
-                if(viewportOffset.top < 0){
-                    scrollFilters.classList.add('active');
-                } else {
-                    scrollFilters.classList.remove('active');
-                }
-            });
-            */
         },
         "filter":function(type){
             Grid.currentFilter = type;

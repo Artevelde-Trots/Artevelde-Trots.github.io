@@ -1,7 +1,5 @@
-$grid-padding: 28;
-$grid-margin: 3;
 .grid-container {
-  padding: 0px;
+  padding: 0px 40px;
   overflow: hidden;
   .grid {
     font-size:7vw;
@@ -125,6 +123,7 @@ $grid-margin: 3;
       padding-right: 40px;
       position: fixed;
       bottom: 0px;
+      left: 0;
       z-index: 9;
       background-color: #f4f4f4;
       border-top: 1px solid #ddd;
@@ -134,8 +133,8 @@ $grid-margin: 3;
         padding-right: 20px;
       }
       @media (max-width: $sm){
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 3px;
+        padding-right: 3px;
       }
       @include transition(all 250ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
 
@@ -150,7 +149,7 @@ $grid-margin: 3;
         text-align: center;
         color: $light-grey;
         background: #FCFCFC;
-        width: 33%;
+        width: 33.33334%;
         padding: 10px;
         border: 1px solid #ddd;
         border-left: 0px solid #ddd;
@@ -209,8 +208,9 @@ $grid-margin: 3;
       //float: left;
       @for $i from 1 through 5 {
         $self: 20 * $i;
+        $grid-padding: 40;
         &.grid-h-#{$i} {
-          height: #{$self}vw;
+          height: calc(((100vw - #{$grid-padding * 2}px) / 5) * #{$i});
         }
         &.grid-w-#{$i} {
           width: percentage($self/100);
@@ -314,8 +314,9 @@ $grid-margin: 3;
       &-item {
         @for $i from 1 through 3 {
           $self: 16.6667 * $i;
+          $grid-padding: 40;
           &.grid-h-#{$i} {
-            height: #{$self}vw;
+            height: calc(((100vw - #{$grid-padding * 2}px) / 6) * #{$i});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -331,8 +332,9 @@ $grid-margin: 3;
       &-item {
         @for $i from 1 through 3 {
           $self: 20 * $i;
+          $grid-padding: 40;
           &.grid-h-#{$i} {
-            height: #{$self}vw;
+            height: calc(((100vw - #{$grid-padding * 2}px) / 5) * #{$i});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -348,8 +350,9 @@ $grid-margin: 3;
       &-item {
         @for $i from 1 through 3 {
           $self: 25 * $i;
+          $grid-padding: 40;
           &.grid-h-#{$i} {
-            height: #{$self}vw;
+            height: calc(((100vw - #{$grid-padding * 2}px) / 4) * #{$i});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -365,6 +368,7 @@ $grid-margin: 3;
       &-item {
         @for $i from 1 through 3 {
           $self: 33.333 * $i;
+          $grid-padding: 25;
           &.grid-h-#{$i} {
             height: #{$self}vw;
           }
@@ -440,5 +444,9 @@ $grid-margin: 3;
         }
       }
     }
+  }
+
+  @media (max-width: $md){
+    padding: 0px;
   }
 }
