@@ -24,18 +24,13 @@ ready(function(){
                 }
             },
             "bindEventListeners":function(){
+                //console.log("Binding Menu events");
                 var icon = document.querySelector('.menu-toggle.menu');
-                if(mobileAndTabletcheck()) {
-                    icon.addEventListener("touchstart", function () {
-                        var self = this;
-                        App.nav.toggleNavigation();
-                    });
-                } else {
-                    icon.addEventListener("click", function () {
-                        var self = this;
-                        App.nav.toggleNavigation();
-                    });
-                }
+                icon.addEventListener("click", function () {
+                    var self = this;
+                    App.nav.toggleNavigation();
+                });
+
             },
             'toggleNavigation':function(){
                 var icon = document.querySelector('.menu-toggle.menu');
@@ -50,7 +45,6 @@ ready(function(){
                     body.classList.add("nav-open");
                     icon.classList.add("active");
                     navigation.classList.add("active");
-
                     App.nav.state = true;
                 }
             }
@@ -64,7 +58,7 @@ ready(function(){
                 }
             },
             "bindEventListeners":function(){
-                console.log('Binding sidebar events');
+                //console.log('Binding sidebar events');
 
                 var closer = document.querySelector('.sidebar-toggle');
                 var shareToggle = document.querySelector('.share-toggle');
