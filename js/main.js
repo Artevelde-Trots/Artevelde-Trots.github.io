@@ -9,6 +9,7 @@ ready(function(){
 
     App = {
         "init": function () {
+            window.mobileAndTabletcheck();
             this.bindEventListeners();
             App.nav.init();
             App.sidebar.init();
@@ -84,7 +85,7 @@ ready(function(){
                         App.sidebar.state = false;
                     }
                 });
-                if(mobileAndTabletcheck()){
+                if(window.mobileAndTabletcheck()){
                     shareToggle.addEventListener("touchstart", function () {
                         var timout;
                         if (!App.sidebar.shareState) {

@@ -196,6 +196,7 @@
           }
         }
       }
+
       .line {
         &:nth-child(1) {
           @include transform(translate(18px, 22px) rotate(-45deg));
@@ -290,6 +291,29 @@
 
     }
   }
-
+}
+[data-mobile="true"] {
+  .shrink .sidebar-toggle:hover {
+    background:$primary;
+    .line {
+      &:nth-child(1) {
+        @include transform(translate(31px, 22px) rotate(45deg));
+      }
+      &:nth-child(2) {
+        @include transform(translate(31px, 32px) rotate(-45deg));
+      }
+    }
+  }
+  .sidebar-toggle:hover {
+    background-color: #f2f2f2;
+    .line {
+      &:nth-child(1) {
+        @include transform(translate(18px, 22px) rotate(-45deg));
+      }
+      &:nth-child(2) {
+        @include transform(translate(18px, 32px) rotate(45deg));
+      }
+    }
+  }
 }
 

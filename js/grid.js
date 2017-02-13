@@ -23,7 +23,7 @@ if(document.querySelector('.grid')){
             var filters = document.querySelectorAll('.grid-filters-wrapper .filter');
             [].forEach.call(filters, function(filter) {
                 filter.addEventListener("click", function () {
-                    console.log('Clicked a filter-button');
+                    //console.log('Clicked a filter-button');
                     document.querySelectorAll('.grid-filters-wrapper .filter[data-filter='+Grid.currentFilter+']').forEach(function(el) {
                         el.classList.remove('active');
                     });

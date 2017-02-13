@@ -64,11 +64,7 @@
       margin: 4px 0;
     }
     &:nth-child(4) {
-      -webkit-transform: translateY(-10px);
-      -moz-transform: translateY(-10px);
-      -o-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-      transform: translateY(-10px);
+      @include transform(translateY(-10px));
     }
     &:nth-child(1),
     &:nth-child(3) {
@@ -83,29 +79,21 @@
 }
 
 .menu-toggle.active .line:nth-child(1),
-.isMobile .menu-toggle.active:hover .line:nth-child(1){
-  -webkit-transform: rotate(45deg) translateX(5px) translateY(5px);
-  -moz-transform: rotate(45deg) translateX(5px) translateY(5px);
-  -o-transform: rotate(45deg) translateX(5px) translateY(5px);
-  -ms-transform: rotate(45deg) translateX(5px) translateY(5px);
-  transform: rotate(45deg) translateX(5px) translateY(5px);
+[data-mobile="true"] .menu-toggle.active:hover .line:nth-child(1){
+  @include transform(rotate(45deg) translateX(5px) translateY(5px));
 }
 
 .menu-toggle.active .line:nth-child(2),
 .menu-toggle.active:hover .line:nth-child(2),
 .menu-toggle.active .line:nth-child(4),
-.isMobile .menu-toggle.active:hover .line:nth-child(4),
+[data-mobile="true"] .menu-toggle.active:hover .line:nth-child(4),
 .menu-toggle.project .line:nth-child(2){
   opacity:0;
 }
 
 .menu-toggle.active .line:nth-child(3),
-.isMobile .menu-toggle.active:hover .line:nth-child(3){
-  -webkit-transform: rotate(-45deg) translateX(5px) translateY(-5px);
-  -moz-transform: rotate(-45deg) translateX(5px) translateY(-5px);
-  -o-transform: rotate(-45deg) translateX(5px) translateY(-5px);
-  -ms-transform: rotate(-45deg) translateX(5px) translateY(-5px);
-  transform: rotate(-45deg) translateX(5px) translateY(-5px);
+[data-mobile="true"] .menu-toggle.active:hover .line:nth-child(3){
+  @include transform( rotate(-45deg) translateX(5px) translateY(-5px));
 }
 
 .menu-toggle.active .line {
@@ -119,85 +107,56 @@
 }
 
 .menu-toggle.closing .line:nth-child(1),
-.isMobile .menu-toggle.closing .line:nth-child(1),
-.isMobile .menu-toggle.closing:hover .line:nth-child(1),
+[data-mobile="true"] .menu-toggle.closing .line:nth-child(1),
+[data-mobile="true"] .menu-toggle.closing:hover .line:nth-child(1),
 .menu-toggle:hover .line:nth-child(1) {
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
-  -webkit-transform: translateY(7px);
-  -moz-transform: translateY(7px);
-  -o-transform: translateY(7px);
-  -ms-transform: translateY(7px);
-  transform: translateY(7px);
+  @include transform(translateY(7px));
 }
 
 .menu-toggle.closing .line:nth-child(3),
-.isMobile .menu-toggle.closing .line:nth-child(3),
-.isMobile .menu-toggle.closing:hover .line:nth-child(3),
+[data-mobile="true"] .menu-toggle.closing .line:nth-child(3),
+[data-mobile="true"] .menu-toggle.closing:hover .line:nth-child(3),
 .menu-toggle:hover .line:nth-child(3) {
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
-  -webkit-transform: translateX(0px) translateY(-7px);
-  -moz-transform: translateX(0px) translateY(-7px);
-  -o-transform: translateX(0px) translateY(-7px);
-  -ms-transform: translateX(0px) translateY(-7px);
-  transform: translateX(0px) translateY(-7px);
+  @include transform( translateX(0px) translateY(-7px));
 }
 
 .menu-toggle.closing .line:nth-child(4),
-.isMobile .menu-toggle.closing .line:nth-child(4),
-.isMobile .menu-toggle.closing:hover .line:nth-child(4),
+[data-mobile="true"] .menu-toggle.closing .line:nth-child(4),
+[data-mobile="true"] .menu-toggle.closing:hover .line:nth-child(4),
 .menu-toggle:hover .line:nth-child(4) {
   opacity:1;
   -webkit-transition-delay:250ms;
   transition-delay: 250ms;
-  -webkit-transform: rotate(90deg) translateX(-10px);
-  -moz-transform: rotate(90deg) translateX(-10px);
-  -o-transform: rotate(90deg) translateX(-10px);
-  -ms-transform: rotate(90deg) translateX(-10px);
-  transform: rotate(90deg) translateX(-10px);
+  @include transform( rotate(90deg) translateX(-10px));
 }
 
 .menu-toggle.active:hover .line:nth-child(1),
 .menu-toggle.project .line:nth-child(1) {
-  -webkit-transform: translateY(7px);
-  -moz-transform: translateY(7px);
-  -o-transform: translateY(7px);
-  -ms-transform: translateY(7px);
-  transform: translateY(7px);
+  @include transform(translateY(7px));
 }
 .menu-toggle.active:hover .line:nth-child(3),
 .menu-toggle.project .line:nth-child(3) {
-  -webkit-transform: translateY(-7px);
-  -moz-transform: translateY(-7px);
-  -o-transform: translateY(-7px);
-  -ms-transform: translateY(-7px);
-  transform: translateY(-7px);
+  @include transform(translateY(-7px));
 }
 
 .menu-toggle.active:hover .line:nth-child(4),
 .menu-toggle.project .line:nth-child(4) {
-  -webkit-transform: rotate(0deg) translateY(-10px);
-  -moz-transform: rotate(0deg) translateY(-10px);
-  -o-transform: rotate(0deg) translateY(-10px);
-  -ms-transform: rotate(0deg) translateY(-10px);
-  transform: rotate(0deg) translateY(-10px);
+  @include transform( rotate(0deg) translateY(-10px));
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
 }
 
-.isMobile .menu-toggle:hover .line:nth-child(1),
-.isMobile .menu-toggle:hover .line:nth-child(3),
-.isMobile .menu-toggle:hover .line:nth-child(4){
+[data-mobile="true"] .menu-toggle:hover .line:nth-child(1),
+[data-mobile="true"] .menu-toggle:hover .line:nth-child(3),
+[data-mobile="true"] .menu-toggle:hover .line:nth-child(4){
   -webkit-transition-delay: 0ms;
   transition-delay: 0ms;
-  -webkit-transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  -o-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  transform: translateY(0px);
-
+  @include transform(translateY(0px));
 }
-.isMobile .menu-toggle:hover .line:nth-child(4) {
+[data-mobile="true"] .menu-toggle:hover .line:nth-child(4) {
   opacity:0;
 }

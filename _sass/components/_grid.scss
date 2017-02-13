@@ -450,3 +450,16 @@
     padding: 0px;
   }
 }
+
+[data-mobile="true"]{
+  .grid-container .grid-filters-scroll .filter.active{
+    &::after{
+      background-color: $blue;
+    }
+    &:hover{
+      &::after{
+        opacity:0.9;
+      }
+    }
+  }
+}
