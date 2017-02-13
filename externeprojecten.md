@@ -12,8 +12,8 @@ title   : "Externe projecten"
     </div>
     <div class="row flex externe-details">
         <div class="externe-section flex-child flex column wrap">
-            <img class="externe-section-image" src="assets/img/projects/externe/Noordzeevis.png">
-            <img class="externe-section-image" src="assets/img/projects/externe/CharliesBagel.png">
+            <img class="externe-section-image" src="/assets/img/projects/externe/Noordzeevis.png">
+            <img class="externe-section-image" src="/assets/img/projects/externe/CharliesBagel.png">
         </div>
         <div class="externe-section flex-child stretch">
             <h2 class="ahs__title flex column black lg">Hoe gaan <br/>we te werk</h2>
