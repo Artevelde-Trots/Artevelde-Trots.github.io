@@ -95,6 +95,7 @@
   overflow: hidden;
   border: none;
   background-color: $blue;
+  display: none;
   .cube-row {
     height: 8px;
     width: 25px;
@@ -114,7 +115,11 @@
       @include transition( background-color 250ms ease-in-out 300ms, height 100ms ease-in-out 400ms, width 100ms ease-in-out  400ms,margin 100ms ease-in-out 400ms);
     }
   }
+  &.visible {
+    display: block;
+  }
   &.hover {
+    padding: 17px 17px 17px 22px;
     @include transition(background 250ms ease-in, opacity 250ms ease-in, padding 300ms ease-in-out 200ms);
     .cube-row:nth-child(1) {
       @include animation(rowToArrow1 0.5s ease-in-out);
@@ -130,7 +135,7 @@
       @include fill-mode(forwards);
     }
     .cube{
-      height: 1px;
+      height: 3px;
       width: 6px;
       margin: 0px;
       @include transition(background-color 250ms ease-in-out, height 100ms ease-in-out, width 100ms ease-in-out, margin 100ms ease-in-out);
@@ -141,10 +146,6 @@
     opacity: 1;
     visibility: visible;
   }
-}
-
-.overview-toggle.hover {
-  @include transition(background 250ms ease-in, opacity 250ms ease-in, padding 300ms ease-in-out 200ms);
 }
 
 .overview-toggle.offhover .cube-row:nth-child(1) {
@@ -193,7 +194,7 @@
   }
   60% {
     background-color: white;
-    height:4px;
+    height:3px;
     @include translate(0, -4px);
   }
   100% {
@@ -207,17 +208,17 @@
 
 @include keyframes(arrowToRow1) {
   0% {
-    height:1px;
+    height:3px;
     width:14px;
     @include transform(rotate(-45deg) translateY(0px));
   }
   20% {
-    height:1px;
+    height:3px;
     width:25px;
     @include translate(0, 5px)
   }
   40% {
-    height:1px;
+    height:3px;
     width:25px;
     @include translate(0, 5px)
   }
@@ -230,17 +231,17 @@
 
 @include keyframes(arrowToRow3){
   0% {
-    height:1px;
+    height:3px;
     width:14px;
     @include transform(rotate(45deg) translateY(0px));
   }
   20% {
-    height:1px;
+    height:3px;
     width:25px;
     @include translate(0, -4px);
   }
   40% {
-    height:1px;
+    height:3px;
     width:25px;
     @include translate(0, -4px);
   }
