@@ -100,6 +100,12 @@
   animation: #{$str};
 }
 
+@mixin fill-mode ($fillmode) {
+  -o-animation-fill-mode: $fillmode;
+  -moz-animation-fill-mode: $fillmode;
+  -webkit-animation-fill-mode: $fillmode;
+  animation-fill-mode: $fillmode;
+}
 /// Transition Generator
 /// @access public
 /// @param {String} $args - Transition arguments string
@@ -155,4 +161,19 @@
   -ms-transform-origin: $origin;
   -webkit-transform-origin: $origin;
   transform-origin: $origin;
+}
+//transform style
+@mixin transform-style ($style) {
+  -moz-transform-style: $style;
+  -ms-transform-style: $style;
+  -o-transform-style: $style;
+  -webkit-transform-style: $style;
+  transform-style: $style;
+}
+@mixin backface-visibility ($visibility) {
+  -webkit-backface-visibility: $visibility;
+  -moz-backface-visibility: $visibility;
+  -ms-backface-visibility: $visibility;
+  -o-backface-visibility: $visibility;
+  backface-visibility: $visibility;
 }
