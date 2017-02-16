@@ -14,44 +14,51 @@
 </header>
 <nav class="navigation ">
     <div class="nav-bg"></div>
-    <div class="nav-container">
+    <div class="nav-container flex centered">
         <div class="nav-container-sub">
+            <!-- For when menu gets more items
+
             <div class="nav-block">
-                <div class="small-block flex maxed">
+                <div class="big-block flex maxed">
                     <a class='{% if page.url == "/" %}active{% endif %}'  href="/">Home</a>
                     <a class='{% if page.url == "/contact/" %}active{% endif %}' href="/contact">Contact</a>
                 </div>
             </div>
+            -->
             <div class="nav-block">
-                <a class="big-block">
-                    <h3 class="ahs__title nav-title lg" data-letters="CMO">CMO</h3>
-                    <h5 class="ahs__title lg nav-subtitle" data-letters="Story">
-                        Story
-                    </h5>
+                <a class='big-block {% if page.url == "/" %}active{% endif %}' href="/">
+                    <h3 class="ahs__title nav-title md  black" data-letters="Portfolio">
+                        Portfolio
+                        <span data-letters="Portfolio"></span>
+                        <span data-letters="Portfolio"></span>
+                    </h3>
                 </a>
             </div>
             <div class="nav-block">
                 <a class="big-block">
-                    <h3 class="ahs__title nav-title lg" data-letters="MMP">MMP</h3>
-                    <h5 class="ahs__title lg nav-subtitle" data-letters="Story">
-                        Story
-                    </h5>
-                </a>
-            </div>
-            <div class="nav-block">
-                <a class="big-block">
-                    <h3 class="ahs__title nav-title lg" data-letters="GMB">GMB</h3>
-                    <h5 class="ahs__title lg nav-subtitle" data-letters="Story">
-                        Story
-                    </h5>
+                    <h3 class="ahs__title nav-title md  black" data-letters="CMO Story">
+                        CMO Story
+                        <span data-letters="CMO Story"></span>
+                        <span data-letters="CMO Story"></span>
+                    </h3>
                 </a>
             </div>
             <div class="nav-block">
                 <a class='big-block {% if page.url == "/externeprojecten/" %}active{% endif %}' href="/externeprojecten">
-                    <h3 class="ahs__title nav-title lg" data-letters="Externe">Externe</h3>
-                    <h5 class="ahs__title lg nav-subtitle" data-letters="Projecten">
-                        Projecten
-                    </h5>
+                    <h3 class="ahs__title nav-title md black" data-letters="Externe Projecten">
+                        Externe Projecten
+                        <span data-letters="Externe Projecten"></span>
+                        <span data-letters="Externe Projecten"></span>
+                    </h3>
+                </a>
+            </div>
+            <div class="nav-block">
+                <a class='big-block {% if page.url == "/contact/" %}active{% endif %}' href="/contact">
+                    <h3 class="ahs__title nav-title md black" data-letters="Contact">
+                        Contact
+                        <span data-letters="Contact"></span>
+                        <span data-letters="Contact"></span>
+                    </h3>
                 </a>
             </div>
         </div>
