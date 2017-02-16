@@ -30,11 +30,16 @@ ready(function(){
                 gridIcon.addEventListener("mouseover", function () {
                     gridIcon.classList.remove("offhover");
                     gridIcon.classList.add("hover");
+                    gridIcon.classList.add("link");
                 });
                 gridIcon.addEventListener("mouseleave", function () {
                     gridIcon.classList.remove("hover");
+                    gridIcon.classList.remove("link");
                     gridIcon.classList.add("offhover");
                 });
+                gridIcon.addEventListener("click", function () {
+                    window.history.back();
+                })
             }
         },
         "nav":{
