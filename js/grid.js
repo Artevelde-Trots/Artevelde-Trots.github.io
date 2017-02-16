@@ -14,11 +14,16 @@ if(document.querySelector('.grid')){
         "init":function() {
             Grid.bindEventListeners();
             document.querySelector('.footer').classList.add('grid-footer')
+            document.querySelector('body').onscroll = function(){
+                Grid.scroll();
+            }
+            Grid.scroll();
         },
         "open":function(target){
 
         },
         "bindEventListeners":function(){
+
             //Filters
             var filters = document.querySelectorAll('.grid-filters-wrapper .filter');
             [].forEach.call(filters, function(filter) {
@@ -33,7 +38,7 @@ if(document.querySelector('.grid')){
                     Grid.filter(this.dataset.filter);
                 });
             });
-
+            /*
             var items = document.querySelectorAll('.grid .grid-item');
             [].forEach.call(items, function(item) {
                 imagesLoaded(item, function(){
@@ -41,6 +46,7 @@ if(document.querySelector('.grid')){
                     item.classList.add('loaded');
                 });
             });
+            */
         },
         "filter":function(type){
             Grid.currentFilter = type;
@@ -53,6 +59,28 @@ if(document.querySelector('.grid')){
             });
 
             Grid.msnry.layout();
+        },
+        'scroll':function(){
+            var items = document.querySelectorAll('.grid .grid-item:not(.loaded)');
+            [].forEach.call(items, function(item) {
+                var temp = isInViewport(item);
+                if(temp){
+                    var images = item.querySelectorAll(".image");
+                    [].forEach.call(images, function(image) {
+                        //console.log("Tag Name",image.tagName);
+                        if(image.tagName === 'IMG'){
+                            image.src = image.dataset.src;
+                        } else {
+                            image.style = "background-image: url("+image.dataset.src+");"
+                        }
+                        imagesLoaded(image, function(){
+                            //console.log('Current Item',item);
+                            item.classList.add('loaded');
+                        });
+                    });
+                }
+            });
+
         }
     }
     Grid.init();
