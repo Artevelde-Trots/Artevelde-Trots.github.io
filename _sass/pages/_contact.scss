@@ -9,29 +9,19 @@
 }
 .contact {
   &-container {
-    padding: 75px 75px 0;
+    padding: 0px 75px 0;
   }
   &-section {
-    padding: 30px 50px;
+    padding: 0px;
     width: 50%;
     a {
       color: inherit;
     }
-    &:first-of-type {
-      background-image: url(../../assets/img/background/location.png);
-      background-repeat: no-repeat;
-      background-size: 120px;
-    }
-    &:nth-of-type(2) {
-      background-image: url(../../assets/img/background/message.png);
-      background-repeat: no-repeat;
-      background-size: 120px;
-    }
   }
   &-details {
-    font-size: 1.5em;
+    font-size: 0.9em;
     line-height: 1.5em;
-    h3 {
+    h3.ahs__title {
       font-size: 1.2em;
     }
     a {
