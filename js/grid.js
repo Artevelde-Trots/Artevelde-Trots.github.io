@@ -14,10 +14,10 @@ if(document.querySelector('.grid')){
         "init":function() {
             Grid.bindEventListeners();
             document.querySelector('.footer').classList.add('grid-footer')
-            document.querySelector('body').onscroll = function(){
-                Grid.scroll();
-            }
             Grid.scroll();
+            $( window ).scroll(function() {
+                Grid.scroll();
+            });
         },
         "open":function(target){
 

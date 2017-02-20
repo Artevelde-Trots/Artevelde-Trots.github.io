@@ -13,9 +13,34 @@ ready(function(){
             this.bindEventListeners();
             App.nav.init();
             App.sidebar.init();
+            App.header.init();
         },
         "bindEventListeners":function(){
 
+        },
+        "header": {
+            "state":false,
+            "init":function(){
+                if(document.querySelector('.overview-toggle')){
+                    App.header.bindEventListeners();
+                }
+            },
+            "bindEventListeners":function(){
+                var gridIcon = document.querySelector('.overview-toggle');
+                gridIcon.addEventListener("mouseover", function () {
+                    gridIcon.classList.remove("offhover");
+                    gridIcon.classList.add("hover");
+                    gridIcon.classList.add("link");
+                });
+                gridIcon.addEventListener("mouseleave", function () {
+                    gridIcon.classList.remove("hover");
+                    gridIcon.classList.remove("link");
+                    gridIcon.classList.add("offhover");
+                });
+                gridIcon.addEventListener("click", function () {
+                    window.history.back();
+                })
+            }
         },
         "nav":{
             "state":false,
@@ -31,7 +56,6 @@ ready(function(){
                     var self = this;
                     App.nav.toggleNavigation();
                 });
-
             },
             'toggleNavigation':function(){
                 var icon = document.querySelector('.menu-toggle.menu');
@@ -48,7 +72,7 @@ ready(function(){
                     navigation.classList.add("active");
                     App.nav.state = true;
                 }
-            }
+            },
         },
         "sidebar":{
             "state":false,
