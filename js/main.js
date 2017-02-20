@@ -374,16 +374,17 @@ ready(function(){
                     var self = this;
                     App.intro.hide();
                 });
+
                 setTimeout(function(){
                     App.intro.hide();
-                },20000);
+                },60000);
             },
             'hide':function(){
                 document.querySelector('.intro-page').classList.add("hide");
                 document.querySelector('.wrapper').classList.add("popin");
                 setTimeout(function(){
                     document.querySelector('.wrapper').classList.remove("intro-animating");
-                },800);
+                },410);
             }
 
         }

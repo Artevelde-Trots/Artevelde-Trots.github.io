@@ -21,7 +21,7 @@
     font-size: 0.1em;
     color:white;
     position: absolute;
-    bottom:12px;
+    bottom:5%;
     left:0;
     right:0;
     h4 {
@@ -30,40 +30,43 @@
       font-weight: 400;
       top:0;
       @include opacity(0);
-      @include animation(settle-in 1s 3s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      @include animation(settle-in 0.4s 2s ease-out);
       @include fill-mode(forwards);
     }
   }
   &.hide{
     @include animation(scaleDown .7s ease both);
   }
+  video {
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 $colors: $green,
 $primary,
-$pink;
+$pink,
+$blue;
 
 $max: 3;
-$stroke-step: 7%;
+$stroke-step: 25%;
 .text-copy {
   fill: none;
-  stroke: $blue;
-  stroke-dasharray: $stroke-step $stroke-step * $max;
+  stroke: white;
   stroke-width: 3px;
+  stroke-dasharray: 2000;
+  stroke-dashoffset: 2000;
   @include animation(stroke-offset 4s cubic-bezier(0.860, 0.000, 0.070, 1.000));
-  @for $item from 1 through $max {
-    $stroke-color: nth($colors, $item);
-    &:nth-child(#{$item}) {
-      stroke: $stroke-color;
-      stroke-dashoffset: $stroke-step * $item;
-    }
-  }
+  @include fill-mode(forwards);
 }
 
 @include keyframes(stroke-offset) {
-  0% {
-    stroke-dashoffset: $stroke-step * $max;
-    stroke-dasharray: 0 $stroke-step * $max*2.5;
+  to {
+    stroke-dashoffset: 0;
   }
 }
 .intro-animating{
