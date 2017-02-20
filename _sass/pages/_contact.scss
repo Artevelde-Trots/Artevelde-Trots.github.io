@@ -9,7 +9,7 @@
 }
 .contact {
   &-container {
-    padding: 0px 75px 0;
+    padding: 30px 75px 0;
   }
   &-section {
     padding: 0px;
@@ -17,10 +17,67 @@
     a {
       color: inherit;
     }
+    .map-container {
+      height: 320px;
+      padding:0 60px 20px 0;
+      position: relative;
+
+      .map {
+        height: 100%;
+      }
+
+      #gmap {
+        .gm-style-cc {
+          display: none;
+        }
+      }
+      .zoomControls {
+        position: absolute;
+        top: 10px;
+        right: 70px;
+        z-index: 1;
+
+        .zoomControl,
+        &.active .zoomControl:hover {
+          display: block;
+          background-color: $pink;
+          width: 35px;
+          height: 35px;
+          box-sizing: border-box;
+          padding: 16.8px 10.5px;
+          margin: 0 0 3px;
+          @include transition( background-color 200ms ease-in);
+          cursor: pointer;
+          transform-style: preserve-3d;
+          -webkit-backface-visibility: hidden;
+        }
+
+        .zoomControl .line,
+        &.active .zoomControl:hover .line {
+          height: 2px;
+          width: 14px;
+          background-color: #F2F2F2;
+          @include transition( background-color 200ms ease-in,opacity 200ms ease-in,transform 200ms ease-in);
+        }
+
+        #zoomin.zoomControl .line:nth-child(2) {
+          @include transform( rotate(90deg) translateX(-2px));
+        }
+        .zoomControl:hover,
+        &.active .zoomControl {
+          background-color: $primary;
+        }
+      }
+
+
+    }
   }
   &-details {
     font-size: 0.9em;
     line-height: 1.5em;
+    img {
+      width: 100px;
+    }
     h3.ahs__title {
       font-size: 1.2em;
     }
@@ -49,7 +106,7 @@
       min-height: 40px;
       @include transition(all 100ms ease-in-out);
       &.form-textarea {
-        min-height: 150px;
+        min-height: 160px;
         resize: none;
       }
       &:focus {
@@ -62,7 +119,8 @@
           color:black;
         }
         & + .line {
-          height: 4px;
+          height: 1px;
+          background: $dark-grey;
         }
       }
       &-row{
@@ -70,15 +128,15 @@
         padding: 10px 0;
         height:60px;
         &.form-textarea-row {
-          height: auto;
+          height: 180px;
         }
         @include transition(all 100ms ease-in-out);
         .line {
           position: absolute;
           bottom:0;
           width: 100%;
-          height:2px;
-          background: $dark-grey;
+          height:1px;
+          background: $mid-grey;
           @include transition(all 100ms ease-in-out);
         }
 
@@ -95,6 +153,7 @@
   .contact {
     &-page .contact-container {
       height: auto;
+      padding:60px 75px;
     }
     &-row {
       -webkit-flex-direction: column;
@@ -102,8 +161,15 @@
       flex-direction: column;
     }
     &-section {
-      padding: 10px 50px 30px;
+      padding: 10px 0px 30px;
       width: 100%;
+      .map-container {
+        height: 460px;
+        padding: 0 0 60px 0;
+        .zoomControls {
+          right:10px;
+        }
+      }
       a {
         color: inherit;
       }

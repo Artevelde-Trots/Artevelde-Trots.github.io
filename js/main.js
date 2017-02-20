@@ -13,6 +13,7 @@ ready(function(){
             this.bindEventListeners();
             App.nav.init();
             App.sidebar.init();
+            App.contact.init();
             App.header.init();
         },
         "bindEventListeners":function(){
@@ -136,6 +137,225 @@ ready(function(){
                         shareBox.addEventListener("mouseenter", function () {
                             clearTimeout(timout);
                         });
+                    });
+                }
+            }
+        },
+        'contact': {
+            "init":function(){
+                if(document.querySelector('.contact-form')){
+                    App.contact.bindEventListeners();
+                }
+            },
+            "bindEventListeners":function(){
+                if(document.querySelector('#gmap')){
+                    App.contact.map.load();
+                }
+            },
+            "map":{
+                "initialised":false,
+                "initGoogleMaps":function(){
+                    this.initialised = true;
+                    App.contact.map.init();
+                },
+                "init":function(){
+                    var myLatlng = new google.maps.LatLng(51.0873012,3.667899); // Add the coordinates
+
+                    var mapOptions = {
+                        zoom:15,
+                        center: new google.maps.LatLng(51.0873012,3.667899),
+                        panControl: false,
+                        mapTypeControl: false,
+                        scaleControl: false,
+                        streetViewControl: false,
+                        overviewMapControl: false,
+                        zoomControl: false,
+                        styles: [
+                            {
+                                "featureType": "all",
+                                "elementType": "labels.text.fill",
+                                "stylers": [
+                                    {
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "color": "#1a1a1a"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "all",
+                                "elementType": "labels.text.stroke",
+                                "stylers": [
+                                    {
+                                        "visibility": "on"
+                                    },
+                                    {
+                                        "weight": 0.9
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "all",
+                                "elementType": "labels.icon",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#f2f2f2"
+                                    },
+                                    {
+                                        "weight": 0.7
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "administrative",
+                                "elementType": "geometry.fill",
+                                "stylers": [
+                                    {
+                                        "visibility": "on"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "landscape",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#f2f2f2"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "poi",
+                                "elementType": "labels",
+                                "stylers": [
+                                    {
+                                        "visibility": "off"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.highway",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#ee9900"
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.arterial",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#00aacc"
+                                    },
+                                    {
+                                        "lightness": -20
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "road.local",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#00aacc"
+                                    },
+                                    {
+                                        "lightness": -17
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "transit",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#bbcc00"
+                                    },
+                                    {
+                                        "lightness": -10
+                                    }
+                                ]
+                            },
+                            {
+                                "featureType": "water",
+                                "elementType": "geometry",
+                                "stylers": [
+                                    {
+                                        "color": "#00aacc"
+                                    }
+                                ]
+                            }
+                        ],
+                        scrollwheel: false
+                    }
+                    App.contact.map._map = new google.maps.Map(document.querySelector('#gmap'), mapOptions);
+                    google.maps.visualRefresh = true;
+                    google.maps.event.trigger(App.contact.map._map, 'resize');
+                    App.contact.map._geoLocationMarker = new google.maps.Marker({
+                        position: myLatlng,
+                        icon: '/assets/img/logo/marker.png',
+                        title: 'Arteveldehogeschool Campus Mariakerke.',
+                        size: new google.maps.Size(35, 32),
+                    });
+                    var contentString = '<div class="map-marker-info">' +
+                        '<h4>Arteveldehogeschool Campus Mariakerke</h4>'+
+                        '<p>Industrieweg 232 - 9030 Gent<br>Belgie '+
+                        '<br>T. +32(0)9 234 86 00'+
+                        '</p>'+
+                        ''+
+                        '</div>';
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString
+                    });
+                    google.maps.event.addListener(App.contact.map._geoLocationMarker, 'click', function() {
+                        infowindow.open(App.contact.map._map,App.contact.map._geoLocationMarker);
+                    });
+                    App.contact.map._geoLocationMarker.setMap(App.contact.map._map);
+                    window.onresize = function(event) {
+                        App.contact.map.resize(myLatlng);
+                    }
+                    App.contact.map.controlBind();
+
+                },
+                "load":function(){
+                    var key = 'AIzaSyBdn8xMIp4qHAWal3I2VZ9QfxmS4UvWCGg'; // Use your own Key!
+                    //Load Google Maps Async
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp'
+                        + '&key=' + key
+                        + '&callback=App.contact.map.initGoogleMaps';
+                    document.body.appendChild(script);
+
+                },
+                'resize': function(myLatlng){
+                    google.maps.event.trigger(App.contact.map._map, 'resize');
+                    App.contact.map._map.setCenter(myLatlng);
+                },
+                'controlBind':function(){
+                    google.maps.event.addDomListener(zoomout, 'click', function() {
+                        var currentZoomLevel = App.contact.map._map.getZoom();
+                        if(currentZoomLevel != 0){
+                            App.contact.map._map.setZoom(currentZoomLevel - 1);}
+                    });
+
+                    google.maps.event.addDomListener(zoomin, 'click', function() {
+                        var currentZoomLevel = App.contact.map._map.getZoom();
+                        if(currentZoomLevel != 21){
+                            App.contact.map._map.setZoom(currentZoomLevel + 1);}
                     });
                 }
             }
