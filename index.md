@@ -2,7 +2,6 @@
 layout  : default
 title   : "Time is ticking."
 ---
-
 <div class="container flex column maxed home">
     <div class="row flex column centered justified-c">
         <h1 class="ahs__title black xl padded-top-xxl padded-bottom-xl">

@@ -5,7 +5,7 @@ title   : "Externe projecten"
 <div class="externe container flex column maxed ">
     <h1 class="ahs__title padded-top-xxl blue xl padded-bottom-xl black">
         Externe Projecten 
-        <span class="ahs__title flex column black xl">We work for you</span>
+        <span class="ahs__title flex column black lg">We work for you</span>
     </h1>
     <div class="ahs__paragraph">
         <p>Externe projecten zijn werken die we maken voor bedrijven. Als een echte ontwerpstudio kunnen de bedrijven ons contacteren met hun wensen. Wij vullen deze in zodat u bedrijf een zo uniek mogelijk profiel bekomt. Communicatie over alle mogelijke media is onze specialiteit en het is voor ons een must om u visie waar te maken. </p>

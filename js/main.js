@@ -15,6 +15,7 @@ ready(function(){
             App.sidebar.init();
             App.contact.init();
             App.header.init();
+            App.intro.init();
         },
         "bindEventListeners":function(){
 
@@ -358,7 +359,33 @@ ready(function(){
                             App.contact.map._map.setZoom(currentZoomLevel + 1);}
                     });
                 }
+            },
+        },
+        'intro':{
+            'init':function(){
+                if(document.querySelector('.intro-page')){
+                    App.intro.bindEventListeners();
+                    document.querySelector('.wrapper').classList.add("intro-animating");
+                }
+            },
+            'bindEventListeners':function(){
+                var btn = document.querySelector('.intro-continue-button');
+                btn.addEventListener("click", function () {
+                    var self = this;
+                    App.intro.hide();
+                });
+                setTimeout(function(){
+                    App.intro.hide();
+                },20000);
+            },
+            'hide':function(){
+                document.querySelector('.intro-page').classList.add("hide");
+                document.querySelector('.wrapper').classList.add("popin");
+                setTimeout(function(){
+                    document.querySelector('.wrapper').classList.remove("intro-animating");
+                },800);
             }
+
         }
     };
 

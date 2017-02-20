@@ -1,0 +1,100 @@
+.intro-page {
+  height:100vh;
+  width:100%;
+  position: fixed;
+  z-index:12;
+
+  background: hsl(200, 70, 11);
+  background-size: .12em 100%;
+  font-size: 16em;
+
+  .text--line {
+    font-size: 1em;
+  }
+
+  svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .continue-section {
+    font-size: 0.1em;
+    color:white;
+    position: absolute;
+    bottom:12px;
+    left:0;
+    right:0;
+    h4 {
+      padding: 20px 0;
+      position: relative;
+      font-weight: 400;
+      top:0;
+      @include opacity(0);
+      @include animation(settle-in 1s 3s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      @include fill-mode(forwards);
+    }
+  }
+  &.hide{
+    @include animation(scaleDown .7s ease both);
+  }
+}
+
+$colors: $green,
+$primary,
+$pink;
+
+$max: 3;
+$stroke-step: 7%;
+.text-copy {
+  fill: none;
+  stroke: $blue;
+  stroke-dasharray: $stroke-step $stroke-step * $max;
+  stroke-width: 3px;
+  @include animation(stroke-offset 4s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+  @for $item from 1 through $max {
+    $stroke-color: nth($colors, $item);
+    &:nth-child(#{$item}) {
+      stroke: $stroke-color;
+      stroke-dashoffset: $stroke-step * $item;
+    }
+  }
+}
+
+@include keyframes(stroke-offset) {
+  0% {
+    stroke-dashoffset: $stroke-step * $max;
+    stroke-dasharray: 0 $stroke-step * $max*2.5;
+  }
+}
+.intro-animating{
+  height: 100vh;
+  overflow: hidden;
+  &.popin{
+    z-index: 13;
+    @include animation(moveFromBottom .7s ease both);
+  }
+}
+
+@include keyframes(settle-in) {
+  0% {
+    @include opacity(0);
+    top:-30px;
+  }
+
+  100%{
+    @include opacity(1);
+    top:0;
+  }
+}
+
+@include keyframes(scaleDown) {
+  from { }
+  to { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+
+@include keyframes(moveFromBottom) {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
