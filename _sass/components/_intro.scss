@@ -27,6 +27,7 @@
     h4 {
       padding: 20px 0;
       position: relative;
+      font-size: 100%;
       font-weight: 400;
       top:0;
       @include opacity(0);
@@ -37,13 +38,14 @@
   &.hide{
     @include animation(scaleDown .7s ease both);
   }
+  &.gone{
+    visibility: hidden;
+  }
   video {
     opacity: 0.5;
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    height: 100vh;
   }
 }
 
@@ -58,8 +60,8 @@ $stroke-step: 25%;
   fill: none;
   stroke: white;
   stroke-width: 3px;
-  stroke-dasharray: 2000;
-  stroke-dashoffset: 2000;
+  stroke-dasharray: 200vw;
+  stroke-dashoffset: 200vw;
   @include animation(stroke-offset 4s cubic-bezier(0.860, 0.000, 0.070, 1.000));
   @include fill-mode(forwards);
 }
