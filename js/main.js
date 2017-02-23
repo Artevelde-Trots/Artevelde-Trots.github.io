@@ -151,6 +151,9 @@ ready(function(){
             }
         },
         'contact': {
+            "message":null,
+            "form":null,
+            "statusMessage":null,
             "init":function(){
                 if(document.querySelector('.contact-form')){
                     App.contact.bindEventListeners();
@@ -164,6 +167,15 @@ ready(function(){
                     event.preventDefault();
                     App.contact.send();
                 });
+
+                App.contact.message = new Object();
+                App.contact.message.loading = 'Versturen...';
+                App.contact.message.success = 'Bedankt. Uw bericht is verzonden!';
+                App.contact.message.failure = 'Oeps! Er was een probleem bij het versturen van je bericht!';
+                App.contact.form = document.forms[0];
+
+                App.contact.statusMessage = document.createElement('div');
+                App.contact.statusMessage.className = 'status';
             },
             "send":function(){
                 var button = document.querySelector('.form-btn');
@@ -171,16 +183,40 @@ ready(function(){
                 setTimeout(function(){
                     button.classList.remove("fly-away");
                 },1000);
-                var email = null, subject = null, message = null, valid = true;
 
-                if(valid){
-                    ajax({
-                        url: "https://formspree.io/jensdwul1@student.arteveldehs.be/",
-                        method: "POST",
-                        data: {message: "Test message!"},
-                        dataType: "json"
-                    });
-                }
+
+                // Set up the AJAX request
+                var request = new XMLHttpRequest();
+                request.open('POST', '//formspree.io/jensdwul1.student.arteveldehs.be', true);
+                request.setRequestHeader('accept', 'application/json');
+
+                // Listen for the form being submitted
+                App.contact.form.addEventListener('submit', function(evt) {
+                    evt.preventDefault();
+                    App.contact.form.appendChild(App.contact.statusMessage);
+
+                    // Create a new FormData object passing in the form's key value pairs (that was easy!)
+                    var formData = new FormData(App.contact.form);
+
+                    // Send the formData
+                    request.send(formData);
+
+                    // Watch for changes to request.readyState and update the statusMessage accordingly
+                    request.onreadystatechange = function () {
+                        // <4 =  waiting on response from server
+                        if (request.readyState < 4)
+                            App.contact.statusMessage.innerHTML = App.contact.message.loading;
+                        // 4 = Response from server has been completely loaded.
+                        else if (request.readyState === 4) {
+                            // 200 - 299 = successful
+                            if (request.status == 200 && request.status < 300)
+                                App.contact.statusMessage.innerHTML = App.contact.message.success;
+                            else
+                                App.contact.form.insertAdjacentHTML('beforeend', App.contact.message.failure);
+                        }
+                    }
+                });
+
             },
             "map":{
                 "initialised":false,
