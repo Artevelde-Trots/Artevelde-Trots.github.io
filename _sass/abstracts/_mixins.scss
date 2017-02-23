@@ -100,6 +100,14 @@
   animation: #{$str};
 }
 
+@mixin animation-delay($str) {
+  -webkit-animation-delay: #{$str};
+  -moz-animation-delay: #{$str};
+  -ms-animation-delay: #{$str};
+  -o-animation-delay: #{$str};
+  animation-delay: #{$str};
+}
+
 @mixin fill-mode ($fillmode) {
   -o-animation-fill-mode: $fillmode;
   -moz-animation-fill-mode: $fillmode;

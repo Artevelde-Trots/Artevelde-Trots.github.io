@@ -1,6 +1,6 @@
 ---
 layout  : default
-title   : "Contact us"
+title   : "Contacteer ons"
 ---
 <div class="contact-page">
 {% include components/contact.html %}

@@ -1,28 +1,12 @@
-<div class="container flex column">
-    <div class="row">
+<div class="container flex">
+    <div class="split-page">
         <div class="contact-container flex column justified-c">
-            <h1 class="ahs__title bold lg padded-bottom">Contact us</h1>
-            <div class="contact-row row flex">
+            {% if page.url != "/contact/" %}
+            <h1 class="ahs__title bold lg padded-top padded-bottom">Contacteer ons</h1>
+            {% endif %}
+            <div class="contact-row column flex">
                 <div class="flex-child contact-section">
-                    <div class="contact-header">
-                        <h2 class="contact-title ahs__title sm normal blue">
-                            Grafische en Digitale Media<br>
-                            Arteveldehogeschool
-                        </h2>
-                    </div>
-                    <div class="map-container">
-                        <div class="zoomControls">
-                            <div id="zoomin" class="zoomControl"><div class="line animate-250"></div><div class="line animate-250"></div></div>
-                            <div id="zoomout" class="zoomControl"><div class="line animate-250"></div></div>
-                        </div>
-                        <div class="map" id="gmap">
-
-                        </div>
-                    </div>
                     <div class="contact-details flex">
-                        <div class="split padded-right">
-                            <img src="/assets/img/background/location.png"/>
-                        </div>
                         <div class="split flex-child stretch">
                             <h3 class="ahs__title sm bold">Campus Mariakerke</h3>
                             <span>Industrieweg </span><span>232</span><br>
@@ -34,30 +18,49 @@
                 <div class="flex-child stretch contact-section">
                     <div class="contact-header">
                         <h2 class="contact-title ahs__title sm normal blue">
-                            Mail us at<br>
+                            Mail ons<br>
                             <a href="mailto:info.gdm@arteveldehs.be">info.gdm&#64;arteveldehs.be</a>
                         </h2>
                     </div>
                     <div class="contact-form">
-                        <form id="contact-form" action="#" method="POST" enctype="multipart/form-data">
+                        <form id="contact-form" action="#"
+                              method="POST" enctype="multipart/form-data">
                             <div class="form-item-row">
-                                <input type="email" placeholder="E-mail" class="ahs__title xsm light form-item">
+                                <input name="email" type="email" placeholder="E-mail" class="ahs__title xsm light form-item">
                                 <div class="line"></div>
                             </div>
                             <div class="form-item-row">
-                                <input type="text" placeholder="Subject" class="ahs__title xsm light form-item">
+                                <input name="subject" type="text" placeholder="Onderwerp" class="ahs__title xsm light form-item">
                                 <div class="line"></div>
                             </div>
                             <div class="form-item-row form-textarea-row">
-                                <textarea placeholder="Message" class="ahs__title xsm light form-item form-textarea"></textarea>
+                                <textarea name="message" placeholder="Message" class="ahs__title xsm light form-item form-textarea"></textarea>
                                 <div class="line"></div>
                             </div>
                             <div class="row">
-                                <input class="btn form-btn blue" type="submit" value="Send mail" />
+                                <input type="text" name="_gotcha" style="display:none" />
+                                <button class="btn form-btn round blue" type="submit" value="Verstuur"><i class="fa fa-send"></i></button>
                             </div>
                         </form>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="split-page">
+        <div class="map-container">
+            <div class="zoomControls">
+                <div id="zoomin" class="zoomControl"><div class="line animate-250"></div><div class="line animate-250"></div></div>
+                <div id="zoomout" class="zoomControl"><div class="line animate-250"></div></div>
+            </div>
+            <div class="map" id="gmap">
+
+            </div>
+            <div class="map-colours animate">
+                <div class="map-colour green"></div>
+                <div class="map-colour pink"></div>
+                <div class="map-colour blue"></div>
+                <div class="map-colour orange"></div>
             </div>
         </div>
     </div>

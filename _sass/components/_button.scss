@@ -80,6 +80,16 @@
         @include animation('rotatePulse 1s');
       }
     }
+    &.fly-away,
+    &.fly-away.active,
+    &.fly-away:active {
+      -webkit-pointer-events: none;
+      pointer-events: none;
+      background-color: $light-grey;
+      i{
+        @include animation('flyaway 500ms ease-in-out');
+      }
+    }
   }
 }
 

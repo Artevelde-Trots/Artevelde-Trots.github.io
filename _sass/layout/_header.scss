@@ -28,6 +28,53 @@
   }
 }
 
+.svg-container {
+  position: relative;
+  width:100%;
+}
+.svg-box{
+  height:9vw;
+  max-height: 110px;
+  width: 100%;
+  position: relative;
+  .text--line {
+    font-size: 1em;
+  }
+
+  svg {
+    height: 100%;
+  }
+
+  $max: 3;
+  $stroke-step: 25%;
+  .text-copy {
+    fill: none;
+    stroke:$blue;
+    stroke-width: 1px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  &:nth-child(2){
+    .text-copy {
+      stroke:$text-color;
+    }
+  }
+}
+.wrapper:not(.intro-animating) {
+  .svg-box {
+    .text-copy {
+      @include animation(stroke-offset 2s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      @include fill-mode(forwards);
+    }
+    &:nth-child(2){
+      .text-copy {
+        @include animation(stroke-offset-black 2s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+        @include fill-mode(forwards);
+      }
+    }
+  }
+}
+
 .navigation {
   z-index: 10;
   position: fixed;

@@ -160,6 +160,27 @@ ready(function(){
                 if(document.querySelector('#gmap')){
                     App.contact.map.load();
                 }
+                document.querySelector('.form-btn').addEventListener("click", function (event) {
+                    event.preventDefault();
+                    App.contact.send();
+                });
+            },
+            "send":function(){
+                var button = document.querySelector('.form-btn');
+                button.classList.add("fly-away");
+                setTimeout(function(){
+                    button.classList.remove("fly-away");
+                },1000);
+                var email = null, subject = null, message = null, valid = true;
+
+                if(valid){
+                    ajax({
+                        url: "https://formspree.io/jensdwul1@student.arteveldehs.be/",
+                        method: "POST",
+                        data: {message: "Test message!"},
+                        dataType: "json"
+                    });
+                }
             },
             "map":{
                 "initialised":false,
