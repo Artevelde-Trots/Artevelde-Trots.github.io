@@ -12,6 +12,7 @@
     }
     &-filters {
       position: relative;
+      padding: 0 150px;
       &-wrapper{
         position: relative;
       }
@@ -19,7 +20,9 @@
         cursor:pointer;
         position: relative;
         font-weight: 900;
+        width: 33.3333334%;
         text-align: center;
+        font-weight: 400;
         color: $light-grey;
         @include transition(all 250ms ease-in-out);
         padding: 10px 60px;
@@ -31,72 +34,30 @@
         }
         &:nth-child(1).active ~ .line-marker{
           left:0;
-          width:168.43px;
         }
         &:nth-child(2).active ~ .line-marker{
-          left:168.43px;
-          width:291.84px;
+          left: 33.3333334%;
         }
         &:nth-child(3).active ~ .line-marker{
-          width: 297.19px;
-          left:460.18px;
+          left: 66.6666667%;
         }
         &:nth-child(1):hover ~ .line-marker{
           left:0;
-          width:168.43px;
         }
         &:nth-child(2):hover ~ .line-marker{
-          left:168.43px;
-          width:291.84px;
+          left: 33.3333334%;
         }
         &:nth-child(3):hover ~ .line-marker{
-          width: 297.19px;
-          left:460.18px;
+          left: 66.6666667%;
         }
 
-        @media (max-width: $lg){
-          padding: 10px 20px;
-          &:nth-child(1).active ~ .line-marker{
-            left:0;
-            width:88.34px;
-          }
-          &:nth-child(2).active ~ .line-marker{
-            left:88.34px;
-            width:211.84px;
-          }
-          &:nth-child(3).active ~ .line-marker{
-            width: 217.19px;
-            left:460.18px;
-          }
-          &:nth-child(1):hover ~ .line-marker{
-            left:0;
-            width:88.34px;
-          }
-          &:nth-child(2):hover ~ .line-marker{
-            left:88.34px;
-            width:211.84px;
-          }
-          &:nth-child(3):hover ~ .line-marker{
-            left:300.18px;
-            width: 217.19px;
-          }
-        }
-        @media (max-width: $md){
-          &.active,
-          &:hover {
-            border-bottom:3px solid $blue;
-          }
-        }
-        @media (max-width: $sm){
-          width: 100%;
-        }
 
       }
       .line-marker {
         position: absolute;
         height:3px;
         bottom: 0px;
-        width: 168.43px;
+        width: 33.3333334%;
         background: $blue;
         @include transition(all 250ms ease-in-out);
       }
@@ -104,10 +65,6 @@
         -webkit-justify-content: center;
         -ms-flex-pack: center;
         justify-content: center;
-
-        .line-marker {
-          display: none;
-        }
       }
       @media (max-width: $sm){
         &-wrapper{
@@ -120,15 +77,14 @@
     &-filters-scroll{
       height: 100px;
       width: 100%;
-      padding-left: 40px;
-      padding-right: 40px;
+      padding-left: 150px;
+      padding-right: 150px;
       position: fixed;
       bottom: 0px;
       left: 0;
       z-index: 9;
       background-color: #f4f4f4;
       border-top: 1px solid #ddd;
-
       @media (max-width: $md){
         padding-left: 20px;
         padding-right: 20px;
@@ -141,62 +97,14 @@
 
       .grid-filters-wrapper {
         width: 100%;
-      }
-      .filter {
-        cursor:pointer;
-        position: relative;
-        font-size: 16px;
-        font-weight: 500;
-        text-align: center;
-        color: $light-grey;
-        background: #FCFCFC;
-        width: 33.33334%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-left: 0px solid #ddd;
-        overflow: hidden;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
-        -webkit-font-smoothing: antialiased;
 
-        box-shadow: 0 0 1px transparent;
-        @include transform(perspective(1px) translateZ(0));
-        @include transition(all 250ms ease-in-out);
-        &:first-child {
-          border-left: 1px solid #ddd;
-        }
-        &.active {
-          color: white;
-          background-color: $blue;
-          border: 1px solid $blue;
-          &::after {
-            background-color: white;
-          }
-          &:hover::after {
-            opacity: 0.2;
-          }
-        }
-        &::after {
-          content: "";
+        &::after{
           position: absolute;
-          z-index: -1;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: $blue;
-          opacity:0;
-          border-radius: 100%;
-          @include scale(0.5);
-          @include transition(transform 250ms ease-out,opacity 200ms ease-out);
-        }
-        &:hover {
-          color:white;
-          &::after{
-            opacity: 0.9;
-            @include scale(2);
-            @include transition(transform 250ms ease-out,opacity 250ms ease-out);
-
-          }
+          left:-100px;
+          top:11px;
+          content:"Filter";
+          font-weight: bold;
+          color: $light-grey;
         }
       }
     }
