@@ -4,7 +4,10 @@ title   : "Time is ticking."
 ---
 <div class="container flex column maxed home">
     <div class="row flex column centered justified-c">
-        <div class="svg-container ahs__title black xl padded-top-xxl padded-bottom-xl">
+        <h1 class="ahs__title black xl padded-top-xxl padded-bottom-xl show-edge">
+            <span class="blue">Grafische &amp; Digitale</span> Media
+        </h1>
+        <div class="svg-container ahs__title black xl padded-top-xxl padded-bottom-xl hide-edge">
             <div class="svg-box">
                 <svg viewBox="0 0 900 100">
                     <symbol id="d-text">
@@ -33,6 +36,11 @@ title   : "Time is ticking."
                 De Gentse GDM campus is een broeihaard van grafische creativiteit. Zowel creatieve, technische als commerciële talenten krijgen hier de kans om te schitteren. Het groeiende aanbod aan media vraagt om gespecialiseerde krachten, maar tegelijk visionaire denkers die het totaalplaatje zien. Wij leiden professionals op die thuis zijn in de wereld van print, video, code of marketing.      
             </p>
         </div>
+    </div>
+    <div class="bg">
+        <div class="shapes"></div>
+        <div class="content"></div>
+        <div class="fadeout"></div>
     </div>
 </div>
 {% include components/grid.html %}

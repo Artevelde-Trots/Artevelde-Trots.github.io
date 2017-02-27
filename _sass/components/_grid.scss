@@ -1,8 +1,9 @@
 .grid-container {
   padding: 0px 40px;
   overflow: hidden;
+  z-index: 5;
   .grid {
-    font-size:7vw;
+    font-size:14px;
 
     &:after {
       content: '';
@@ -214,7 +215,7 @@
         }
         &.grid-w-#{$i} {
           width: percentage($self/100);
-          font-size:percentage($self/100);
+          //font-size:percentage($self/100);
         }
       }
 
@@ -263,52 +264,83 @@
           }
         }
         .hover-content {
-          visibility: hidden;
-          opacity: 0;
           position: absolute;
-          top:0;
-          @include scale(0.9);
+          bottom:0;
           @include transition(all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
-
-          height: 100%;
+          text-align: left;
           width: 100%;
-          padding: 10px;
-          background: rgba(0,0,0,0.9);
-          .hover-title {
-            color:white;
-            font-weight: 900;
+          height: 100%;
+          z-index: 4;
+          .hover-text-content {
+            position: absolute;
+            bottom:0;
+            width: 100%;
+            @include transition(all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
+            text-align: left;
+            padding: 10px 17px;
+            background: rgba(255,255,255,0.7);
+            &::after{
+              content:'';
+              position: absolute;
+              width: 7px;
+              height: 100%;
+              left:0;
+              bottom:0;
+            }
+
+            .hover-title {
+              font-weight: 900;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
+            .hover-subtitle {
+              color: $text-color;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+            }
           }
-          .hover-subtitle {
-          }
+
         }
       }
       &.c-{
         &1 .content {
           color:$primary;
           background: $primary;
-          .hover-content {
+          .hover-text-content {
             color:$primary;
+            &::after{
+              background: $primary;
+            }
           }
         }
         &2 .content {
           color:$blue;
           background: $blue;
-          .hover-content {
+          .hover-text-content {
             color:$blue;
+            &::after{
+              background: $blue;
+            }
           }
         }
         &3 .content {
           color:$pink;
           background: $pink;
-          .hover-content {
+          .hover-text-content {
             color:$pink;
+            &::after{
+              background: $pink;
+            }
           }
         }
         &4 .content {
           color:$green;
           background: $green;
-          .hover-content {
+          .hover-text-content {
             color:$green;
+            &::after{
+              background: $green;
+            }
           }
         }
       }
@@ -350,7 +382,7 @@
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
-            font-size:percentage($self/100);
+            //font-size:percentage($self/100);
           }
         }
       }
@@ -368,7 +400,7 @@
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
-            font-size:percentage($self/100);
+            //font-size:percentage($self/100);
           }
         }
       }
@@ -386,7 +418,7 @@
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
-            font-size:percentage($self/100);
+            //font-size:percentage($self/100);
           }
         }
       }
@@ -404,7 +436,7 @@
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
-            font-size:percentage($self/100);
+            //font-size:percentage($self/100);
           }
         }
       }
@@ -421,7 +453,7 @@
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
-            font-size:percentage($self/100);
+            //font-size:percentage($self/100);
           }
         }
         &.grid-w-3 {
@@ -444,7 +476,7 @@
       &-item {
         &.grid-w-1 {
           width: 100%;
-          font-size:100%;
+          //font-size:100%;
           @for $i from 1 through 3 {
             $self: 100 * $i;
             &.grid-h-#{$i} {
@@ -454,7 +486,7 @@
         }
         &.grid-w-2 {
           width: 100%;
-          font-size:100%;
+          //font-size:100%;
           @for $i from 1 through 3 {
             $self: 50 * $i;
             &.grid-h-#{$i} {
