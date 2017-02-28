@@ -18,11 +18,14 @@
                 <div data-src="/assets/img/projects/{{ project.thumbnail.url }}" class="image up"></div>
                 <div data-src="/assets/img/projects/{{ project.thumbnail.url }}" class="image down"></div>
                 <a href="{{ project.url }}" class="hover-content flex justified-end column">
-                    <div class="hover-text-content">
-                        <h3 class="hover-title">{{ project.title }}</h3>
-                        {% for member in project.members limit:1 %}
-                            <h4 class="hover-subtitle">{{ member.name }}</h4>
-                        {% endfor %}
+                    <div class="hover-content-wrapper flex">
+                        <div class="hover-text-content">
+                            {% for member in project.members limit:1 %}
+                            <h4 class="hover-title">{{ member.name }}</h4>
+                            {% endfor %}
+                            <h5 class="hover-subtitle">{{ project.title }}</h5>
+                        </div>
+                        <div class="hover-text-filler flex-child stretch"></div>
                     </div>
                 </a>
             </div>
