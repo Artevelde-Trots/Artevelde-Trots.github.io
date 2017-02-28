@@ -37,11 +37,6 @@ title   : "Time is ticking."
             </p>
         </div>
     </div>
-    <div class="bg">
-        <div class="shapes sh1"></div>
-        <div class="shapes sh2"></div>
-        <div class="content"></div>
-        <div class="fadeout"></div>
-    </div>
+    {% include components/bg.html %}
 </div>
 {% include components/grid.html %}

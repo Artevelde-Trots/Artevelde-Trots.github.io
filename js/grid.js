@@ -18,26 +18,6 @@ if(document.querySelector('.grid')){
             $( window ).scroll(function() {
                 Grid.scroll();
             });
-            var timeout = null;
-            $("body").mousemove(function(e){
-                Grid.animateShapes(e);
-            });
-        },
-        "animateShapes":function(e){
-
-            var movementStrength = 20;
-            var height = movementStrength / $(window).height();
-            var width = movementStrength / $(window).width();
-
-            var pageX = e.pageX - ($(window).width() / 4);
-            var pageY = e.pageY - ($(window).height() / 4);
-            var newvalueX = width * pageX * -1 + movementStrength;
-            var newvalueY = height * pageY * -1 + movementStrength;
-            var newvalue2X = width * pageX * 1 - movementStrength;
-            var newvalue2Y = height * pageY * 1 - movementStrength;
-            $('.sh1').css("background-position", newvalueX+"px     "+newvalueY+"px");
-            $('.sh2').css("background-position", newvalue2X+"px     "+newvalue2Y+"px");
-
         },
         "open":function(target){
 
