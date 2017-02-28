@@ -2,6 +2,7 @@
   padding: 0px 40px;
   overflow: hidden;
   z-index: 5;
+  background: white;
   .grid {
     font-size:14px;
 
@@ -23,10 +24,10 @@
         width: 33.3333334%;
         text-align: center;
         font-weight: 400;
-        color: #AAAAAA;
+        color: #BBBBBB;
         @include transition(all 250ms ease-in-out);
         padding: 10px 60px;
-        border-bottom:3px solid #AAAAAA;
+        border-bottom:3px solid #BBBBBB;
         &.active,
         &:hover {
           color: $blue;
@@ -104,7 +105,7 @@
           top:11px;
           content:"Filter";
           font-weight: bold;
-          color: #AAAAAA;
+          color: #BBBBBB;
         }
       }
     }
