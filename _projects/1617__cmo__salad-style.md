@@ -1,5 +1,6 @@
 ---
-title: Dikke BMW
+title: A salad is not a meal
+slug: salad
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 type: "intern"
 members:
@@ -8,11 +9,11 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "bmw/thumb.png"
+    url: "salad-style/thumb.png"
     alt: ""
     height: 1
-    width: 2
-    color: 2
+    width: 1
+    color: 1
 images:
     - url: "fb-banner/1.gif"
       alt: "Started with an idea, worked out a sketch and digitalized it."
@@ -22,5 +23,5 @@ images:
       alt: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
     - url: "fb-banner/4.gif"
 created: 20/01/2017
-order: 2
+order: 5
 ---

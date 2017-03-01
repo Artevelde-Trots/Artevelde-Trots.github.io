@@ -1,16 +1,17 @@
 ---
-title: Rockriders
+title: Release the Kraken
+slug: kraken
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
-type: "extern"
+type: "intern"
 members:
     - name: "Jonas Dermul"
       direction: "Cross-Media Ontwerp"
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "rockriders/thumb.png"
+    url: "kraken/thumb.png"
     alt: ""
-    height: 1
+    height: 2
     width: 1
     color: 3
 images:
@@ -22,5 +23,5 @@ images:
       alt: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
     - url: "fb-banner/4.gif"
 created: 20/01/2017
-order: 3
+order: 7
 ---

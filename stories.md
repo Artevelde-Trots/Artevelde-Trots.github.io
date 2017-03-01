@@ -2,11 +2,38 @@
 layout  : default
 title   : "GDM Stories"
 ---
-<div class="externe container flex column maxed ">
+<div class="container flex column">
     {% include components/bg.html %}
-    <h1 class="ahs__title padded-top-xxl blue xl padded-bottom-xl black">
-        GDM Stories
-        <span class="ahs__title flex column black lg">Experience us</span>
-    </h1>
+    <div class="externe container flex column maxed ">
+        <h1 class="ahs__title padded-top-xxl blue xl padded-bottom-xl black show-edge">
+            GDM Stories
+            <span class="ahs__title flex column black lg">Experience us</span>
+        </h1>
+        <div class="svg-container ahs__title black xl padded-top-xxl padded-bottom-xl hide-edge">
+                <div class="svg-box">
+                    <svg viewBox="0 0 900 100">
+                        <symbol id="d-text">
+                            <text text-anchor="left" x="0" y="72%" class="text--line">GDM Stories</text>
+                        </symbol>
+                        <g class="g-ants">
+                            <use xlink:href="#d-text"
+                                 class="text-copy"></use>
+                        </g>
+                    </svg>
+                </div>
+                <div class="svg-box">
+                    <svg viewBox="0 0 750 110">
+                        <symbol id="m-text">
+                            <text text-anchor="left" x="0" y="72%" class="text--line">Experience us</text>
+                        </symbol>
+                        <g class="g-ants">
+                            <use xlink:href="#m-text"
+                                 class="text-copy"></use>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+    </div>
+    {% include components/stories.html %}
 </div>
 

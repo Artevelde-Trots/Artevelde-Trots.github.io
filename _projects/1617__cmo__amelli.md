@@ -1,5 +1,6 @@
 ---
 title: Melk Campagne
+slug: milk
 description: De opdracht hield in dat er een campagne
              moest gebouwd worden rond een Melkmerk.
              Dit merk moesten we vanaf nul

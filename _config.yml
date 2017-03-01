@@ -36,7 +36,12 @@ permalink: pretty
 collections:
   projects:
     output: true
-    permalink: /project/:title/
+    permalink: /project/:slug/
+  stories:
+    output: false
+  news:
+    output: true
+    permalink: /news/:slug/
 defaults:
     - scope:
         path: ""

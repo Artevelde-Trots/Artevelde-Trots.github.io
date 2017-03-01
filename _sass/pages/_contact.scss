@@ -70,6 +70,17 @@
       padding:0;
       min-height: 40px;
       @include transition(all 100ms ease-in-out);
+      &.error {
+        &::-webkit-input-placeholder,
+        &:-moz-placeholder,
+        &::-moz-placeholder,
+        &:-ms-input-placeholder {
+          color:$pink;
+        }
+        & ~ .line{
+          background: $pink;
+        }
+      }
       &.form-textarea {
         min-height: 160px;
         resize: none;

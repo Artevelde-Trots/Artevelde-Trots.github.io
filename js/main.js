@@ -170,7 +170,20 @@ ready(function(){
                     event.preventDefault();
                     App.contact.send();
                 });
-
+                document.onkeydown = function (e) {
+                    e = e || window.event;
+                    switch (e.which || e.keyCode) {
+                        case 13 : //Your Code Here (13 is ascii code for 'ENTER')
+                            App.contact.send();
+                            break;
+                    }
+                }
+                $('.form-item').each(function(){
+                    var self = $(this);
+                    self.on("focusout", function() {
+                        self.removeClass('error');
+                    });
+                });
                 App.contact.message = new Object();
                 App.contact.message.loading = 'Versturen...';
                 App.contact.message.success = 'Bedankt. Uw bericht is verzonden!';
@@ -186,40 +199,39 @@ ready(function(){
                 setTimeout(function(){
                     button.classList.remove("fly-away");
                 },1000);
+                var error = false;
+                var subject = $('.contact-form  #contact-subject').val(),
+                    vmail = $('.contact-form  #contact-mail').val(),
+                    message = $('.contact-form  #contact-message').val();
 
+                if(!(vmail !== 'undefined' && vmail.length > 0 && vmail !== $('.contact-form #contact-mail').attr('placeholder'))) { $('.contact-form #contact-mail').addClass('error'); error = true; }
+                if(!(subject !== 'undefined' && subject.length > 0 && subject !== $('.contact-form #contact-subject').attr('placeholder'))) { $('.contact-form #contact-subject').addClass('error'); error = true; }
+                if(!(message !== 'undefined' && subject.length > 0 && subject !== $('.contact-form #contact-message').attr('placeholder'))) { $('.contact-form #contact-message').addClass('error'); error = true; }
+                if(!isValidEmailAddress(vmail)) { $('.contact-form #contact-mail').addClass('error'); error = true; }
 
-                // Set up the AJAX request
-                var request = new XMLHttpRequest();
-                request.open('POST', '//formspree.io/jensdwul1.student.arteveldehs.be', true);
-                request.setRequestHeader('accept', 'application/json');
+                if(!error){
 
-                // Listen for the form being submitted
-                App.contact.form.addEventListener('submit', function(evt) {
-                    evt.preventDefault();
-                    App.contact.form.appendChild(App.contact.statusMessage);
-
-                    // Create a new FormData object passing in the form's key value pairs (that was easy!)
-                    var formData = new FormData(App.contact.form);
-
-                    // Send the formData
-                    request.send(formData);
-
-                    // Watch for changes to request.readyState and update the statusMessage accordingly
-                    request.onreadystatechange = function () {
-                        // <4 =  waiting on response from server
-                        if (request.readyState < 4)
+                    $.ajax({
+                        url: '//formspree.io/jensdwul1.student.arteveldehs.be',
+                        method: 'POST',
+                        data: {"message":message},
+                        dataType: 'json',
+                        beforeSend: function() {
                             App.contact.statusMessage.innerHTML = App.contact.message.loading;
-                        // 4 = Response from server has been completely loaded.
-                        else if (request.readyState === 4) {
-                            // 200 - 299 = successful
-                            if (request.status == 200 && request.status < 300)
-                                App.contact.statusMessage.innerHTML = App.contact.message.success;
-                            else
-                                App.contact.form.insertAdjacentHTML('beforeend', App.contact.message.failure);
+                            console.log('Sending');
+                        },
+                        success: function(data) {
+                            console.log('Great success');
+                            App.contact.statusMessage.innerHTML = App.contact.message.success;
+                        },
+                        error: function(err) {
+                            App.contact.form.insertAdjacentHTML('beforeend', App.contact.message.failure);
+                            console.log('Great FAILURE');
                         }
-                    }
-                });
+                    });
+                } else {
 
+                }
             },
             "map":{
                 "initialised":false,
