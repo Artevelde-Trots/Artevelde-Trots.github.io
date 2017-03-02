@@ -314,7 +314,7 @@ ready(function(){
                                         "color": "#f2f2f2"
                                     },
                                     {
-                                        "saturation": "-80"
+                                        "saturation": "10"
                                     }
                                 ]
                             },
@@ -335,7 +335,7 @@ ready(function(){
                                         "color": "#ee9900"
                                     },
                                     {
-                                        "saturation": "-80"
+                                        "saturation": "10"
                                     }
                                 ]
                             },
@@ -362,7 +362,7 @@ ready(function(){
                                         "lightness": 17
                                     },
                                     {
-                                        "saturation": "-80"
+                                        "saturation": "10"
                                     }
                                 ]
                             },
@@ -377,7 +377,7 @@ ready(function(){
                                         "lightness": 10
                                     },
                                     {
-                                        "saturation": "-80"
+                                        "saturation": "10"
                                     }
                                 ]
                             },
@@ -389,7 +389,7 @@ ready(function(){
                                         "color": "#00aacc"
                                     },
                                     {
-                                        "saturation": "-80"
+                                        "saturation": "10"
                                     }
                                 ]
                             }
