@@ -182,3 +182,15 @@ $paddedXXL: $padded * 3;
     }
   }
 }
+.pos {
+  &-rel{
+    position: relative;
+  }
+  &-abs{
+    position: absolute;
+  }
+  &-fix{
+    position: fixed;
+  }
+
+}

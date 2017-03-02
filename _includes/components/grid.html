@@ -12,8 +12,16 @@
         <div class="grid-sizer"></div>
         {% assign projects = site.projects | sort:'order' %}
         {% for project in projects %}
-        <div class="grid-item grid-w-{{project.thumbnail.width}} grid-h-{{project.thumbnail.height}} c-{{project.thumbnail.color}}" data-type="{{ project.type }}">
+        <div id="grid-item-{{project.slug}}" class="grid-item grid-w-{{project.thumbnail.width}} grid-h-{{project.thumbnail.height}} c-{{project.thumbnail.color}}" data-type="{{ project.type }}">
             <div class="content">
+                <style>
+                #grid-item-{{project.slug}} .content{
+                    background-color:#{{project.thumbnail.color}}
+                }
+                #grid-item-{{project.slug}} .hover-title {
+                    color:#{{project.thumbnail.color}}
+                }
+                </style>
                 <img data-src="/assets/img/projects/{{ project.thumbnail.url }}" class="image" alt="{{ project.title }}"/>
                 <a href="{{ project.url }}" class="hover-content flex justified-end column">
                     <div class="hover-content-wrapper flex">

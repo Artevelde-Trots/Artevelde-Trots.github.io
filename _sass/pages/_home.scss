@@ -6,6 +6,32 @@
   .row {
     z-index: 3;
   }
+  .intro {
+    position: relative;
+    padding-bottom: 175px;
+    & ~ .tease {
+      position: absolute;
+      text-align: center;
+      bottom:-20px;
+      left:0;
+      max-width: 200px;
+
+      h4 {
+        font-size: 23px;
+        color: $green;
+        font-family: "Scriptorama",arial;
+      }
+      span {
+        color: $text-color;
+        display: block;
+      }
+      img {
+        margin: 10px;
+        height: 60px;
+      }
+    }
+  }
+
   
   @media (max-width: $md){
     .ahs__paragraph p.intro {

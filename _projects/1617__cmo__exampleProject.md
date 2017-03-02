@@ -9,7 +9,7 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "fb-banner/1.gif"
+    url: "fb-banner/thumb.png"
     alt: ""
     height: 1
     width: 1

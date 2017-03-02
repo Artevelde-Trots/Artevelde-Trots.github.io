@@ -1,10 +1,10 @@
 ---
-title: Kip met een kop
+title: Kinderboerderij
 slug: "chicken"
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 type: "intern"
 members:
-    - name: "Jonas Dermul"
+    - name: "Jules Vanrijsselgem"
       direction: "Cross-Media Ontwerp"
       subdirection: "Graphic Design"
       disk: "2e Schijf"

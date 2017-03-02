@@ -5,6 +5,7 @@
 @import "vendor/font-awesome/scss/font-awesome";
 
 $font-path-neo: "../assets/fonts/neosans/" !default;
+$font-path-scriptorama: "../assets/fonts/scriptorama/" !default;
 
 @font-face {
   font-family: 'NeoSans Intel';
@@ -162,6 +163,16 @@ $font-path-neo: "../assets/fonts/neosans/" !default;
   src: url($font-path-neo + 'NeoSans.eot?#iefix') format('embedded-opentype'),
   url($font-path-neo + 'NeoSans.woff') format('woff'),
   url($font-path-neo + 'NeoSans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Scriptorama';
+  src: url($font-path-scriptorama + 'scriptorama.eot');
+  src: url($font-path-scriptorama + 'scriptorama.eot?#iefix') format('embedded-opentype'),
+  url($font-path-scriptorama + 'scriptorama.woff') format('woff'),
+  url($font-path-scriptorama + 'scriptorama.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

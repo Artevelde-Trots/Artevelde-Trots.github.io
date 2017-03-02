@@ -17,7 +17,7 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: 3
+    color: 129898
 images:
     - url: "amelli/1_logoevolutie.png"
     - url: "amelli/2_halfvollogo.png"

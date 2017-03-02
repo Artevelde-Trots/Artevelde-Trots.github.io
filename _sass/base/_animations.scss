@@ -103,3 +103,32 @@
     @include translate(0%,0%);
   }
 }
+@include keyframes(spooky){
+  0% {
+    color:rgba(255,255,255,0.7);
+  }
+  50% {
+    color:rgba(255,255,255,0.3);
+  }
+  100%{
+    color:rgba(255,255,255,0.4);
+  }
+}
+@include keyframes(spooky-move){
+  0% {
+    @include translate(100%,100%);
+    opacity: 0.7;
+  }
+  40% {
+    @include translate(10%,10%);
+    opacity: 0.3;
+  }
+  50%{
+    @include translate(100%,100%);
+    opacity: 0.7;
+  }
+  100% {
+    @include translate(100%,100%);
+    opacity: 0.7;
+  }
+}

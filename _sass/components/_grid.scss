@@ -4,7 +4,7 @@
   z-index: 5;
   background: white;
   .grid {
-    font-size:14px;
+    font-size:16px;
 
     &:after {
       content: '';
@@ -111,6 +111,7 @@
     }
     &-item{
       padding:3px;
+      margin: 9px 0;
       position: relative;
       @include opacity(0);
       -webkit-pointer-events: none;
@@ -155,12 +156,16 @@
           height:100%;
         }
         .image {
-
+          position: absolute;
+          top:0;
+          left:0;
+          right:0;
+          bottom:0;
+          @include transition(all 200ms ease-in);
         }
         .hover-content {
           position: absolute;
           bottom:0;
-          @include transition(all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
           text-align: left;
           width: 100%;
           height: 100%;
@@ -170,19 +175,23 @@
             bottom: -1px;
             width: 100%;
             overflow: hidden;
-            @include transition(all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000));
           }
           .hover-text-content {
+            z-index: 1;
             position: relative;
             text-align: left;
             padding: 10px 17px;
             background: white;
             .hover-title {
-              font-weight: 900;
+              position: relative;
+              display: block;
+              text-transform: uppercase;
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
             }
             .hover-subtitle {
+              position: relative;
+              display: block;
               color: $text-color;
               -webkit-font-smoothing: antialiased;
               -moz-osx-font-smoothing: grayscale;
@@ -237,25 +246,9 @@
           }
         }
       }
-      &:hover {
-        .content {
-          .hover-content {
-            @include scale(1);
-            visibility: visible;
-            opacity: 1;
-            text-decoration: none;
-          }
-        }
-
+      @include on-event{
         .image {
-          &.up {
-            @include opacity(0);
-            @include translate(0,-50%);
-          }
-          &.down {
-            @include opacity(0);
-            @include translate(0,50%);
-          }
+          top:-10px;
         }
       }
     }

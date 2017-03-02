@@ -223,3 +223,11 @@ function detectIE() {
     // other browser
     return false;
 }
+function detectH(){
+    var d = new Date();
+    var n = d.getDay();
+    var m = d.getMonth();
+    if(n === 31 && m === 10){
+        document.querySelector('body').classList.add('halloween');
+    }
+}

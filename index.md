@@ -32,10 +32,15 @@ title   : "Time is ticking."
                 </svg>
             </div>
         </div>
-        <div class="ahs__paragraph">
-            <p class="intro padded-bottom-xl">
-                De Gentse GDM campus is een broeihaard van grafische creativiteit. Zowel creatieve, technische als commerciële talenten krijgen hier de kans om te schitteren. Het groeiende aanbod aan media vraagt om gespecialiseerde krachten, maar tegelijk visionaire denkers die het totaalplaatje zien. Wij leiden professionals op die thuis zijn in de wereld van print, video, code of marketing.      
+        <div class="ahs__paragraph pos-rel">
+            <p class="intro">
+                Grafische communicatie gebeurt via een pijlsnel groeiende waaier aan kanalen in een wereld waar de grens tussen pixels en rasterpunten steeds vager wordt. Op de GDM campus leiden we professionals op in (photo-)graphic design, code, motiongraphics of video. Voor de commerciële breinen achter de creativiteit ontwikkelden we de richting ‘Grafimediabeleid’.    
             </p>
+            <div class="tease">
+                <h4>Check dat af!</h4>
+                <span>Een aantal samples van studentenwerk</span>
+                <img src="/assets/img/background/arrow.svg"/>
+            </div>
         </div>
     </div>
 </div>
