@@ -3,11 +3,12 @@ layout  : default
 title   : "Time is ticking."
 ---
 <div class="container flex column maxed home">
+    {% include components/bg.html %}
     <div class="row flex column centered justified-c">
-        <h1 class="ahs__title black xl padded-top-xxl padded-bottom-xl show-edge">
+        <h1 class="ahs__title bold xl padded-top-xxl padded-bottom-xl show-edge">
             <span class="blue">Grafische &amp; Digitale</span> Media
         </h1>
-        <div class="svg-container ahs__title black xl padded-top-xxl padded-bottom-xl hide-edge">
+        <div class="svg-container ahs__title bold xl padded-top-xxl padded-bottom-xl hide-edge">
             <div class="svg-box">
                 <svg viewBox="0 0 900 100">
                     <symbol id="d-text">
@@ -37,6 +38,5 @@ title   : "Time is ticking."
             </p>
         </div>
     </div>
-    {% include components/bg.html %}
 </div>
 {% include components/grid.html %}

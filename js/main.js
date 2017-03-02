@@ -312,6 +312,9 @@ ready(function(){
                                 "stylers": [
                                     {
                                         "color": "#f2f2f2"
+                                    },
+                                    {
+                                        "saturation": "-80"
                                     }
                                 ]
                             },
@@ -330,6 +333,9 @@ ready(function(){
                                 "stylers": [
                                     {
                                         "color": "#ee9900"
+                                    },
+                                    {
+                                        "saturation": "-80"
                                     }
                                 ]
                             },
@@ -341,7 +347,7 @@ ready(function(){
                                         "color": "#00aacc"
                                     },
                                     {
-                                        "lightness": -20
+                                        "lightness": 20
                                     }
                                 ]
                             },
@@ -353,7 +359,10 @@ ready(function(){
                                         "color": "#00aacc"
                                     },
                                     {
-                                        "lightness": -17
+                                        "lightness": 17
+                                    },
+                                    {
+                                        "saturation": "-80"
                                     }
                                 ]
                             },
@@ -365,7 +374,10 @@ ready(function(){
                                         "color": "#bbcc00"
                                     },
                                     {
-                                        "lightness": -10
+                                        "lightness": 10
+                                    },
+                                    {
+                                        "saturation": "-80"
                                     }
                                 ]
                             },
@@ -375,6 +387,9 @@ ready(function(){
                                 "stylers": [
                                     {
                                         "color": "#00aacc"
+                                    },
+                                    {
+                                        "saturation": "-80"
                                     }
                                 ]
                             }

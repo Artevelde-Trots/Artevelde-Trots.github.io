@@ -1,6 +1,6 @@
 ---
 title: A salad is not a meal
-slug: salad
+slug: "salad"
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 type: "intern"
 members:

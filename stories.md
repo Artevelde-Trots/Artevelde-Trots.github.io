@@ -5,11 +5,11 @@ title   : "GDM Stories"
 <div class="container flex column">
     {% include components/bg.html %}
     <div class="externe container flex column maxed ">
-        <h1 class="ahs__title padded-top-xxl blue xl padded-bottom-xl black show-edge">
+        <h1 class="ahs__title padded-top-xxl blue xl padded-bottom-xl bold show-edge">
             GDM Stories
-            <span class="ahs__title flex column black lg">Experience us</span>
+            <span class="ahs__title flex column bold lg">Experience us</span>
         </h1>
-        <div class="svg-container ahs__title black xl padded-top-xxl padded-bottom-xl hide-edge">
+        <div class="svg-container ahs__title bold xl padded-top-xxl padded-bottom-xl hide-edge">
                 <div class="svg-box">
                     <svg viewBox="0 0 900 100">
                         <symbol id="d-text">

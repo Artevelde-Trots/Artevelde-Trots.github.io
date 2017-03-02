@@ -1,6 +1,6 @@
 ---
 title: Kon Samui
-slug: samui
+slug: "samui"
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 type: "intern"
 members:

@@ -1,6 +1,6 @@
 ---
 title: Mighty Spicy
-slug: spicy
+slug: "spicy"
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 type: "extern"
 members:

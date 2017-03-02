@@ -1,6 +1,6 @@
 ---
 title: Memorial Van Damme 40ste Editie
-slug: memorial-van-damme
+slug: "memorial-van-damme"
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 type: "extern"
 members:

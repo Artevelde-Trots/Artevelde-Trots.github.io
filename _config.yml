@@ -10,7 +10,7 @@ port        : 4000
 # ---
 title      : &title TROTS
 description: "This is an assignment for Artevelde University College Ghent."
-author     : Jens De Wulf & Lotte Verwerft
+author     : Arteveldehogeschool Gent
 tracking_id: ""
 # url        :
 # image      :
@@ -36,12 +36,12 @@ permalink: pretty
 collections:
   projects:
     output: true
-    permalink: /project/:slug/
+    permalink: /project/:title/
   stories:
     output: false
   news:
     output: true
-    permalink: /news/:slug/
+    permalink: /news/:title/
 defaults:
     - scope:
         path: ""

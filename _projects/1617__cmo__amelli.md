@@ -1,6 +1,6 @@
 ---
-title: Melk Campagne
-slug: milk
+title: Melk Campagne 
+slug: "milk"
 description: De opdracht hield in dat er een campagne
              moest gebouwd worden rond een Melkmerk.
              Dit merk moesten we vanaf nul
@@ -8,7 +8,7 @@ description: De opdracht hield in dat er een campagne
              campagne-elementen.
 type: "intern"
 members:
-    - name: "Shauny Eloot"
+    - name: "Shauny Elot"
       direction: "Cross-Media Ontwerp"
       subdirection: "Photo Design"
       disk: "3e Schijf"
