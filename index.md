@@ -2,8 +2,8 @@
 layout  : default
 title   : "Time is ticking."
 ---
+{% include components/bg.html %}
 <div class="container flex column maxed home">
-    {% include components/bg.html %}
     <div class="row flex column centered justified-c">
         <h1 class="ahs__title bold xl padded-top-xxl padded-bottom-xl show-edge">
             <span class="blue">Grafische &amp; Digitale</span> Media
