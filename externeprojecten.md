@@ -2,8 +2,8 @@
 layout  : default
 title   : "Externe projecten"
 ---
-{% include components/bg.html %}
 <div class="externe container flex column maxed ">
+    {% include components/bg.html %}
     <h1 class="ahs__title padded-top-xxl blue xl padded-bottom-xl bold show-edge">
         Externe Projecten 
         <span class="ahs__title flex column bold lg">We work for you</span>
