@@ -217,7 +217,7 @@ ready(function(){
                         data: {
                             "Naam":name,
                             "Email":vmail,
-                            "_subject":"Arteveldehogeschool Trots Contact:"+subject,
+                            "_subject":"Arteveldehogeschool Trots:"+subject,
                             "Onderwerp":subject,
                             "Boodschap":message,
                         },
@@ -229,7 +229,7 @@ ready(function(){
                         },
                         success: function(data) {
                             console.log('Great success');
-                            App.contact.statusMessage.innerHTML = App.contact.message.success;
+                            App.contact.form.insertAdjacentHTML('beforeend', App.contact.message.success);
                             setTimeout(function(){
                                 $(button).attr('disabled', false);
                                 button.classList.remove("fly-away");
