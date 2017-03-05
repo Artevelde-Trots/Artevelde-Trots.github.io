@@ -198,10 +198,12 @@ ready(function(){
                 var error = false;
                 var subject = $('.contact-form  #contact-subject').val(),
                     vmail = $('.contact-form  #contact-mail').val(),
+                    name = $('.contact-form  #contact-name').val(),
                     message = $('.contact-form  #contact-message').val(),
                     gotcha = $('.contact-form  #contact-gotcha').val();
 
                 if(!(vmail !== 'undefined' && vmail.length > 0 && vmail !== $('.contact-form #contact-mail').attr('placeholder'))) { $('.contact-form #contact-mail').addClass('error'); error = true; }
+                if(!(name !== 'undefined' && name.length > 0 && name !== $('.contact-form #contact-name').attr('placeholder'))) { $('.contact-form #contact-name').addClass('error'); error = true; }
                 if(!(subject !== 'undefined' && subject.length > 0 && subject !== $('.contact-form #contact-subject').attr('placeholder'))) { $('.contact-form #contact-subject').addClass('error'); error = true; }
                 if(!(message !== 'undefined' && message.length > 0 && message !== $('.contact-form #contact-message').attr('placeholder'))) { $('.contact-form #contact-message').addClass('error'); error = true; }
                 if(!isValidEmailAddress(vmail)) { $('.contact-form #contact-mail').addClass('error'); error = true; }
