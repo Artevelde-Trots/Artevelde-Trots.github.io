@@ -212,7 +212,7 @@ ready(function(){
                 if(!error){
                     console.log('Sending message to: '+vmail +' with subject: ' +subject+' and the message: '+message );
                     $.ajax({
-                        url: 'https://formspree.io/jensdwul1.student.arteveldehs.be',
+                        url: 'https://formspree.io/jensdwul1@student.arteveldehs.be',
                         method: 'POST',
                         data: {
                             "email":vmail,

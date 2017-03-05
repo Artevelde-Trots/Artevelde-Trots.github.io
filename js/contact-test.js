@@ -6,7 +6,7 @@ $contactForm.submit(function(e) {
     var defaultSubmitText = $submit.val();
 
     $.ajax({
-        url: '//formspree.io/jensdwul1.student.arteveldehs.be',
+        url: '//formspree.io/jensdwul1@student.arteveldehs.be',
         method: 'POST',
         data: $(this).serialize(),
         dataType: 'json',
