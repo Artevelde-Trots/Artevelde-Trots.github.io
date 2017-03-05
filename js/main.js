@@ -201,15 +201,17 @@ ready(function(){
                 var error = false;
                 var subject = $('.contact-form  #contact-subject').val(),
                     vmail = $('.contact-form  #contact-mail').val(),
-                    message = $('.contact-form  #contact-message').val();
+                    message = $('.contact-form  #contact-message').val(),
+                    gotcha = $('.contact-form  #contact-gotcha').val();
 
                 if(!(vmail !== 'undefined' && vmail.length > 0 && vmail !== $('.contact-form #contact-mail').attr('placeholder'))) { $('.contact-form #contact-mail').addClass('error'); error = true; }
                 if(!(subject !== 'undefined' && subject.length > 0 && subject !== $('.contact-form #contact-subject').attr('placeholder'))) { $('.contact-form #contact-subject').addClass('error'); error = true; }
-                if(!(message !== 'undefined' && subject.length > 0 && subject !== $('.contact-form #contact-message').attr('placeholder'))) { $('.contact-form #contact-message').addClass('error'); error = true; }
+                if(!(message !== 'undefined' && message.length > 0 && message !== $('.contact-form #contact-message').attr('placeholder'))) { $('.contact-form #contact-message').addClass('error'); error = true; }
                 if(!isValidEmailAddress(vmail)) { $('.contact-form #contact-mail').addClass('error'); error = true; }
+                if(gotcha.length > 0){ console.log('You are spammer and I caught ya bruh'); error = true; }
 
                 if(!error){
-
+                    console.log('Sending message to: '+vmail +' with subject: ' +subject+' and the message: '+message );
                     $.ajax({
                         url: 'https://formspree.io/jensdwul1.student.arteveldehs.be',
                         method: 'POST',
