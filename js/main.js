@@ -195,9 +195,6 @@ ready(function(){
             "send":function(){
                 var button = document.querySelector('.form-btn');
                 button.classList.add("fly-away");
-                setTimeout(function(){
-                    button.classList.remove("fly-away");
-                },1000);
                 var error = false;
                 var subject = $('.contact-form  #contact-subject').val(),
                     vmail = $('.contact-form  #contact-mail').val(),
@@ -223,15 +220,24 @@ ready(function(){
                         dataType: 'json',
                         beforeSend: function() {
                             App.contact.statusMessage.innerHTML = App.contact.message.loading;
+                            $(button).attr('disabled', true);
                             console.log('Sending');
                         },
                         success: function(data) {
                             console.log('Great success');
                             App.contact.statusMessage.innerHTML = App.contact.message.success;
+                            setTimeout(function(){
+                                $(button).attr('disabled', false);
+                                button.classList.remove("fly-away");
+                            },1000);
                         },
                         error: function(err) {
                             App.contact.form.insertAdjacentHTML('beforeend', App.contact.message.failure);
                             console.log('Great FAILURE');
+                            setTimeout(function(){
+                                $(button).attr('disabled', false);
+                                button.classList.remove("fly-away");
+                            },1000);
                         }
                     });
                 } else {
