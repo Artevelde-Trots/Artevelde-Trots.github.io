@@ -215,9 +215,11 @@ ready(function(){
                         url: 'https://formspree.io/jensdwul1@student.arteveldehs.be',
                         method: 'POST',
                         data: {
-                            "email":vmail,
+                            "Naam":name,
+                            "Email":vmail,
                             "_subject":"Arteveldehogeschool Trots Contact:"+subject,
-                            "comments":message,
+                            "Onderwerp":subject,
+                            "Boodschap":message,
                         },
                         dataType: 'json',
                         beforeSend: function() {
