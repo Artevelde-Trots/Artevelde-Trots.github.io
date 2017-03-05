@@ -117,6 +117,7 @@
   .contact {
     &-page .contact-container {
       height: auto;
+      min-height: inherit;
       padding:60px 75px;
     }
     &-row {

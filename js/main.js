@@ -210,7 +210,7 @@ ready(function(){
                 if(gotcha.length > 0){ console.log('You are spammer and I caught ya bruh'); error = true; }
 
                 if(!error){
-                    console.log('Sending message to: '+vmail +' with subject: ' +subject+' and the message: '+message );
+                    //console.log('Sending message to: '+vmail +' with subject: ' +subject+' and the message: '+message );
                     $.ajax({
                         url: 'https://formspree.io/jensdwul1@student.arteveldehs.be',
                         method: 'POST',
