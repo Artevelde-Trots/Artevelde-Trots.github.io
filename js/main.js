@@ -211,9 +211,13 @@ ready(function(){
                 if(!error){
 
                     $.ajax({
-                        url: '//formspree.io/jensdwul1.student.arteveldehs.be',
+                        url: 'https://formspree.io/jensdwul1.student.arteveldehs.be',
                         method: 'POST',
-                        data: {"message":message},
+                        data: {
+                            "email":vmail,
+                            "_subject":"Arteveldehogeschool Trots Contact:"+subject,
+                            "comments":message,
+                        },
                         dataType: 'json',
                         beforeSend: function() {
                             App.contact.statusMessage.innerHTML = App.contact.message.loading;
