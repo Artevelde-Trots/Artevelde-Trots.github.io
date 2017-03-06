@@ -36,7 +36,7 @@ permalink: pretty
 collections:
   projects:
     output: true
-    permalink: /project/:slug/
+    permalink: /project/:slug
   stories:
     output: false
   news:
