@@ -7,15 +7,69 @@
     min-height:400px;
     height: 33.3333334vh;
     position: relative;
+    overflow: hidden;
     .story-bg {
       position: absolute;
       width: 100%;
       height: 100%;
       left:0;
       top:0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      @include transition(all 0.35s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      -webkit-transform-origin: 50% 50%;
+      transform-origin: 50% 50%;
     }
     .story-title {
       position: relative;
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.7);
+      padding: 12px 12px 0px;
+      @include transition(all 0.35s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      span {
+        top:-5px;
+        font-size: 0.8em;
+        position: relative;
+        font-weight: 300;
+      }
+    }
+    .story-description {
+      position: relative;
+      letter-spacing: 1px;
+      color: white;
+      max-width: 400px;
+      @include transition(all 0.35s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      @include transform(perspective(1000px) rotate3d(1,0,0,90deg));
+      -webkit-transform-origin: 50% 0%;
+      transform-origin: 50% 0%;
+      @include opacity(0.95);
+      text-shadow: 1px 1px 1px $text-color;
+    }
+    @include on-event{
+      .story-title {
+        @include transform(translate3d(0,-20px,0));
+      }
+      .story-description {
+        @include opacity(1);
+        @include transform(perspective(1000px) rotate3d(1,0,0,0deg));
+      }
+      .story-bg{
+        @include opacity(0.95);
+        @include transform(scale3d(1.05,1.05,1));
+      }
+    }
+    &:nth-child(1){
+      background: $primary;
+    }
+    &:nth-child(2){
+      background: $blue;
+    }
+    &:nth-child(3){
+      background: $pink;
+    }
+    &:nth-child(4){
+      background: $green;
     }
   }
 }

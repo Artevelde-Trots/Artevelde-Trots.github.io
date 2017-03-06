@@ -1,5 +1,5 @@
 ---
-title: CMO Story
+title: CMO story
 slug: cmo-story
 description: Ontdek hoe een CMO student groeit van een beginner zonder enige kennis tot een ervaren artiest.
 thumbnail:

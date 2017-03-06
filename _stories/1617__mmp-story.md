@@ -1,5 +1,5 @@
 ---
-title: MMP Story
+title: MMP story
 slug: mmp-story
 description: Ontdek hoe een MMP student groeit van een beginner zonder enige kennis tot een ervaren programmeur.
 thumbnail:

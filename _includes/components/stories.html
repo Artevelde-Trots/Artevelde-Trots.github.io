@@ -2,9 +2,10 @@
     <div class="stories-wrapper flex column">
         {% assign stories = site.stories | sort:'order' %}
         {% for story in stories %}
-        <div id="{{ story.slug }}" class="story flex centered justified-c">
+        <div id="{{ story.slug }}" class="story flex column centered justified-c">
             <div class="story-bg" style='background-image:url("/assets/img/stories/{{ story.thumbnail.url }}");' alt="{{ story.thumbnail.alt }}"></div>
-            <h2 class="story-title ahs__title white lg black">{{ story.title }}</h2>
+            <h2 class="story-title ahs__title lg black">{{ story.title | replace:'story','<span>story</span>' }}</h2>
+            <div class="story-description">{{ story.description }}</div>
         </div>
         {% endfor %}
     </div>
