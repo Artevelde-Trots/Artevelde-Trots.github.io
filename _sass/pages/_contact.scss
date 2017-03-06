@@ -154,6 +154,7 @@
   position: absolute;
   @media (max-width: $lg){
     height:40vh;
+    position: relative;
   }
   .map {
     height: 100%;
