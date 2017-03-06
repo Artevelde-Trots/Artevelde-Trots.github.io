@@ -16,6 +16,7 @@
       left:0;
       max-width: 200px;
 
+
       h4 {
         font-size: 23px;
         color: $green;
@@ -36,6 +37,11 @@
   @media (max-width: $md){
     .ahs__paragraph p.intro {
       padding-top: 50px;
+    }
+  }
+  @media (max-width: $xsm){
+    .ahs__paragraph p.intro {
+      padding-bottom: 50px;
     }
   }
   .svg-container {

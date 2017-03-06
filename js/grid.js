@@ -80,7 +80,14 @@ if(document.querySelector('.grid')){
                     });
                 }
             });
-
+            var gridBox = document.querySelector('.grid-container');
+            var bounds = gridBox.getBoundingClientRect();
+            if((bounds.top + 110) <= (window.innerHeight || html.clientHeight)){
+                //console.log("We see the grid",bounds.top);
+                var filter = document.querySelector('.grid-filters').classList.add('show');
+            } else {
+                var filter = document.querySelector('.grid-filters').classList.remove('show');
+            }
         }
     }
     Grid.init();

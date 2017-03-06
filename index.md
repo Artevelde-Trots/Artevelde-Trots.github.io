@@ -36,7 +36,7 @@ title   : "Time is ticking."
             <p class="intro">
                 Grafische communicatie gebeurt via een pijlsnel groeiende waaier aan kanalen in een wereld waar de grens tussen pixels en rasterpunten steeds vager wordt. Op de GDM campus leiden we professionals op in (photo-)graphic design, code, motiongraphics of video. Voor de commerciële breinen achter de creativiteit ontwikkelden we de richting ‘Grafimediabeleid’.    
             </p>
-            <div class="tease">
+            <div class="tease hide-xsm hide-xxsm">
                 <h4>Check dat af!</h4>
                 <span>Een aantal samples van studentenwerk</span>
                 <img src="/assets/img/background/arrow.svg"/>

@@ -53,14 +53,9 @@ $mid-grey: rgb(170, 170, 170) !default;
 $dark-grey: rgb(66, 66, 66) !default;
 
 
-
-
-
 /// Container's maximum width
 /// @type Length
 $max-width: 1180px !default;
-
-
 
 $default-font-size: 16;
 
@@ -73,18 +68,13 @@ $xsm   : 320/$default-font-size * 1rem;
 $sm    : 480/$default-font-size * 1rem;
 $md    : 680/$default-font-size * 1rem;
 $lg    : 960/$default-font-size * 1rem;
-$xlg   : 1140/$default-font-size * 1rem;
-$xxlg  : 1440/$default-font-size * 1rem;
+$xl   : 1140/$default-font-size * 1rem;
+$xxl  : 1440/$default-font-size * 1rem;
 
 
 /// Grid Prefixes map
 /// @prop {String} keys - Keys are identifiers mapped to certain grid component
 /// @prop {Map} values - Values are the class identifiers in implementation
-
-
-
-
-
 
 
 

@@ -15,14 +15,14 @@
     position: absolute;
     width: 50%;
     height:100%;
-    top:20px;
+    top:0px;
     left:0;
     background: url("/assets/img/background/shapes.svg") no-repeat;
     &:nth-child(2){
       background: url("/assets/img/background/shapes2.svg") no-repeat;
     }
     @media (max-width: $md){
-      top:40px;
+      padding-top:40px;
       width: 80%;
     }
     @media (max-width: $sm){

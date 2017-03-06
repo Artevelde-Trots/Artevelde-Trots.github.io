@@ -192,5 +192,35 @@ $paddedXXL: $padded * 3;
   &-fix{
     position: fixed;
   }
+}
 
+@media (min-width: $xxl){
+  .hide-xxl {
+    display: none;
+  }
+}
+@media (min-width: $md) and (max-width: $xl){
+  .hide-xl {
+    display: none;
+  }
+}
+@media (min-width: $sm) and (max-width: $md){
+  .hide-md {
+    display: none;
+  }
+}
+@media (min-width: $xsm) and (max-width: $sm){
+  .hide-sm {
+    display: none;
+  }
+}
+@media (min-width: $xxsm) and (max-width: $xsm){
+  .hide-xsm {
+    display: none;
+  }
+}
+@media (max-width: $xxsm){
+  .hide-xxsm {
+    display: none;
+  }
 }
