@@ -4,6 +4,7 @@ function ready(cb) {
         : cb();
 };
 window.onload = function(){
+    /*
     if(getCookie('intro')){
         if(document.querySelector('.intro-page')) {
             document.querySelector('.intro-page').classList.add("hide");
@@ -13,6 +14,7 @@ window.onload = function(){
             }, 710);
         }
     }
+    */
 }
 var App;
 ready(function(){
@@ -421,11 +423,11 @@ ready(function(){
             'init':function(){
                 if(document.querySelector('.intro-page')){
                     App.intro.bindEventListeners();
-                    if(!getCookie('intro')){
+                    /*if(!getCookie('intro')){*/
                         document.querySelector('.wrapper').classList.add("intro-animating");
-                    } else {
+                    /*} else {
                         App.intro.hide();
-                    }
+                    }*/
                 }
             },
             'bindEventListeners':function(){
