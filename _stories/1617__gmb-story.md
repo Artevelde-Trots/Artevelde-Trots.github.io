@@ -1,7 +1,7 @@
 ---
 title: GMB story
 slug: gmb-story
-description: Ontdek hoe een GMB student groeit van een beginner zonder enige kennis tot een ervaren leider.
+description: "Coming soon!"
 thumbnail:
     url: "gmb-story/thumb.png"
     alt: "Het GMB verhaal"
