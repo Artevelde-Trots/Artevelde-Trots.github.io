@@ -420,6 +420,7 @@ ready(function(){
             },
         },
         'intro':{
+            'news':false,
             'init':function(){
                 if(document.querySelector('.intro-page')){
                     App.intro.bindEventListeners();
@@ -440,6 +441,15 @@ ready(function(){
                 setTimeout(function(){
                     App.intro.hide();
                 },60000);
+                var newsOpener = document.querySelector('.news-toggle');
+                var newsCloser = document.querySelector('.news-closer');
+                var newsBox = document.querySelector('.news-container');
+                newsOpener.addEventListener("click", function () {
+                    newsBox.classList.add('active');
+                });
+                newsCloser.addEventListener("click", function () {
+                    newsBox.classList.remove('active');
+                });
             },
             'hide':function(){
                 document.querySelector('.intro-page').classList.add("hide");

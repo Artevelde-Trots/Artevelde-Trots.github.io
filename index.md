@@ -45,4 +45,5 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
         </div>
     </div>
 </div>
+{% include components/news.html %}
 {% include components/grid.html %}
