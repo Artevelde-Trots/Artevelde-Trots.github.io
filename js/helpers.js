@@ -231,3 +231,31 @@ function detectH(){
         document.querySelector('body').classList.add('halloween');
     }
 }
+
+function scroll_element_thumb_click(e, new_window, url) {
+    try {
+        new_window = (typeof(new_window) === 'undefined')?true:new_window;
+        //1. Get event
+        var elem, evt = e?e:event;
+        if (!evt) evt = window.event;
+        //2. Stop propatation
+        if(evt.stopPropagation) {
+            evt.stopPropagation();
+        } else {
+            window.event.cancelBubble = true;
+        }
+        //3. Get url
+        if(typeof(url) === 'undefined') {
+            if (evt.target) elem = evt.target;
+            else if (evt.srcElement) elem = evt.srcElement;
+            if (elem.nodeType == 3) elem = elem.parentNode;
+            //Get href of target a element
+            url = elem.getAttribute("href");
+        }
+        if(new_window) {
+            window.open(url, '_blank', 'location=yes,height=600,width=800,scrollbars=yes,status=yes');
+        } else {
+            window.open(url);
+        }
+    } catch (err) {}
+}

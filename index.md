@@ -1,6 +1,7 @@
 ---
 layout  : default
 title   : "Time is ticking."
+description: "Arteveldehogeschool stelt met trots het portfolio van haar richting Grafische Digitale Media voor aan iedereen. Neem een kijk hoe onze studenten te werk gaan en creative werken van begin tot einde ontwikkelen."
 ---
 {% include components/bg.html %}
 <div class="container flex column maxed home">

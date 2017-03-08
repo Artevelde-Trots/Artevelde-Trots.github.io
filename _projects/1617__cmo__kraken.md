@@ -1,10 +1,19 @@
 ---
-title: Release the Kraken
+title: El Dorado
 slug: "kraken"
-description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
+description: "Als eindopdracht bij de 2e schijf,
+              moest er een campagne worden
+              gecreëerd voor een pretpark,
+              foodtruck of ruimtereis. Hierbij
+              konden de studenten hun creaviteit
+              de vrije loop laten gaan en de
+              resultaten waren soms subliem!<br>
+              Amandine, heeft gekozen voor een
+              campagne te maken over een pretpark
+              en dit was het resultaat."
 type: "intern"
 members:
-    - name: "Jonas Dermul"
+    - name: "Amandine Faingnaert"
       direction: "Cross-Media Ontwerp"
       subdirection: "Graphic Design"
       disk: "2e Schijf"
@@ -15,13 +24,27 @@ thumbnail:
     width: 1
     color: 3
 images:
-    - url: "fb-banner/1.gif"
-      alt: "Started with an idea, worked out a sketch and digitalized it."
-    - url: "fb-banner/2.gif"
-      alt: "Picked the colors and filled in the shades."
-    - url: "fb-banner/3.gif"
-      alt: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
-    - url: "fb-banner/4.gif"
+    - url: "kraken/1.jpg"
+    - url: "kraken/2.jpg"
+      alt: "Bij het starten van een campagne, begin je met het ontwikkelen van een logo. Hier gaan vele voorstudies aan
+            vooraf. Als de klant tevreden is met een van de voorstellen, dan begint de uitwerking, zoals hierboven."
+    - url: "kraken/3.jpg"
+      alt: "Bij de opdracht was het de bedoeling een mascotte voor de campagne te onwtikkelen, deze reflecteert waarvoor
+            de onderneming of de campagne staat."
+    - url: "kraken/4.jpg"
+      alt: "Er moet reclame worden gemaakt. Dit doen we met behulp van allerlei toepassingen waaronder een poster.
+            Deze bestaat uit een blikvanger en de informatie die nodig is om de mensen te triggeren. Eens je je idee hebt
+            uitgetekend, kan de uitwerking hiervan beginnen."
+    - url: "kraken/5.jpg"
+      alt: "Het afgewerkte product is een poster met een blikvanger die in het oog schiet van een voorbijganger en hem
+            triggert om eens een kijkje te gaan nemen in het park."
+    - url: "kraken/6.jpg"
+    - url: "kraken/7.jpg"
+      alt: "Je hebt natuurlijk nood aan een ticket om het park te kunnen betreden, dit moet ook ontworpen worden. Heel de
+            campagne moet een samenhang hebben, dus zoek je naar een ticket dat in de stijl van de campagne ligt."    
+    - url: "kraken/8.jpg"
+      alt: "Uiteindelijk krijgen de bezoekers een kaart om zich te kunnen oriënteren in het park en kunnen ze genieten van
+            een dag vol avontuur en adrenaline."    
 created: 20/01/2017
 order: 7
 ---
