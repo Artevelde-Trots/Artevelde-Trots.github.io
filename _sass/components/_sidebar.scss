@@ -44,6 +44,10 @@
       text-align: center;
       border-radius: 50%;
       cursor: pointer;
+       i {
+         -webkit-pointer-events: none;
+         pointer-events: none;
+       }
       &:hover {
         background: $primary;
         &:nth-child(1){
