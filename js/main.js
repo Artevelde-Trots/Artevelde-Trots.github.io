@@ -25,6 +25,7 @@ ready(function(){
             App.contact.init();
             App.header.init();
             App.intro.init();
+            App.news.init();
             App.background.init();
         },
         "bindEventListeners":function(){
@@ -453,19 +454,43 @@ ready(function(){
         },
         "news":{
             'currentTopic':null,
+            'currentKey':0,
             'animating':false,
-            "topics":[],
+            "topics":null,
+            'topics_length':0,
             'autoplay':{
+                'duration': 5000,
+                'timer':null,
                 'pause':function(){
-
+                    document.querySelector('.news-timer').classList.remove('animate');
+                    clearTimeout(App.news.autoplay.timer);
                   },
                 'play':function(){
-
-                }
+                    App.news.autoplay.timer = setTimeout(function(){
+                        if(App.news.currentKey >= (App.news.topics_length - 1)){
+                            App.news.currentKey = 0;
+                            App.news.show(App.news.topics[0]);
+                        } else {
+                            App.news.show(App.news.topics[++App.news.currentKey]);
+                        }
+                        App.news.autoplay.play();
+                    },App.news.autoplay.duration);
+                  }
             },
             'init':function(){
-                App.news.topics = document.querySelectorAll('.news-container .topics');
-                App.news.show(App.news.topics[0]);
+                if(document.querySelector('.news')) {
+                    App.news.bindEventListeners();
+                    App.news.topics = document.querySelectorAll('.news-container .news-topic');
+                    App.news.topics_length = App.news.topics.length;
+                    App.news.currentKey = 0;
+                    App.news.show(App.news.topics[0]);
+                    if(App.news.topics.length > 1){
+                        App.news.autoplay.play();
+                        document.querySelector('.news-timer').classList.add('animate');
+                    } else {
+                        document.querySelector('.news-timer').classList.add('hidden');
+                    }
+                }
             },
             'bindEventListeners':function(){
                 var newsOpener = document.querySelector('.news-toggle'),
@@ -476,6 +501,8 @@ ready(function(){
                 newsOpener.addEventListener("click", function () {
                     newsBox.classList.add('active');
                     newsUberBox.classList.add('news-active');
+                    App.news.autoplay.play();
+                    document.querySelector('.news-timer').classList.add('animate');
                 });
                 newsCloser.addEventListener("click", function () {
                     newsBox.classList.remove('active');
@@ -486,14 +513,23 @@ ready(function(){
             'show':function(topic){
                 if(!App.news.animating) {
                     App.news.animating = true;
-                    App.news.currentTopic.classList.add('animate-out');
+                    if(App.news.currentTopic !== null){
+                        App.news.currentTopic.classList.add('animate-out');
+                    }
+                    //console.log('topic',App.news.topics);
+                    document.querySelector('.news-container .news-content-bg').classList.add('animate');
                     topic.classList.add('animate-in');
                     setTimeout(function () {
-                        App.news.currentTopic.classList.remove('active');
-                        App.news.currentTopic.classList.remove('animate-out');
+                        document.querySelector('.news-container .news-content-bg').classList.remove('animate');
+                        if(App.news.currentTopic !== null) {
+                            App.news.currentTopic.classList.remove('active');
+                            App.news.currentTopic.classList.remove('animate-out');
+                        }
                         setTimeout(function () {
                             topic.classList.add('active');
-                            App.news.currentTopic.classList.remove('animate-in');
+                            if(App.news.currentTopic !== null) {
+                                App.news.currentTopic.classList.remove('animate-in');
+                            }
                             App.news.currentTopic = topic;
                             App.news.animating = false;
                         }, 200);

@@ -248,3 +248,34 @@
     @include translate(-4px, 0);
   }
 }
+@include keyframes(animate-news-in){
+  to {
+    @include opacity(1);
+    left:0;
+  }
+}
+@include keyframes(animate-news-out){
+  to {
+    @include opacity(0);
+    left:-1em;
+  }
+}
+
+@include keyframes(animate-news-bg){
+  0% {
+    width: 0;
+    background-color: rgba(255,255,255,0.2);
+  }
+  90% {
+    width: 90%;
+    background-color: rgba(255,255,255,0);
+  }
+  100% {
+    width: 100%;
+  }
+}
+@include keyframes(full-width){
+  to{
+    width: 100%;
+  }
+}
