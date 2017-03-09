@@ -1,5 +1,4 @@
-
-<div class="news news-container">
+<div class="news news-container flex-child active">
     <div class="news-toggle">
         <button class="btn green">
             Nieuws
@@ -13,5 +12,24 @@
             <span class="line"></span>
             <span class="line"></span>
         </button>
+        <div class="news-title">
+            <h2>Nieuws</h2>
+        </div>
+        <div class="news-carousel">
+            {% assign news = site.news | sort:'order' %}
+            {% for topic in news %}
+                <div class="news-topic">
+                    <div class="news-topic-content">
+                        {% if topic.subtitle %}<h3 class="news-topic-subtitle">{{ topic.subtitle }}</h3>{% endif %}
+                        <h2 class="news-topic-title">{{ topic.title }}</h2>
+                        <a class="btn outline rounded" href="{{ topic.uri }}"><i class="icon right arrow"></i>{{ topic.button }}</a>
+                        <a class="btn outline black rounded" href="/stories"><i class="icon right arrow"></i>Alle stories</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="news-timer">
+            <div class="grower"></div>
+        </div>
     </div>
 </div>

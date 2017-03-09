@@ -40,8 +40,7 @@ collections:
   stories:
     output: false
   news:
-    output: true
-    permalink: /news/:title/
+    output: false
 defaults:
     - scope:
         path: ""

@@ -258,3 +258,14 @@
     padding: 18px 10px !important;
   }
 }
+.icon {
+  .arrow {
+    .right {
+      width: 21px;
+      height: 19px;
+      display: inline-block;
+      background: url("/assets/img/icons/arrow-right.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+}
