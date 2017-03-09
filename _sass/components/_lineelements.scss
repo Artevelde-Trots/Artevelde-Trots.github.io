@@ -76,6 +76,13 @@
   &.active {
     background: transparent;
     box-shadow: none;
+
+    & ~ .overview-toggle.active {
+      @include opacity(0);
+
+      -webkit-pointer-events:none;
+      pointer-events:none;
+    }
   }
 }
 
