@@ -30,6 +30,7 @@
     @include animation(scaleDown .7s ease both);
   }
   &.gone{
+    display: none;
     visibility: hidden;
   }
   .video-container {

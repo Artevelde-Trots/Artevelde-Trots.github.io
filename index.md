@@ -6,7 +6,7 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
 {% include components/bg.html %}
 <div class="container flex home">
     <div class="row flex column centered justified-c">
-        <div class="column maxed">
+        <div class="container maxed">
             <h1 class="ahs__title bold xl padded-top-xxl padded-bottom-xl show-edge">
                 <span class="blue">Grafische &amp; Digitale</span> Media
             </h1>
@@ -36,15 +36,17 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
             </div>
         </div>
         <div class="ahs__paragraph pos-rel intro-container flex news-active">
-            <p class="intro flex-child stretch">
-                Grafische communicatie gebeurt via een pijlsnel groeiende waaier aan kanalen in een wereld waar de grens tussen pixels en rasterpunten steeds vager wordt. Op de GDM campus leiden we professionals op in (photo-)graphic design, code, motiongraphics of video. Voor de commerciële breinen achter de creativiteit ontwikkelden we de richting ‘Grafimediabeleid’.    
-            </p>
-            {% include components/news.html %}
-            <div class="tease hide-xsm hide-xxsm">
-                <h4>Check dat af!</h4>
-                <span>Een aantal samples van studentenwerk</span>
-                <img src="/assets/img/background/arrow.svg"/>
+            <div class="intro flex-child stretch">
+                <p>
+                    Grafische communicatie gebeurt via een pijlsnel groeiende waaier aan kanalen in een wereld waar de grens tussen pixels en rasterpunten steeds vager wordt. Op de GDM campus leiden we professionals op in (photo-)graphic design, code, motiongraphics of video. Voor de commerciële breinen achter de creativiteit ontwikkelden we de richting ‘Grafimediabeleid’.    
+                </p>
+                <div class="tease hide-xsm hide-xxsm">
+                    <h4>Check dat af!</h4>
+                    <span>Een aantal samples van studentenwerk</span>
+                    <img src="/assets/img/background/arrow.svg"/>
+                </div>
             </div>
+            {% include components/news.html %}
         </div>
     </div>
 </div>
