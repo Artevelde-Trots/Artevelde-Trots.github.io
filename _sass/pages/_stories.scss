@@ -6,9 +6,12 @@
     width: 100%;
     min-height:400px;
     height: 33.3333334vh;
+    margin-bottom: 0.35em;
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    background-color: $mid-grey;
+    @include transition(all 0.35s ease-in);
     .story-bg {
       position: absolute;
       width: 100%;
@@ -25,11 +28,12 @@
     .story-title {
       position: relative;
       text-transform: uppercase;
+      text-align: center;
       background: rgba(255,255,255,0.7);
       padding: 12px 12px 0px;
       @include transition(all 0.35s cubic-bezier(0.860, 0.000, 0.070, 1.000));
       span {
-        top:-5px;
+        top:-0.1em;
         font-size: 0.8em;
         position: relative;
         font-weight: 300;
@@ -40,12 +44,25 @@
       letter-spacing: 1px;
       color: white;
       max-width: 400px;
+      padding: 0 10px;
       @include transition(all 0.35s cubic-bezier(0.860, 0.000, 0.070, 1.000));
       @include transform(perspective(1000px) rotate3d(1,0,0,90deg));
       @include opacity(0.5);
       -webkit-transform-origin: 50% 0%;
       transform-origin: 50% 0%;
       text-shadow: 1px 1px 1px $text-color;
+    }
+    &:nth-child(1){
+      border:0px $primary solid;
+    }
+    &:nth-child(2){
+      border:0px $blue solid;
+    }
+    &:nth-child(3){
+      border:0px $pink solid;
+    }
+    &:nth-child(4){
+      border:0px $green solid;
     }
     @include on-event{
       .story-title {
@@ -61,18 +78,7 @@
         @include opacity(0.95);
         @include transform(scale3d(1.05,1.05,1));
       }
-    }
-    &:nth-child(1){
-      background: $primary;
-    }
-    &:nth-child(2){
-      background: $blue;
-    }
-    &:nth-child(3){
-      background: $pink;
-    }
-    &:nth-child(4){
-      background: $green;
+      border-width: 0.35em;
     }
     &.disabled {
       .story-bg {

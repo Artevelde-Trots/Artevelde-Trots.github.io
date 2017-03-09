@@ -7,6 +7,7 @@
  */
 html {
   box-sizing: border-box;
+  background-color: #333;
 }
 
 /**
@@ -26,6 +27,7 @@ body {
   &.nav-open {
     overflow: hidden;
   }
+  @include animation(buildup 0.6s ease-in);
 }
 .wrapper {
   //min-height: 100vh;

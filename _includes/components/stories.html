@@ -4,8 +4,10 @@
         {% for story in stories %}
         <div id="{{ story.slug }}" class="story flex column centered justified-c {% if story.enabled == false %}disabled{% endif %}">
             <div class="story-bg" style='background-image:url("/assets/img/stories/{{ story.thumbnail.url }}");' alt="{{ story.thumbnail.alt }}"></div>
-            <h2 class="story-title ahs__title lg black">{{ story.title | replace:'story','<span>story</span>' }}</h2>
-            <div class="story-description">{{ story.description }}</div>
+            <div class="story-content">
+                <h2 class="story-title ahs__title lg black">{{ story.title | replace:'story','<span>story</span>' }}</h2>
+                <div class="story-description">{{ story.description }}</div>
+            </div>
         </div>
         {% endfor %}
     </div>

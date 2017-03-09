@@ -132,3 +132,11 @@
     opacity: 0.7;
   }
 }
+@include  keyframes(buildup){
+  0%{
+    @include opacity(0);
+  }
+  100%{
+    @include opacity(1);
+  }
+}
