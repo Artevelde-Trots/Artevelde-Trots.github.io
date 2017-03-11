@@ -259,13 +259,20 @@
   }
 }
 .icon {
-  .arrow {
-    .right {
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include transition(all 200ms ease-out);
+  &.arrow {
+    &.right {
       width: 21px;
       height: 19px;
       display: inline-block;
-      background: url("/assets/img/icons/arrow-right.svg") no-repeat;
-      background-size: contain;
     }
+  }
+  &.white {
+    fill: white;
   }
 }

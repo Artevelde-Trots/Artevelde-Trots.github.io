@@ -18,8 +18,12 @@
     top:0px;
     left:0;
     background: url("/assets/img/background/shapes.svg") no-repeat;
+    &:nth-child(1){
+      @include animation(shape-movement-1 8s infinite);
+    }
     &:nth-child(2){
       background: url("/assets/img/background/shapes2.svg") no-repeat;
+      @include animation(shape-movement-2 8s 100ms infinite);
     }
     @media (max-width: $md){
       padding-top:40px;
@@ -28,6 +32,7 @@
     @media (max-width: $sm){
       width: 70%;
     }
+
   }
   .content{
     position: absolute;

@@ -119,6 +119,19 @@
           font-size: 2.8em;
           color: white;
         }
+        .btn {
+          padding: 0 3em;
+          text-align: left;
+          width: 200px;
+          display: block;
+          font-weight: 500;
+          &> .icon {
+            top: 50%;
+            margin-top: -9px;
+            margin-left: -30px;
+            position: absolute;
+          }
+        }
 
       }
     }
@@ -147,7 +160,7 @@
       }
       &.animate {
         .grower{
-          @include animation(full-width 5s infinite linear);
+          @include animation(full-width 8s infinite linear);
         }
       }
       &.hidden {

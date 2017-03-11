@@ -459,7 +459,7 @@ ready(function(){
             "topics":null,
             'topics_length':0,
             'autoplay':{
-                'duration': 5000,
+                'duration': 8000,
                 'timer':null,
                 'pause':function(){
                     document.querySelector('.news-timer').classList.remove('animate');
@@ -540,9 +540,11 @@ ready(function(){
         },
         "background":{
             'init':function(){
+                /*
                 $("body").mousemove(function(e){
                     App.background.animateShapes(e);
                 });
+                */
             },
             "animateShapes":function(e){
 
