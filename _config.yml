@@ -8,12 +8,18 @@ port        : 4000
 
 # SEO
 # ---
-title      : Online portfolio GDM
-domain     : Grafische en Digitale Media
-subdomain  : TROTS
-description: "This is an assignment for Artevelde University College Ghent."
-author     : Arteveldehogeschool Gent
-tracking_id: ""
+title      : 'Online portfolio GDM'
+domain     : 'Grafische en Digitale Media'
+subdomain  : 'TROTS'
+description : "This is an assignment for Artevelde University College Ghent."
+author      : 'Bachelor of Graphical and Digital Media | Artevelde University College Ghent'
+copyright   : 'Copyright 2010-16 Artevelde University College Ghent. All Rights Reserved.'
+keywords    : 'portfolio, stories, grafische, digitale, media, gdm, arteveldehogeschool'
+
+# Tracking Services
+# ---------------
+google-analytics-tracking_id  :  "UA-18202861-3"
+
 # url        :
 # image      :
 # Build settings

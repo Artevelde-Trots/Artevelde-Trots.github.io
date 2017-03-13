@@ -23,14 +23,19 @@
       //padding-right: 600px;
       .intro {
         padding-right: calc(600px - (100vw - 980px) / 2);
-        @media (max-width: 1180px){
+      }
+      @media (max-width: 1180px){
+        .intro {
           padding-right: 500px;
         }
-        @media (max-width: $md){
-          padding-right: 50px;
-        }
-        @media (max-width: $sm){
-          padding-right: 25px;
+      }
+      @media (max-width: $lg) {
+
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        .intro {
+          padding-right: 0;
         }
       }
     }
@@ -47,31 +52,37 @@
     @media (max-width: 1180px){
       padding-right: 163px;
     }
+    @media (max-width: $lg) {
+      padding:50px 0px;
+    }
     @include transition(all 250ms cubic-bezier(0.86, 0, 0.07, 1));
-    .tease {
-      position: absolute;
-      text-align: center;
-      bottom:-20px;
-      left:0;
-      max-width: 200px;
 
+  }
+  .tease {
+    position: absolute;
+    text-align: center;
+    bottom:-20px;
+    left: 100px;
+    max-width: 200px;
 
-      h4 {
-        font-size: 23px;
-        color: $green;
-        font-family: "Scriptorama",arial;
-      }
-      span {
-        color: $text-color;
-        display: block;
-      }
-      img {
-        margin: 10px;
-        height: 60px;
-      }
+    @media (max-width: $lg) {
+      left: 25px;
+    }
+
+    h4 {
+      font-size: 23px;
+      color: $green;
+      font-family: "Scriptorama",arial;
+    }
+    span {
+      color: $text-color;
+      display: block;
+    }
+    img {
+      margin: 10px;
+      height: 60px;
     }
   }
-
   
   @media (max-width: $md){
     .ahs__paragraph p.intro {

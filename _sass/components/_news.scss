@@ -195,3 +195,23 @@
     }
   }
 }
+
+@media (max-width: $lg) {
+  .news {
+    position: relative;
+    width: 100%;
+    margin-bottom: 200px;
+    .news-content {
+      width: 100%;
+      padding: 22px;
+      .news-title,
+      .news-carousel {
+        max-width: 400px;
+        margin:0 auto;
+      }
+      .news-closer {
+        display: none;
+      }
+    }
+  }
+}
