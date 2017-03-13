@@ -8,7 +8,9 @@ port        : 4000
 
 # SEO
 # ---
-title      : &title TROTS
+title      : Online portfolio GDM
+domain     : Grafische en Digitale Media
+subdomain  : TROTS
 description: "This is an assignment for Artevelde University College Ghent."
 author     : Arteveldehogeschool Gent
 tracking_id: ""

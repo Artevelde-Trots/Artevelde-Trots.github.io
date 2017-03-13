@@ -1,6 +1,6 @@
 ---
 layout  : default
-title   : "Time is ticking."
+title   : "Online portfolio GDM"
 description: "Arteveldehogeschool stelt met trots het portfolio van haar richting Grafische Digitale Media voor aan iedereen. Neem een kijk hoe onze studenten te werk gaan en creative werken van begin tot einde ontwikkelen."
 ---
 {% include components/bg.html %}
