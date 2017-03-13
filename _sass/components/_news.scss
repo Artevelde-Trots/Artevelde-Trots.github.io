@@ -215,3 +215,9 @@
     }
   }
 }
+
+@media (max-width: $sm) {
+  .news {
+    height: 450px;
+  }
+}

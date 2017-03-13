@@ -53,7 +53,7 @@
       padding-right: 163px;
     }
     @media (max-width: $lg) {
-      padding:100px 0px;
+      padding:50px 0px;
     }
     @media (max-width: $md) {
       padding:50px 0px;
@@ -72,6 +72,7 @@
       left: 25px;
     }
 
+
     h4 {
       font-size: 23px;
       color: $green;
@@ -84,6 +85,38 @@
     img {
       margin: 10px;
       height: 60px;
+    }
+  }
+  .backToVid {
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    right: 25vw;
+    max-width: 210px;
+    cursor: pointer;
+    z-index: 1;
+
+    @media (max-width: $lg) {
+    }
+    @media (max-width: $md) {
+    }
+
+    h4 {
+      font-size: 23px;
+      color: $pink;
+      font-family: "Scriptorama",arial;
+    }
+    span {
+      color: $text-color;
+      font-size: 16px;
+      display: block;
+    }
+    img {
+      position: absolute;
+      right:0;
+      top:0;
+      margin: 0 10px;
+      height: 23px;
     }
   }
   

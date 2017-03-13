@@ -7,6 +7,13 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
 <div class="container flex home">
     <div class="row flex column centered justified-c">
         <div class="container maxed">
+            <div class="backToVid hide-xsm hide-xxsm flex">
+                <div>
+                    <h4>Sick Vid!</h4>
+                    <span>Dat wil ik wel nog eens zien!</span>
+                </div>
+                <img src="/assets/img/background/arrow-pink.svg"/>
+            </div>
             <h1 class="ahs__title bold xl padded-top-xxl padded-bottom-xl show-edge">
                 <span class="blue">Grafische &amp; Digitale</span> Media
             </h1>
@@ -45,7 +52,7 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
             <div class="tease hide-xsm hide-xxsm">
                 <h4>Check dat af!</h4>
                 <span>Een aantal samples van studentenwerk</span>
-                <img src="/assets/img/background/arrow.svg"/>
+                <img src="/assets/img/background/arrow-green.svg"/>
             </div>
         </div>
     </div>

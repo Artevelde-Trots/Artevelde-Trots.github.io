@@ -314,3 +314,34 @@
     @include transform(rotate(0deg) translateX(30px) rotate(0deg));
   }
 }
+
+@include keyframes(settle-in) {
+  0% {
+    @include opacity(0);
+    top:-30px;
+  }
+
+  100%{
+    @include opacity(1);
+    top:0;
+  }
+}
+
+@include keyframes(scaleDown) {
+  from { }
+  to { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+
+@include keyframes(moveFromBottom) {
+  from {
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+}
+
+@include keyframes(moveFromTop) {
+  from {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}

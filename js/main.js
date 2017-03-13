@@ -419,11 +419,13 @@ ready(function(){
             },
         },
         'intro':{
+            'timer':setTimeout(function(){},60000),
             'init':function(){
                 if(document.querySelector('.intro-page')){
                     App.intro.bindEventListeners();
                     if(!getCookie('intro')){
                         document.querySelector('.wrapper').classList.add("intro-animating");
+                        App.intro.timer = setTimeout(function(){ App.intro.hide();},60000);
                     } else {
                         //App.intro.hide();
                     }
@@ -436,18 +438,35 @@ ready(function(){
                     App.intro.hide();
                 });
 
-                setTimeout(function(){
-                    App.intro.hide();
-                },60000);
-
+                var backToVideo =  document.querySelector('.backToVid');
+                backToVideo.addEventListener("click", function () {
+                    var self = this;
+                    App.intro.show();
+                });
             },
             'hide':function(){
                 document.querySelector('.intro-page').classList.add("hide");
                 document.querySelector('.wrapper').classList.add("popin");
                 setTimeout(function(){
+                    document.querySelector('.video-container video').pause();
                     document.querySelector('.wrapper').classList.remove("intro-animating");
                     document.querySelector('.intro-page').classList.add("gone");
+                    document.querySelector('.intro-page').classList.remove("hide");
                     setCookie('intro',true,0.2);
+                },710);
+                clearTimeout(App.intro.timer);
+            },
+            'show':function(){
+                document.querySelector('.video-container video').currentTime = 0;
+                document.querySelector('.video-container video').play();
+                document.querySelector('.intro-page').classList.remove("gone");
+                document.querySelector('.intro-page').classList.add("show");
+                document.querySelector('.wrapper').classList.add("intro-animating");
+                document.querySelector('.wrapper').classList.add("hide");
+                setTimeout(function(){
+                    document.querySelector('.intro-page').classList.remove("show");
+                    document.querySelector('.wrapper').classList.remove("hide");
+                    document.querySelector('.wrapper').classList.remove("popin");
                 },710);
             }
 
