@@ -6,7 +6,7 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
 {% include components/bg.html %}
 <div class="container flex home">
     <div class="row flex column centered justified-c">
-        <div class="container maxed">
+        <div class="container maxed padded-top-xl">
             <div class="backToVid hide-xsm hide-xxsm flex">
                 <div>
                     <h4>Sick Vid!</h4>

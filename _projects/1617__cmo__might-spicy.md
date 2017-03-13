@@ -11,8 +11,8 @@ members:
 thumbnail:
     url: "mighty-spicy/thumb.png"
     alt: ""
-    height: 2
-    width: 3
+    height: 1
+    width: 2
     color: 2
 images:
     - url: "fb-banner/1.gif"
@@ -23,5 +23,5 @@ images:
       alt: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
     - url: "fb-banner/4.gif"
 created: 20/01/2017
-order: 6
+order: 10
 ---

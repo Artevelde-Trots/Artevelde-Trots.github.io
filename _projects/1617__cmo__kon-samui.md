@@ -11,8 +11,8 @@ members:
 thumbnail:
     url: "kon-samui/thumb.png"
     alt: ""
-    height: 2
-    width: 2
+    height: 1
+    width: 1
     color: 4
 images:
     - url: "fb-banner/1.gif"

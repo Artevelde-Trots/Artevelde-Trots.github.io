@@ -19,6 +19,7 @@
         <div class="news-carousel">
             {% assign news = site.news | sort:'order' %}
             {% for topic in news %}
+                {% if topic.active %}
                 <div class="news-topic">
                     <div class="news-topic-content">
                         {% if topic.subtitle %}<h3 class="news-topic-subtitle">{{ topic.subtitle }}</h3>{% endif %}
@@ -37,6 +38,7 @@
                         </a>
                     </div>
                 </div>
+                {% endif %}
             {% endfor %}
         </div>
         <div class="news-timer">
