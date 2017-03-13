@@ -35,23 +35,26 @@
     }
   }
   @media screen and (max-width: $lg) {
-    height: auto;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    .ahs__logo {
-      padding: 10px;
+    > div {
+      height: auto;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      .ahs__logo {
+        padding: 10px;
+      }
+      .ahs__footer-address,
+      .ahs__footer-contact {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+        -webkit-align-self: stretch;
+        -ms-flex-item-align: stretch;
+        align-self: stretch;
+        padding: 10px;
+      }
     }
-    .ahs__footer-address,
-    .ahs__footer-contact {
-      -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-      flex: 1 1 auto;
-      -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-      align-self: stretch;
-      padding: 10px;
-    }
+
 
   }
 }

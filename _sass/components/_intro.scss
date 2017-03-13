@@ -42,7 +42,7 @@
     height: 100%;
     overflow: hidden;
     z-index: -1;
-    @include opacity(0.5);
+    @include opacity(0.95);
     video {
       /* Make video to at least 100% wide and tall */
       min-width: 100%;
