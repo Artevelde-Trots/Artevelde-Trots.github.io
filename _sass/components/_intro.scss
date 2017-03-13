@@ -16,10 +16,11 @@
     left:0;
     right:0;
     h4 {
-      padding: 20px 0;
+      padding: 0.5em 0;
       position: relative;
       font-size: 100%;
       font-weight: 400;
+      font-size: 2vw;
       top:0;
       @include opacity(0);
       @include animation(settle-in 0.4s 2s ease-out);
@@ -61,6 +62,31 @@
   }
 }
 
+
+@media (max-width: $lg) {
+  .intro-page {
+    .continue-section {
+      h4 {
+        font-size: 4vw;
+      }
+      .intro-continue-button {
+        height: 3vw;
+        width: 3vw;
+        padding: 3vw !important;
+      }
+    }
+  }
+}
+
+@media (max-width: $lg) and (orientation: landscape) {
+  .intro-page {
+    .video-container {
+      video {
+        width: 100vw;
+      }
+    }
+  }
+}
 $colors: $green,
 $primary,
 $pink,
