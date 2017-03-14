@@ -5,13 +5,13 @@
   .story {
     width: 100%;
     min-height:400px;
-    height: 33.3333334vh;
+    height: 33.3333334vw;
     margin-bottom: 0.35em;
     position: relative;
     overflow: hidden;
     cursor: pointer;
     background-color: $mid-grey;
-    @include transition(all 0.35s ease-in);
+    @include transition(all 0.2s ease-in-out);
     .story-bg {
       position: absolute;
       width: 100%;
@@ -21,9 +21,13 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: 50% 50%;
-      @include transition(all 0.35s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      @include transition(all 0.2s ease-in-out);
       -webkit-transform-origin: 50% 50%;
       transform-origin: 50% 50%;
+
+      &.blur {
+        @include opacity(0);
+      }
     }
     .story-title {
       position: relative;
@@ -31,7 +35,7 @@
       text-align: center;
       background: rgba(255,255,255,0.7);
       padding: 12px 12px 0px;
-      @include transition(all 0.35s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      @include transition(all 0.2s ease-in-out);
       span {
         top:-0.1em;
         font-size: 0.8em;
@@ -45,7 +49,7 @@
       color: white;
       max-width: 400px;
       padding: 0 10px;
-      @include transition(all 0.35s cubic-bezier(0.860, 0.000, 0.070, 1.000));
+      @include transition(all 0.2s ease-in-out);
       @include transform(perspective(1000px) rotate3d(1,0,0,90deg));
       @include opacity(0.5);
       -webkit-transform-origin: 50% 0%;
@@ -73,18 +77,27 @@
         @include transform(perspective(1000px) rotate3d(1,0,0,0deg));
       }
       .story-bg{
-        -webkit-filter: blur(6px); /* Safari 6.0 - 9.0 */
-        filter: blur(6px);
-        @include opacity(0.95);
+        @include opacity(0);
         @include transform(scale3d(1.05,1.05,1));
+        &.blur {
+          @include opacity(0.95);
+        }
       }
       border-width: 0.35em;
     }
     &.disabled {
       .story-bg {
        @include opacity(0.5);
+        &.blur {
+          @include opacity(0);
+        }
       }
       background: $dark-grey;
+      @include on-event{
+        .story-bg.blur {
+          @include opacity(0.95);
+        }
+      }
     }
   }
 

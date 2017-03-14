@@ -8,7 +8,7 @@ description: De opdracht hield in dat er een campagne
              campagne-elementen.
 type: "intern"
 members:
-    - name: "Shauny Elot"
+    - name: "Shauny Eloot"
       direction: "Cross-Media Ontwerp"
       subdirection: "Photo Design"
       disk: "3e Schijf"
