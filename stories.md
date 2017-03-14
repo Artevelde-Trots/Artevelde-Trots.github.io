@@ -23,7 +23,7 @@ description: "Ontdek de vele verhalen die onze student van Grafische Digitale Me
                     </svg>
                 </div>
                 <div class="svg-box">
-                    <svg viewBox="0 0 750 110">
+                    <svg viewBox="0 0 620 110">
                         <symbol id="m-text">
                             <text text-anchor="left" x="0" y="72%" class="text--line">Experience us</text>
                         </symbol>
