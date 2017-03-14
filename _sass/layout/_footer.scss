@@ -3,14 +3,16 @@
 // -----------------------------------------------------------------------------
 .footer {
   z-index: 3;
-  padding: 40px;
   position: relative;
-  background:white;
   height:80px;
   width: 100%;
-  padding: 10px 28px;
   &.grid-footer {
-    margin-bottom: 100px;
+    margin-bottom: 80px;
+  }
+  > div {
+    width: 100%;
+    padding: 10px 28px;
+    background:white;
   }
   .ahs__logo {
     height: 100%;
