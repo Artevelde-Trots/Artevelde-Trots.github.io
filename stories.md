@@ -14,7 +14,7 @@ description: "Ontdek de vele verhalen die onze student van Grafische Digitale Me
                 <div class="svg-box">
                     <svg viewBox="0 0 900 100">
                         <symbol id="d-text">
-                            <text text-anchor="left" x="0" y="72%" class="text--line">GDM Stories</text>
+                            <text text-anchor="left" x="0" y="81%" class="text--line">GDM Stories</text>
                         </symbol>
                         <g class="g-ants">
                             <use xlink:href="#d-text"
@@ -25,7 +25,7 @@ description: "Ontdek de vele verhalen die onze student van Grafische Digitale Me
                 <div class="svg-box">
                     <svg viewBox="0 0 620 110">
                         <symbol id="m-text">
-                            <text text-anchor="left" x="0" y="72%" class="text--line">Experience us</text>
+                            <text text-anchor="left" x="0" y="55%" class="text--line">Experience us</text>
                         </symbol>
                         <g class="g-ants">
                             <use xlink:href="#m-text"

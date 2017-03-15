@@ -139,7 +139,7 @@
         $self: 20 * $i;
         $grid-padding: 40;
         &.grid-h-#{$i} {
-          height: calc(((100vw - #{$grid-padding * 2}px) / 5) * #{$i});
+          height: calc((((100vw - #{$grid-padding * 2}px) / 5) * #{$i}) + #{18px * ($i - 1)});
         }
         &.grid-w-#{$i} {
           width: percentage($self/100);
@@ -282,7 +282,7 @@
           $self: 16.6667 * $i;
           $grid-padding: 40;
           &.grid-h-#{$i} {
-            height: calc(((100vw - #{$grid-padding * 2}px) / 6) * #{$i});
+            height: calc((((100vw - #{$grid-padding * 2}px) / 6) * #{$i}) + #{18px * ($i - 1)});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -300,7 +300,7 @@
           $self: 20 * $i;
           $grid-padding: 40;
           &.grid-h-#{$i} {
-            height: calc(((100vw - #{$grid-padding * 2}px) / 5) * #{$i});
+            height: calc((((100vw - #{$grid-padding * 2}px) / 5) * #{$i}) + #{18px * ($i - 1)});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -318,7 +318,7 @@
           $self: 25 * $i;
           $grid-padding: 40;
           &.grid-h-#{$i} {
-            height: calc(((100vw - #{$grid-padding * 2}px) / 4) * #{$i});
+            height: calc((((100vw - #{$grid-padding * 2}px) / 4) * #{$i}) + #{18px * ($i - 1)});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -333,10 +333,10 @@
       }
       &-item {
         @for $i from 1 through 3 {
-          $self: 33.333 * $i;
+          $self: 33.334 * $i;
           $grid-padding: 25;
           &.grid-h-#{$i} {
-            height: #{$self}vw;
+            height: calc(#{$self}vw + #{18px * ($i - 1)});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -353,7 +353,7 @@
         @for $i from 1 through 3 {
           $self: 50 * $i;
           &.grid-h-#{$i} {
-            height: #{$self}vw;
+            height: calc(#{$self}vw + #{18px * ($i - 1)});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -366,7 +366,7 @@
           @for $i from 1 through 3 {
             $self: 33.33334 * $i;
             &.grid-h-#{$i} {
-              height: #{$self}vw;
+              height: calc(#{$self}vw + #{18px * ($i - 1)});
             }
           }
         }
@@ -384,7 +384,7 @@
           @for $i from 1 through 3 {
             $self: 100 * $i;
             &.grid-h-#{$i} {
-              height: #{$self}vw;
+              height: calc(#{$self}vw + #{18px * ($i - 1)});
             }
           }
         }
@@ -394,7 +394,7 @@
           @for $i from 1 through 3 {
             $self: 50 * $i;
             &.grid-h-#{$i} {
-              height: #{$self}vw;
+              height: calc(#{$self}vw + #{18px * ($i - 1)});
             }
           }
         }
@@ -404,7 +404,7 @@
           @for $i from 1 through 3 {
             $self: 33.33334 * $i;
             &.grid-h-#{$i} {
-              height: #{$self}vw;
+              height: calc(#{$self}vw + #{18px * ($i - 1)});
             }
           }
         }

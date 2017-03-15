@@ -21,13 +21,16 @@ thumbnail:
     height: 1
     width: 1
     color: "f05384"
-images:
+media:
     - url: "sweet-tooth/1.jpg"
+      type: "image"
     - url: "sweet-tooth/2.jpg"
-      alt: "Bij het starten van een campagne, begin je met het ontwikkelen van een logo. Hier gaan vele voorstudies aan
+      type: "image"
+      text: "Bij het starten van een campagne, begin je met het ontwikkelen van een logo. Hier gaan vele voorstudies aan
             vooraf. Als de klant tevreden is met een van de voorstellen, dan begint de uitwerking, zoals hierboven."
     - url: "sweet-tooth/3.jpg"
-      alt: "Bij de opdracht was het de bedoeling een mascotte voor de campagne te onwtikkelen, deze reflecteert waarvoor
+      type: "image"
+      text: "Bij de opdracht was het de bedoeling een mascotte voor de campagne te onwtikkelen, deze reflecteert waarvoor
             de onderneming of de campagne staat."
 created: 20/01/2017
 order: 8

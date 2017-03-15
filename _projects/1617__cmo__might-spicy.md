@@ -13,15 +13,19 @@ thumbnail:
     alt: ""
     height: 1
     width: 2
-    color: 2
-images:
+    color: "ed9d50"
+media:
     - url: "fb-banner/1.gif"
-      alt: "Started with an idea, worked out a sketch and digitalized it."
+      type: "image"
+      text: "Started with an idea, worked out a sketch and digitalized it."
     - url: "fb-banner/2.gif"
-      alt: "Picked the colors and filled in the shades."
+      type: "image"
+      text: "Picked the colors and filled in the shades."
     - url: "fb-banner/3.gif"
-      alt: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
+      type: "image"
+      text: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
     - url: "fb-banner/4.gif"
+      type: "image"
 created: 20/01/2017
 order: 10
 ---

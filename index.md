@@ -12,7 +12,7 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
                     <h4>Sick Vid!</h4>
                     <span>Dat wil ik wel nog eens zien!</span>
                 </div>
-                <img src="/assets/img/background/arrow-pink.svg"/>
+                <img src="/assets/img/icons/arrow-pink.svg"/>
             </div>
             <h1 class="ahs__title bold xl padded-top-xxl padded-bottom-xl show-edge">
                 <span class="blue">Grafische &amp; Digitale</span> Media
@@ -21,7 +21,7 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
                 <div class="svg-box">
                     <svg viewBox="0 0 900 100">
                         <symbol id="d-text">
-                            <text text-anchor="left" x="0" y="72%" class="text--line">Grafische & Digitale</text>
+                            <text text-anchor="left" x="0" y="81%" class="text--line">Grafische & Digitale</text>
                         </symbol>
                         <g class="g-ants">
                             <use xlink:href="#d-text"
@@ -32,7 +32,7 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
                 <div class="svg-box">
                     <svg viewBox="0 0 270 110">
                         <symbol id="m-text">
-                            <text text-anchor="left" x="0" y="72%" class="text--line">Media</text>
+                            <text text-anchor="left" x="0" y="55%" class="text--line">Media</text>
                         </symbol>
                         <g class="g-ants">
                             <use xlink:href="#m-text"
@@ -52,7 +52,7 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
             <div class="tease hide-xsm hide-xxsm">
                 <h4>Check dat af!</h4>
                 <span>Een aantal samples van studentenwerk</span>
-                <img src="/assets/img/background/arrow-green.svg"/>
+                <img src="/assets/img/icons/arrow-green.svg"/>
             </div>
         </div>
     </div>
