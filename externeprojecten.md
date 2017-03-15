@@ -49,7 +49,4 @@ description : "Externe projecten zijn werken die we maken voor bedrijven. Als ee
         </div>
     </div>
 </div>
-<div class="contact-page-container">
-    {% include components/contact.html %}
-</div>
 

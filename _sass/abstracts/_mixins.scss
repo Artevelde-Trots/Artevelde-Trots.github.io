@@ -151,7 +151,7 @@
 }
 
 // scale
-@mixin scale($scale) {
+@mixin scale($scale...) {
   @include transform(scale($scale));
 }
 // translate
