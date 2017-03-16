@@ -13,7 +13,6 @@ if(document.querySelector('.grid')){
         }),
         "init":function() {
             Grid.bindEventListeners();
-            document.querySelector('.footer').classList.add('grid-footer')
             Grid.scroll();
             $( window ).scroll(function() {
                 Grid.scroll();
@@ -87,6 +86,12 @@ if(document.querySelector('.grid')){
                 var filter = document.querySelector('.grid-filters').classList.add('show');
             } else {
                 var filter = document.querySelector('.grid-filters').classList.remove('show');
+            }
+            var bod = document.querySelector('body');
+            if (bod.offsetHeight + bod.scrollTop >= bod.scrollHeight) {
+                gridBox.classList.add('reached-bottom');
+            } else {
+                gridBox.classList.remove('reached-bottom');
             }
         }
     }

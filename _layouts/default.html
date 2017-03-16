@@ -10,8 +10,9 @@
         <main id="main" role="main" class="flex column flex-child stretch">
         {{ content }}
         </main>
-        {% include components/footer.html %}
-
+        {% if page.url != "/" %}
+            {% include components/footer.html %}
+        {% endif %}
         {% include components/scripts.html %}
         </div>
     </body>

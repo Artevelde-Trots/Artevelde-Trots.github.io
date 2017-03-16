@@ -2,6 +2,22 @@
   padding: 0px 40px;
   z-index: 5;
   background: white;
+  margin-bottom: 200px;
+  &.reached-bottom {
+    .grid-filters {
+      @include translate(0,-100%);
+      .line-marker {
+        bottom: inherit;
+        top: 0px;
+      }
+      .filter {
+        border-bottom: 3px solid transparent;
+      }
+      &-wrapper {
+        height: 100%;
+      }
+    }
+  }
   .grid {
     font-size:16px;
 
@@ -120,7 +136,7 @@
         &::after{
           position: absolute;
           left:-100px;
-          top:11px;
+          top: calc(50% - 14px);
           content:"Filter";
           font-weight: bold;
           color: #BBBBBB;

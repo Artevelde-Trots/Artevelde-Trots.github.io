@@ -2,12 +2,13 @@
 <div class="grid-container">
     <div class="grid-filters-scroll grid-filters container flex wrap centered justified-c">
         <div class="grid-filters-wrapper flex">
-            <div class="filter active" data-filter="all">Alles</div>
-            <div class="filter" data-filter="intern">Interne projecten</div>
-            <div class="filter" data-filter="extern">Externe projecten</div>
+            <div class="filter flex justified-c centered active" data-filter="all">Alles</div>
+            <div class="filter flex justified-c centered" data-filter="intern">Interne projecten</div>
+            <div class="filter flex justified-c centered" data-filter="extern">Externe projecten</div>
             <div class="line-marker"></div>
         </div>
     </div>
+    {% include components/footer.html %}
     <div class="grid row">
         <div class="grid-sizer"></div>
         {% assign projects = site.projects | sort:'order' %}
