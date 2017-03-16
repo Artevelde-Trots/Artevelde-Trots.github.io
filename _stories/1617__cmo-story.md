@@ -1,7 +1,7 @@
 ---
 title: CMO story
 slug: cmo-story
-description: Ontdek hoe een CMO student groeit van een beginner zonder enige kennis tot een ervaren artiest.
+description: "Ontdek hoe een CMO student groeit van een beginner tot een ervaren professional."
 thumbnail:
     url: "cmo-story/thumb.jpg"
     alt: "Het CMO verhaal"
