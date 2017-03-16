@@ -561,11 +561,10 @@ ready(function(){
         },
         "background":{
             'init':function(){
-                /*
-                $("body").mousemove(function(e){
-                    App.background.animateShapes(e);
-                });
-                */
+                if(document.querySelector('.home')) {
+                    document.querySelector('.bg').classList.add('animate');
+                }
+
             },
             "animateShapes":function(e){
 

@@ -34,7 +34,7 @@ media:
              op 1 flesje. Dit flesje is speciaal voor de kerst periode uitgebracht dus is dit overgoten met de kerstsfeer.
              Vervolgens maakte ik wat extra objecten zoals de kaars en de kerstballen. De laatste stap was het toevoegen van
              een achtergrond om het geheel de juiste sfeer te geven."
-    - url: "ipuro/4_detail_finaleopstelling.png"
+    - url: "ipuro/4_detail_finale_opstelling.gif"
       type: "image"
       text: "Enkel nog de gepaste animaties en muziek toevoegen zorgt ervoor dat het plaatje compleet wordt."
     - url: "194844362"
