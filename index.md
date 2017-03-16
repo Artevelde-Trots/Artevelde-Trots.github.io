@@ -45,7 +45,7 @@ description: "Arteveldehogeschool stelt met trots het portfolio van haar richtin
         <div class="ahs__paragraph pos-rel intro-container flex news-active">
             <div class="intro flex-child stretch">
                 <p>
-                    Grafische communicatie gebeurt via een pijlsnel groeiende waaier aan kanalen in een wereld waar de grens tussen pixels en rasterpunten steeds vager wordt. Op de GDM campus leiden we professionals op in (photo-)graphic design, code, motiongraphics of video. Voor de commerciële breinen achter de creativiteit ontwikkelden we de richting ‘Grafimediabeleid’.    
+                    Grafische communicatie gebeurt via een pijlsnel groeiende waaier aan kanalen in een wereld waar de grens tussen pixels en rasterpunten steeds vager wordt. Op de media campus leiden we professionals op in (photo-)graphic design, code, motiongraphics of video. Voor de commerciële breinen achter de creativiteit ontwikkelden we de richting ‘Grafimediabeleid’.    
                 </p>
             </div>
             {% include components/news.html %}
