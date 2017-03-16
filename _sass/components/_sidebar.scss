@@ -215,9 +215,9 @@
   }
   .shrink {
     width: 3px;
-    border-right:3px solid $primary;
+    border-right: 25px solid #f2f2f2;
     background: #f2f2f2;
-    cursor:pointer;
+    cursor: pointer;
     @include transition(width 250ms ease-in-out);
     .menu {
       align-self: flex-start;
@@ -229,8 +229,8 @@
       @include transition(opacity 0ms ease-in-out, visibility 0ms ease-in-out);
     }
     .sidebar-toggle {
-      right:-22px;
-      background: $primary;
+      right:-43px;
+      background: #f2f2f2;
       .line {
         &:nth-child(1) {
           @include transform(translate(31px, 22px) rotate(45deg));

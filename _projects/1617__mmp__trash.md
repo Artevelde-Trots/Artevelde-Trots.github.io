@@ -17,7 +17,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 2
-    color: 84839a
+    text-color: "84839a"
+    background-color: "84839a"
 media:
     - url: "trash/0_detail_screendesign.png"
       type: "image"

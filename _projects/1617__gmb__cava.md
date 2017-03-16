@@ -12,7 +12,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: "00997d"
+    text-color: "00997d"
+    background-color: "00997d"
 media:
     - url: "cava/Magazine_DeClercq_Sara.jpg"
       type: "image"

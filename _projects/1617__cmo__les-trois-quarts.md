@@ -22,7 +22,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: ee655d
+    text-color: "ee655d"
+    background-color: "ee655d"
 media:
     - url: "packshot-wijn/1_logo.jpg"
       type: "image"

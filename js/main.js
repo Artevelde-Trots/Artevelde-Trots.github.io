@@ -520,8 +520,10 @@ ready(function(){
                 newsOpener.addEventListener("click", function () {
                     newsBox.classList.add('active');
                     newsUberBox.classList.add('news-active');
-                    App.news.autoplay.play();
-                    document.querySelector('.news-timer').classList.add('animate');
+                    if(App.news.topics.length > 1) {
+                        App.news.autoplay.play();
+                        document.querySelector('.news-timer').classList.add('animate');
+                    }
                 });
                 newsCloser.addEventListener("click", function () {
                     newsBox.classList.remove('active');

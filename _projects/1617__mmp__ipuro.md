@@ -17,7 +17,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: "ad7b70"
+    text-color: "ad7b70"
+    background-color: "ad7b70"
 media:
     - url: "ipuro/1_detail_echteflesjes.png"
       type: "image"

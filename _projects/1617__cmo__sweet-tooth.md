@@ -20,7 +20,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: "f05384"
+    text-color: "f05384"
+    background-color: "f05384"
 media:
     - url: "sweet-tooth/1.jpg"
       type: "image"

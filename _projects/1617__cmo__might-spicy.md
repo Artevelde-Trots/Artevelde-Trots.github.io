@@ -15,7 +15,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 2
-    color: "ed9d50"
+    text-color: "ed9d50"
+    background-color: "ed9d50"
 media:
     - url: "mighty-spicy/1_detail_logo.png"
       type: "image"

@@ -17,7 +17,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: "b96528"
+    text-color: "b96528"
+    background-color: "b96528"
 media:
     - url: "amelli/1_logoevolutie.png"
       type: "image"

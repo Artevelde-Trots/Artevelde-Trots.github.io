@@ -21,7 +21,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: cb4b4a
+    text-color: "cb4b4a"
+    background-color: "cb4b4a"
 media:
     - url: "vormgever-in-cijfers/1.jpg"
       type: "image"

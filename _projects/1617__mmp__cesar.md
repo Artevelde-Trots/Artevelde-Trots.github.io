@@ -15,7 +15,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 2
-    color: "999999"
+    text-color: "999999"
+    background-color: "999999"
 media:
     - url: "cesar/1_detail_theelements.png"
       type: "image"

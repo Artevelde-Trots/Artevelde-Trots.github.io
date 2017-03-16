@@ -13,7 +13,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: "b20112"
+    text-color: "b20112"
+    background-color: "b20112"
 media:
     - url: "fb-banner/1.gif"
       type: "image"

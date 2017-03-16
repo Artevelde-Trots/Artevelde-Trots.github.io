@@ -14,7 +14,8 @@ thumbnail:
     alt: ""
     height: 1
     width: 1
-    color: "181c1f"
+    text-color: "181c1f"
+    background-color: "181c1f"
 media:
     - url: "oceano/1_detail_logo.png"
       type: "image"

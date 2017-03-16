@@ -22,7 +22,8 @@ thumbnail:
     alt: ""
     height: 2
     width: 1
-    color: "d6447a"
+    text-color: "d6447a"
+    background-color: "d6447a"
 media:
     - url: "kraken/1.jpg"
       type: "image"
