@@ -14,14 +14,14 @@
     -ms-flex-direction: row;
     flex-direction: row;
     .externe-section {
-      padding: 0 20px 0 0;
+      padding: 0;
       width: 350px;
       &-image {
         padding: 0 0 10px;
         max-width: 100%;
       }
       &:last-of-type {
-        padding: 0;
+        padding: 0 0 0 40px;
       }
     }
   }

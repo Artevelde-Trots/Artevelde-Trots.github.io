@@ -3,7 +3,7 @@ title: "Packshot IPURO christmas"
 slug: "ipuro"
 description: "De opdracht was het maken van een 3D
               packshot. Hiermee bedoelen we het product
-              dat na de commurcial nog eens getoond
+              dat na de commercial nog eens getoond
               wordt om ze zeggen over welk product
               het juist gaat."
 type: "intern"
@@ -38,7 +38,6 @@ media:
       text: "Enkel nog de gepaste animaties en muziek toevoegen zorgt ervoor dat het plaatje compleet wordt."
     - url: "194844362"
       type: "vimeo"
-      text: "Enkel nog de gepaste animaties en muziek toevoegen zorgt ervoor dat het plaatje compleet wordt."
 created: 20/01/2017
 order: 11
 ---

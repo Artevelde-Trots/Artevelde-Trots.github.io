@@ -28,8 +28,6 @@ media:
       type: "image"
       text: "Vervolgens beginnen we met het creeeren van de gewentste toepassingen, rekeninghoudend met de huisstijl.
              Onderstaand vind je in deze volgorde: de mascotte, poster en buswrap."
-    - url: "oceano/4_detail_kleurgebruik.png"
-      type: "image"
     - url: "oceano/5_detail_mascotte.png"
       type: "image"
     - url: "oceano/6_detail_poster.png"
