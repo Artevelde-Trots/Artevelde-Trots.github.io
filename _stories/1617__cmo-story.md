@@ -39,7 +39,11 @@ sections:
       - line: "Je leert je ideeën visualiseren met klassieke middelen zoals potlood en papier, maar ook om ze digitaal uit te werken met de meest recente grafische software."
     background:
       type: "image"
+<<<<<<< HEAD
       url: "slide02.jpg"
+=======
+      url: "slide02.png"
+>>>>>>> 7223448c2269c9729d7b612956756a83e235b2f0
       mobile: "light"
   - thumb: "slide03.png"
     text:
