@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+{% include components/story/head.html %}
+<body class="flex column" data-mobile>
+<div class="reveal">
+    {% include components/story/menu.html %}
+    {% include components/story/intro.html %}
+    <div class="slides">
+        {% include components/story/branding.html %}
+        {{ content }}
+        {% assign sections = page.sections %}
+        {% for section in sections %}
+        {% if section.background.type == "video" %}
+            <section data-background-video="../assets/stories/{{page.slug}}/video/{{section.background.url}}" class="{{section.background.gradient}}" data-background-video-loop data-transition="fade-in fade-out">
+        {% else if section.background.type == "image" %}
+            <section data-transition="fade-in fade-out" class="{{section.background.gradient}}" data-background-image="../assets/stories/{{page.slug}}/background/{{section.background.url}}">
+        {% endif %}
+            <div class="text mobile-{{section.background.mobile}}-text-bg text-fade-in {{section.text.position}}">
+                {% if section.text.titlehighlight %}
+                <h1 class="ahs__title bold {{section.text.highlight}}">{{section.text.titlehighlight}}</h1>
+                {% endif %}
+                <h1 class="ahs__title bold hide-on-{{section.text.hide}} {{section.text.titlecolor}}">{{section.text.title}}</h1>
+                    {% for paragraph in section.text.paragraph %}
+                        <p class="ahs__paragraph {{section.text.textcolor}} hide-on-{{section.text.hide}}">{{paragraph.line}}</p>
+                    {% endfor %}
+                {% if section.contact %}
+                 <div class="share-list flex">
+                    <a href="" class="share-link facebook">
+                        <i class="fa fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="share-link linkedin">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                    <a href="" class="share-link pintrest">
+                        <i class="fa fa-pinterest-p"></i>
+                    </a>
+                    <a href="" class="share-link twitter">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+                {% endif %}
+                </div>
+            {% for sticker in section.stickers %}
+                <img class="sticker {{sticker.position}} {{sticker.size}} " src="../assets/stories/{{page.slug}}/stickers/{{sticker.url}}" >
+            {% endfor %}
+        </section>
+        {% endfor %}
+    </div>
+</div>
+{% include components/story/scripts.html %}
+</body>
+</html>
