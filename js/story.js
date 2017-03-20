@@ -161,7 +161,7 @@
                     var video = document.querySelector('.present > video');
 
                     var srcImage = document.querySelector('.fullscreen');
-                    srcImage.src = "../assets/img/icons/exitFullscreenButton.svg";
+                    srcImage.src = "../assets/stories/intro/buttons/exitfullscreen.svg";
 
                     var pointer = document.querySelector('.present > svg');
                     if (pointer != undefined) {

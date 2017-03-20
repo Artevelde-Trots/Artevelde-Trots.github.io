@@ -56,7 +56,6 @@ sections:
       titlehighlight: "Stap 1"
       highlight: "white"
       position: "right"
-      title: "Eerste jaar"
       titlecolor: "pink"
       paragraph: 
       - line: "Kies een VZW en bekijk hun website"
@@ -92,7 +91,6 @@ sections:
       gradient: "gradient left"
   - thumb: "slide06.png"
     text:
-      title: "Non-profit organisatie kiezen"
       titlehighlight: "Stap 3"
       highlight: "white"
       position: "right"
@@ -109,7 +107,7 @@ sections:
   - thumb: "slide07.png"
     text:
       position: "left"
-      title: "Non-profit organisatie kiezen"
+      title: "Presentatie"
       titlecolor: "blue"
       titlehighlight: "Stap 3"
       highlight: "white"
