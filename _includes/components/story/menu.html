@@ -1,0 +1,58 @@
+<div class="menu flex end justified-c centered column hide" data-prevent-swipe>
+    <div class="tools">
+        <button class="menu-toggle open flex column">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+        <a class="overview-toggle flex justified-c centered wrap active visible"
+           href="https://artevelde-trots.github.io" target="_blank">
+            <div class="cube-row flex">
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+            </div>
+            <div class="cube-row flex">
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+            </div>
+            <div class="cube-row flex">
+                <div class="cube"></div>
+                <div class="cube"></div>
+                <div class="cube"></div>
+            </div>
+        </a>
+        <img class="fullscreen" src="../assets/img/icons/fullscreenButton.svg">
+
+        <div class="share-container">
+                    <span class="share-toggle ahs__title xsm">
+                        <i class="fa fa-share-alt"></i>
+                        </span>
+            <div class="share-list inactive flex row justified-c centered">
+                <a href="" class="share-link facebook">
+                    <i class="fa fa-facebook-f"></i>
+                </a>
+                <a href="" class="share-link linkedin">
+                    <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="" class="share-link pintrest">
+                    <i class="fa fa-pinterest-p"></i>
+                </a>
+                <a href="" class="share-link twitter">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-items">
+        {% assign sections = page.sections %}
+        {% for section in sections %}
+            <div class="nav-item">
+                <a href="#">
+                    <img src="../assets/stories/{{page.slug}}/thumb/{{section.thumb}}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</div>

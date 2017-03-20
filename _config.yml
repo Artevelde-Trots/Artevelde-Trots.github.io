@@ -46,7 +46,8 @@ collections:
     output: true
     permalink: /project/:slug
   stories:
-    output: false
+    output: true
+    permalink: /stories/:slug
   news:
     output: false
 defaults:
@@ -59,6 +60,11 @@ defaults:
             height: 1
             width: 1
             color: 1
+    - scope:
+        path: ""
+        type: stories
+      values:
+        layout: "story"
 exclude:
   - Gemfile
   - LICENSE
