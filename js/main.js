@@ -479,7 +479,7 @@ ready(function(){
                     });
                     App.intro.sources.active = 'default';
                     vid.load();
-                    vid.currentTime = progression;
+                    //vid.currentTime = progression;
                 } else if(width <= 700 && App.intro.sources.active !== 'mobile') {
                     var i = 0;
                     [].forEach.call(sources, function(source) {
@@ -487,7 +487,7 @@ ready(function(){
                     });
                     App.intro.sources.active = 'mobile';
                     vid.load();
-                    vid.currentTime = progression;
+                    //vid.currentTime = progression;
                 }
             },
             'hide':function(){
