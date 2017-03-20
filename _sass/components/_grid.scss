@@ -16,6 +16,16 @@
       &-wrapper {
         height: 100%;
       }
+
+    }
+  }
+
+  @media (max-width: 700px) {
+    margin-bottom: 350px;
+    &.reached-bottom {
+      .grid-filters {
+        @include translate(0,-200%);
+      }
     }
   }
   .grid {

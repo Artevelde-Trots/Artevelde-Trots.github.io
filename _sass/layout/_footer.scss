@@ -80,6 +80,13 @@
     @include translate(0,100%);
     @include transition(all 250ms cubic-bezier(0.86, 0, 0.07, 1));
 
+    @media (max-width: 700px) {
+      height: 160px;
+      > div > div {
+        width: 50%;
+        &.ahs__logo a{margin-left: auto;}
+      }
+    }
   }
   &.reached-bottom {
     .footer {

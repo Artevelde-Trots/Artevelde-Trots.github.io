@@ -65,6 +65,10 @@
       left: 50%;
       transform: translate(-50%,-50%);
     }
+
+    @media (max-width: $md) and (orientation: portrait){
+
+    }
   }
   &.show {
     @include animation(moveFromTop .7s ease both);

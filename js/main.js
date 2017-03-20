@@ -419,6 +419,19 @@ ready(function(){
             },
         },
         'intro':{
+            'sources': {
+                'active': 'default',
+                'default': [
+                    '/assets/video/landingpage.mp4',
+                    '/assets/video/landingpage.webm',
+                    '/assets/video/landingpage.ogv'
+                ],
+                'mobile': [
+                    '/assets/video/landingpagemobile.mp4',
+                    '/assets/video/landingpagemobile.webm',
+                    '/assets/video/landingpagemobile.ogv'
+                ]
+            },
             'timer':setTimeout(function(){},60000),
             'init':function(){
                 if(document.querySelector('.intro-page')){
@@ -443,6 +456,39 @@ ready(function(){
                     var self = this;
                     App.intro.show();
                 });
+                document.querySelector('.intro-page').addEventListener('touchmove',function(){
+                    App.intro.hide();
+                });
+                document.querySelector('.intro-page').addEventListener('wheel',function(){
+                    App.intro.hide();
+                });
+                window.onresize = function(event) {
+                    App.intro.resize();
+                }
+                App.intro.resize();
+            },
+            'resize': function(){
+                var vid = document.querySelector('.video-container video');
+                var sources = vid.querySelectorAll('source');
+                var width = $(window).width();
+                var progression = vid.currentTime;
+                if(width >= 700 && App.intro.sources.active !== 'default'){
+                    var i = 0;
+                    [].forEach.call(sources, function(source) {
+                        source.src = App.intro.sources.default[i];
+                    });
+                    App.intro.sources.active = 'default';
+                    vid.load();
+                    vid.currentTime = progression;
+                } else if(width <= 700 && App.intro.sources.active !== 'mobile') {
+                    var i = 0;
+                    [].forEach.call(sources, function(source) {
+                        source.src = App.intro.sources.mobile[i];
+                    });
+                    App.intro.sources.active = 'mobile';
+                    vid.load();
+                    vid.currentTime = progression;
+                }
             },
             'hide':function(){
                 document.querySelector('.intro-page').classList.add("hide");

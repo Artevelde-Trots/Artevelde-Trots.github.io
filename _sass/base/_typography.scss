@@ -4,7 +4,7 @@
 body {
   color: $text-color;
   font: normal 125% / 1.4 $text-font-stack;
-  font-family:"NeoSans";
+  font-family: 'Neo Sans Pro','NeoSans',arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
@@ -19,7 +19,7 @@ $title-font-size-xsm: 36;
 
 .ahs__{
   &title {
-    font-family: 'NeoSans';
+    font-family: 'Neo Sans Pro','NeoSans',arial, sans-serif;
     font-weight: 500;
     font-style: normal;
     line-height: normal;
@@ -155,7 +155,7 @@ $title-font-size-xsm: 36;
     }
   }
   &paragraph {
-    font-family: 'NeoSans';
+    font-family: 'Neo Sans Pro','NeoSans',arial, sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
