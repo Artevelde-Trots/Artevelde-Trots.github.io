@@ -176,6 +176,9 @@
         &1 .content {
           color:$primary;
           background: $primary;
+          &.text-block {
+            color:white;
+          }
           .hover-content {
             color:$primary;
           }
@@ -183,6 +186,9 @@
         &2 .content {
           color:$blue;
           background: $blue;
+          &.text-block {
+            color:white;
+          }
           .hover-content {
             color:$blue;
           }
@@ -190,6 +196,9 @@
         &3 .content {
           color:$pink;
           background: $pink;
+          &.text-block {
+            color:white;
+          }
           .hover-content {
             color:$pink;
           }
@@ -197,6 +206,9 @@
         &4 .content {
           color:$green;
           background: $green;
+          &.text-block {
+            color:white;
+          }
           .hover-content {
             color:$green;
           }
@@ -223,6 +235,9 @@
         width: 100%;
         overflow: hidden;
         position: relative;
+        &.text-block {
+          padding: 40px;
+        }
         img {
           max-width: 100%;
           width: 100%;
@@ -475,12 +490,22 @@
     margin-bottom: 0;
     .grid{
       padding: 0;
+      &-sizer{
+        width: 33.334%;
+      }
       &-item {
         margin: 0;
+        &.grid-h-a {
+          height: auto;
+          .image {
+            display: block;
+            position: relative;
+          }
+        }
         @for $i from 1 through 3 {
-          $self: 33.334 * $i;
+          $self: 33.333 * $i;
           &.grid-h-#{$i} {
-            height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
+            height: calc(#{$self - ($i * 11.111)}vw - #{6px * ($i - 1)});
           }
           &.grid-w-#{$i} {
             width: percentage($self/100);
@@ -494,86 +519,44 @@
         }
       }
     }
-
-    @media (min-width: $xxl){
-      padding: 0;
-      .grid {
-        &-item {
-          @for $i from 1 through 3 {
-            $self: 33.334 * $i;
-            &.grid-h-#{$i} {
-              height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
-            }
-            &.grid-w-#{$i} {
-              width: percentage($self/100);
-              //font-size:percentage($self/100);
-            }
-          }
-        }
-      }
-    }
-    @media (max-width: $xl){
-      padding: 0;
-      .grid {
-        &-item {
-          @for $i from 1 through 3 {
-            $self: 33.334 * $i;
-            &.grid-h-#{$i} {
-              height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
-            }
-            &.grid-w-#{$i} {
-              width: percentage($self/100);
-              //font-size:percentage($self/100);
-            }
-          }
-        }
-      }
-    }
-    @media (max-width: $lg){
-      padding: 0;
-      .grid {
-        &-item {
-          @for $i from 1 through 3 {
-            $self: 33.334 * $i;
-            &.grid-h-#{$i} {
-              height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
-            }
-            &.grid-w-#{$i} {
-              width: percentage($self/100);
-              //font-size:percentage($self/100);
-            }
-          }
-        }
-      }
-    }
     @media (max-width: $md){
-      padding: 0;
       .grid {
-        &-item {
-          @for $i from 1 through 3 {
-            $self: 33.334 * $i;
-            &.grid-h-#{$i} {
-              height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
-            }
-            &.grid-w-#{$i} {
-              width: percentage($self/100);
-              //font-size:percentage($self/100);
-            }
-          }
+        &-sizer{
+          width: 50%;
         }
-      }
-    }
-    @media (max-width: $sm){
-      padding: 0;
-      .grid {
         &-item {
           @for $i from 1 through 3 {
             $self: 50 * $i;
             &.grid-h-#{$i} {
-              height: calc(#{33.3334 * $i}vw + #{6px * ($i - 1)});
+              height: calc(#{33.3333 * $i}vw - #{9px * ($i - 1)});
             }
             &.grid-w-#{$i} {
               width: percentage($self/100);
+              //font-size:percentage($self/100);
+              &.grid-m-f {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: $xsm){
+      .grid {
+        &-sizer{
+          width: 100%;
+        }
+        &-item {
+          @for $i from 1 through 3 {
+            $self: 100 * $i;
+            &.grid-h-#{$i} {
+              height: 66.666vw;
+              &.grid-m-f {
+                height: 133.332vw;
+              }
+            }
+            &.grid-w-#{$i} {
+              width: 100%;
               //font-size:percentage($self/100);
             }
           }
