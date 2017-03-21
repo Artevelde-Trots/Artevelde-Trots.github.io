@@ -100,8 +100,8 @@ sections:
       paragraph:
       - line: "In semester 4 kan je kiezen om je werkstukken meer op een fotografische basis af te stemmen. Dan wordt je een photodesigner. Verkies je om vanuit puur grafische technieken visuals te creëeren voor je werkstukken dan kies je voor het keuzetraject Graphicdesign."
     background:
-      type: "image"
-      url: "slide06.png"
+      type: "video"
+      url: "project_kader_2.mp4"
       mobile: "light"
     stickers:
       - url: "navJ2.svg"
