@@ -16,13 +16,15 @@
             <section data-transition="fade-in fade-out" class="{{section.background.gradient}}" data-background-image="../../assets/stories/{{page.slug}}/background/{{section.background.url}}">
         {% endif %}
             <div class="text mobile-{{section.background.mobile}}-text-bg text-fade-in {{section.text.position}}">
-                {% if section.text.titlehighlight %}
-                <h1 class="ahs__title bold {{section.text.highlight}}">{{section.text.titlehighlight}}</h1>
-                {% endif %}
-                <h1 class="ahs__title bold hide-on-{{section.text.hide}} {{section.text.titlecolor}}">{{section.text.title}}</h1>
-                    {% for paragraph in section.text.paragraph %}
-                        <p class="ahs__paragraph {{section.text.textcolor}} hide-on-{{section.text.hide}}">{{paragraph.line}}</p>
-                    {% endfor %}
+                {% for title in section.text.title %}
+                    <h1 class="ahs__title {{title.weight}} hide-on-{{section.text.hide}} {{title.size}} {{title.color}}">
+                    <span class="highlight">{{title.highlight}}</span>
+                        {{title.line}}
+                    </h1>
+                {% endfor %}
+                {% for paragraph in section.text.paragraph %}
+                    <p class="ahs__paragraph {{paragraph.color}} {{paragraph.size}} hide-on-{{section.text.hide}}"><span class="highlight">{{paragraph.highlight}}</span>{{paragraph.line}}</p>
+                {% endfor %}
                 {% if section.contact %}
                  <div class="share-list flex">
                     <a onclick="scroll_element_thumb_click(event); return false;" href='https://www.facebook.com/sharer/sharer.php?u={{site.url | replace: "http://", "" | replace: "https://", "" }}{{page.url}}' class="share-link facebook">

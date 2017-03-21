@@ -1,7 +1,7 @@
 ---
-title: GMB Case
+title: GMB case
 slug: gmb-case
-description: "Coming soon!"
+description: "Google online marketing challenge"
 branding: "GMB"
 thumbnail:
     url: "gmb-case/thumb.jpg"
@@ -22,22 +22,31 @@ sections:
   - thumb: "thumb1.png"
     text:
       position: "left"
-      title: "Grafimediabeleid helpt sites te promoten"
-      titlecolor: "white"
+      title: 
+      - line: "Grafimediabeleid helpt sites te promoten"
+        color: "white"
+        weight: "bold"
     background:
       type: "image"
       url: "slide01.jpg"
       mobile: "dark"
+    stickers: 
+      - url: "GMB_logo.png"
+        position: "left top"
+        size: "medium"
   - thumb: "thumb2.png"
     text:
       position: "left"
-      title: "Wat is het doel van de google online marketing challenge?"
-      titlehighlight: "CASE STUDY"
-      highlight: "green"
-      titlecolor: "blue"
-      textcolor: "dark"
+      title: 
+      - line: "CASE STUDY"
+        color: "gmb-blue"
+        weight: "bold"
+      - line: "Het doel van de google online marketing challenge?"
+        color: "blue"
+        weight: "bold"
       paragraph: 
       - line: "Er wordt een Adwords reclamebudget van $250 voorzien door Google. Hiermee bedenken en lanceren de GMBers een online reclamecam- pagne voor een non-profit organisatie. De campagne loopt over een periode van drie weken. Grafimediabeleidatwork."
+        color: "dark"
     background:
       type: "image"
       url: "slide02.jpg"
@@ -45,8 +54,11 @@ sections:
   - thumb: "thumb3.png"
     text:
       position: "left"
-      title: "Stappenplan"
-      titlecolor: "pink"
+      title:
+      - line: "STAPPENPLAN"
+        size: "md"
+        color: "pink"
+        weight: "bold"
       paragraph:
       - line: "We werken aan de hand van een stappenplan. Zo kunnen we de situatie zo goed mogelijk analyseren en tot het gepaste resultaat komen."
     background:
@@ -55,12 +67,14 @@ sections:
       mobile: "light"
   - thumb: "thumb4.png"
     text:
-      title: "Non-profit organisatie kiezen"
-      titlehighlight: "Stap 1"
-      highlight: "white"
       position: "right"
-      title: "Eerste jaar"
-      titlecolor: "pink"
+      title:
+      - line: "STAP 1"
+        color: "white"
+        weight: "bold"
+      - line: "NON-PROFIT- ORGANISATIE KIEZEN"
+        color: "pink"
+        weight: "bold"
       paragraph: 
       - line: "Kies een VZW en bekijk hun website"
       - line: "Ga langs en bespreek wat een online campagne voor hen kan betekenen."
@@ -77,12 +91,14 @@ sections:
         size: "large"
   - thumb: "thumb5.png"
     text:  
-      title: "Non-profit organisatie kiezen"
-      titlehighlight: "Stap 2"
-      highlight: "white"
       position: "left"
-      title: "Precampaign report opstellen"
-      titlecolor: "pink"
+      title: 
+      - line: "Stap 2"
+        color: "white"
+        weight: "bold"
+      - line: "PRECAMPAIGN REPORT OPSTELLEN"
+        color: "pink"
+        weight: "bold"
       paragraph: 
       - line: "Bespreek de organisatie en hun doelgroep."
       - line: "Doe een marktanalyse"
@@ -95,11 +111,14 @@ sections:
       gradient: "gradient left"
   - thumb: "thumb6.png"
     text:
-      title: "Postcampaign report"
-      titlehighlight: "Stap 3"
-      highlight: "white"
+      title: 
+      - line: "STAP 3"
+        color: "white"
+        weight: "bold"
+      - line: "POSTCAMPAIGN REPORT"
+        color: "pink"
+        weight: "bold"
       position: "right"
-      titlecolor: "pink"
       paragraph: 
       - line: "Schrijf de resultaten en conclusie van de campagne neer in een rapport."
       - line: "Noteer aanbevelingen voor de vzw met oog op hun toekomstige online campagnes."
@@ -111,12 +130,15 @@ sections:
   - thumb: "thumb7.png"
     text:
       position: "left"
-      title: "Presentatie"
-      titlecolor: "blue"
-      titlehighlight: "Stap 4"
-      highlight: "white"
+      title: 
+        - line: "STAP 4"
+          color: "white"
+          weight: "bold"
+        - line: "PRESENTATIE"
+          color: "blue"
+          weight: "bold"
       paragraph: 
-      - line: "Schrijf de resultaten en conclusie van de campagne neer in een rapport. Noteer aanbevelingen voor de vzw met oog op hun toekomstige online campagnes."
+      - line: "Stel het project voor aan de hand van een mooie presentatie."
     background:
       type: "image"
       url: "slide07.jpg"
@@ -126,22 +148,38 @@ sections:
     text:
       position: "right"
       paragraph: 
-      - line: "Create"
-      - line: "Original"
-      - line: "Motivated and"
-      - line: "Progressive in"
-      - line: "Achieving a"
-      - line: "Solution with"
-      - line: "Spirit"
+      - line: " reate"
+        highlight: "C"
+        size: "xsm"
+      - line: " riginal"
+        highlight: "0"
+        size: "xsm"
+      - line: " otivated and"
+        highlight: "M"
+        size: "xsm"
+      - line: " ogressive in"
+        highlight: "P"
+        size: "xsm"
+      - line: " chieving a"
+        highlight: "A"
+        size: "xsm"
+      - line: " olution with"
+        highlight: "S"
+        size: "xsm"
+      - line: " pirit"
+        highlight: "S"
+        size: "xsm"
     background:
       type: "image"
       url: "slide08.jpg"
-      mobile: "light"
-  - thumb: "thumb9.png"
+      mobile: "dark"
+  - thumb: "thumb9.jpg"
     text: 
       position: "left"
-      title: "AND THAT'S HOW WE WORK"
-      titlecolor: "blue"
+      title:
+      - line: "AND THAT'S HOW WE WORK"
+        color: "blue"
+        weight: "bold"
       paragraph: 
       - line: "Wil je meer zien van onze studenten? Bekijk dan zeker eens de GDM portfolio of breng een bezoekje tijdens een van onze infodagen."
     background:
