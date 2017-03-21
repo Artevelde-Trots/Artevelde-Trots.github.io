@@ -10,7 +10,7 @@ blurred:
     url: "gmb-story/thumb-blur.jpg"
     alt: "Het GMB Verhaal"
 intro: 
-  - title: "de CMO story"
+  - title: "de GMB case study"
     mobile:
       paragraph:
       - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding."
@@ -19,16 +19,16 @@ intro:
       - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding. "
       - line: Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
 sections:
-  - thumb: "slide01.png"
+  - thumb: "thumb1.png"
     text:
       position: "left"
       title: "Grafimediabeleid helpt sites te promoten"
       titlecolor: "white"
     background:
       type: "image"
-      url: "slide01.png"
+      url: "slide01.jpg"
       mobile: "dark"
-  - thumb: "slide02.png"
+  - thumb: "thumb2.png"
     text:
       position: "left"
       title: "Wat is het doel van de google online marketing challenge?"
@@ -40,9 +40,9 @@ sections:
       - line: "Er wordt een Adwords reclamebudget van $250 voorzien door Google. Hiermee bedenken en lanceren de GMBers een online reclamecam- pagne voor een non-profit organisatie. De campagne loopt over een periode van drie weken. Grafimediabeleidatwork."
     background:
       type: "image"
-      url: "slide02.png"
+      url: "slide02.jpg"
       mobile: "light"
-  - thumb: "slide03.png"
+  - thumb: "thumb3.png"
     text:
       position: "left"
       title: "Stappenplan"
@@ -51,9 +51,9 @@ sections:
       - line: "We werken aan de hand van een stappenplan. Zo kunnen we de situatie zo goed mogelijk analyseren en tot het gepaste resultaat komen."
     background:
       type: "image"
-      url: "slide03.png"
+      url: "slide03.jpg"
       mobile: "light"
-  - thumb: "slide04.png"
+  - thumb: "thumb4.png"
     text:
       title: "Non-profit organisatie kiezen"
       titlehighlight: "Stap 1"
@@ -68,14 +68,14 @@ sections:
       - line: "Analyseer hun huidige website en ga op zoek naar de juiste trefwoorden"
     background:
       type: "image"
-      url: "slide04.png"
+      url: "slide04.jpg"
       mobile: "light"
       gradient: "gradient right"
     stickers:
       - url: "dreamcatchers.png"
         position: "left bottom"
         size: "large"
-  - thumb: "slide05.png"
+  - thumb: "thumb5.png"
     text:  
       title: "Non-profit organisatie kiezen"
       titlehighlight: "Stap 2"
@@ -90,10 +90,10 @@ sections:
       - line: "Je kan nu via Google Adwords je advertenties aanmaken en beheren"
     background:
       type: "image"
-      url: "slide05.png"
+      url: "slide05.jpg"
       mobile: "dark"
       gradient: "gradient left"
-  - thumb: "slide06.png"
+  - thumb: "thumb6.png"
     text:
       title: "Postcampaign report"
       titlehighlight: "Stap 3"
@@ -105,10 +105,10 @@ sections:
       - line: "Noteer aanbevelingen voor de vzw met oog op hun toekomstige online campagnes."
     background:
       type: "image"
-      url: "slide06.png"
+      url: "slide06.jpg"
       mobile: "light"
       gradient: "gradient right"
-  - thumb: "slide07.png"
+  - thumb: "thumb7.png"
     text:
       position: "left"
       title: "Presentatie"
@@ -119,10 +119,10 @@ sections:
       - line: "Schrijf de resultaten en conclusie van de campagne neer in een rapport. Noteer aanbevelingen voor de vzw met oog op hun toekomstige online campagnes."
     background:
       type: "image"
-      url: "slide07.png"
+      url: "slide07.jpg"
       mobile: "light"
       gradient: "left gradient"
-  - thumb: "slide08.png"
+  - thumb: "thumb8.png"
     text:
       position: "right"
       paragraph: 
@@ -135,9 +135,9 @@ sections:
       - line: "Spirit"
     background:
       type: "image"
-      url: "slide08.png"
+      url: "slide08.jpg"
       mobile: "light"
-  - thumb: "slide09.png"
+  - thumb: "thumb9.png"
     text: 
       position: "left"
       title: "AND THAT'S HOW WE WORK"
@@ -146,7 +146,7 @@ sections:
       - line: "Wil je meer zien van onze studenten? Bekijk dan zeker eens de GDM portfolio of breng een bezoekje tijdens een van onze infodagen."
     background:
       type: "image"
-      url: "slide09.png"
+      url: "slide09.jpg"
       mobile: "light"
     contact: true
 created: 20/01/2017
