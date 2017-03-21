@@ -12,9 +12,12 @@ blurred:
 intro: 
   - title: "de CMO story"
     mobile:
-      text: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snelle internetverbinding. Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal." 
-    desktop: 
-      text: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snelle internetverbinding. Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
+      paragraph:
+      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding."
+    desktop:
+      paragraph: 
+      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding. "
+      - line: Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
 sections:
   - thumb: "slide01.png"
     text:
@@ -72,7 +75,7 @@ sections:
         size: "xxlarge"
       - url: "navJ1.svg"
         position: "top center"
-        size: "large"
+        size: "xlarge"
   - thumb: "slide05.png"
     text:
       position: "right"
@@ -87,7 +90,7 @@ sections:
     stickers:
       - url: "navJ2.svg"
         position: "top center"
-        size: "large"
+        size: "xlarge"
   - thumb: "slide06.png"
     text:
       position: "left"
@@ -98,12 +101,12 @@ sections:
       - line: "In semester 4 kan je kiezen om je werkstukken meer op een fotografische basis af te stemmen. Dan wordt je een photodesigner. Verkies je om vanuit puur grafische technieken visuals te creëeren voor je werkstukken dan kies je voor het keuzetraject Graphicdesign."
     background:
       type: "image"
-      url: "test.png"
+      url: "slide06.png"
       mobile: "light"
     stickers:
       - url: "navJ2.svg"
         position: "top center"
-        size: "large"
+        size: "xlarge"
   - thumb: "slide07.png"
     text:
       position: "right"
@@ -119,7 +122,7 @@ sections:
     stickers:
       - url: "navJ3.svg"
         position: "top center"
-        size: "large"
+        size: "xlarge"
   - thumb: "slide08.png"
     text:
       title: "Bekijk ons interview"

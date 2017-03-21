@@ -66,6 +66,7 @@
   position: absolute;
   bottom: 80px;
   cursor: pointer;
+  right: 0;
   .share-toggle {
     display: block;
     position: absolute;
@@ -105,26 +106,26 @@
       cursor: pointer;
       &:hover {
         background: $primary;
-        @include animation(wiggle 2s ease-in-out infinite);
+        @include animation(wiggle 800ms ease-in-out infinite);
 
         @include keyframes(wiggle) {
           0% {
             transform: rotate(0deg);
           }
           20% {
-            transform: rotate(-2deg) scale(0.97, 1.03);
+            transform: rotate(-2deg) scale(0.97, 1.02);
           }
           35% {
             transform: rotate(2deg) scale(1, 1);
           }
           50% {
-            transform: rotate(-2deg) scale(0.97, 1.03);
+            transform: rotate(-2deg) scale(0.97, 1.02);
           }
           65% {
             transform: rotate(1deg) scale(1, 1);
           }
           80% {
-            transform: rotate(-1deg) scale(0.97, 1.03);
+            transform: rotate(-1deg) scale(0.97, 1.02);
           }
           100% {
             transform: rotate(0deg) scale(1, 1);

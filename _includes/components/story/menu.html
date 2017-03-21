@@ -23,23 +23,23 @@
                 <div class="cube"></div>
             </div>
         </a>
-        <img class="fullscreen" src="../assets/img/icons/fullscreenButton.svg">
+        <img class="fullscreen" src="../../assets/stories/intro/buttons/fullscreen.svg">
 
         <div class="share-container">
-                    <span class="share-toggle ahs__title xsm">
-                        <i class="fa fa-share-alt"></i>
-                        </span>
-            <div class="share-list inactive flex row justified-c centered">
-                <a href="" class="share-link facebook">
+            <span class="share-toggle ahs__title xsm">
+                <i class="fa fa-share-alt"></i>
+            </span>
+            <div class="share-list flex row inactive justified-c centered">
+                <a onclick="scroll_element_thumb_click(event); return false;" href='https://www.facebook.com/sharer/sharer.php?u={{site.url | replace: "http://", "" | replace: "https://", "" }}{{page.url}}' class="share-link facebook">
                     <i class="fa fa-facebook-f"></i>
                 </a>
-                <a href="" class="share-link linkedin">
+                <a onclick="scroll_element_thumb_click(event); return false;" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}&title={{ site.title }}%20%7C%20{{ page.title }}" class="share-link linkedin">
                     <i class="fa fa-linkedin"></i>
                 </a>
-                <a href="" class="share-link pintrest">
+                <a onclick="scroll_element_thumb_click(event); return false;" href='https://pinterest.com/pin/create/button/?url={{site.url}}{{page.url}}&media={{site.url}}{{thumb}}' class="share-link pintrest">
                     <i class="fa fa-pinterest-p"></i>
                 </a>
-                <a href="" class="share-link twitter">
+                <a onclick="scroll_element_thumb_click(event); return false;" href='https://twitter.com/home?status=Check%20out%20{{site.url | replace: "http://", "" | replace: "https://", "" }}{{page.url}}' class="share-link twitter">
                     <i class="fa fa-twitter"></i>
                 </a>
             </div>
@@ -50,7 +50,7 @@
         {% for section in sections %}
             <div class="nav-item">
                 <a href="#">
-                    <img src="../assets/stories/{{page.slug}}/thumb/{{section.thumb}}">
+                    <img src="../../assets/stories/{{page.slug}}/thumb/{{section.thumb}}">
                 </a>
             </div>
         {% endfor %}

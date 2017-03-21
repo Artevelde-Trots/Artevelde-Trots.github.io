@@ -11,9 +11,9 @@
         {% assign sections = page.sections %}
         {% for section in sections %}
         {% if section.background.type == "video" %}
-            <section data-background-video="../assets/stories/{{page.slug}}/video/{{section.background.url}}" class="{{section.background.gradient}}" data-background-video-loop data-transition="fade-in fade-out">
+            <section data-background-video="../../assets/stories/{{page.slug}}/video/{{section.background.url}}" class="{{section.background.gradient}}" data-background-video-loop data-transition="fade-in fade-out">
         {% else if section.background.type == "image" %}
-            <section data-transition="fade-in fade-out" class="{{section.background.gradient}}" data-background-image="../assets/stories/{{page.slug}}/background/{{section.background.url}}">
+            <section data-transition="fade-in fade-out" class="{{section.background.gradient}}" data-background-image="../../assets/stories/{{page.slug}}/background/{{section.background.url}}">
         {% endif %}
             <div class="text mobile-{{section.background.mobile}}-text-bg text-fade-in {{section.text.position}}">
                 {% if section.text.titlehighlight %}
@@ -25,23 +25,23 @@
                     {% endfor %}
                 {% if section.contact %}
                  <div class="share-list flex">
-                    <a href="" class="share-link facebook">
+                    <a onclick="scroll_element_thumb_click(event); return false;" href='https://www.facebook.com/sharer/sharer.php?u={{site.url | replace: "http://", "" | replace: "https://", "" }}{{page.url}}' class="share-link facebook">
                         <i class="fa fa-facebook-f"></i>
                     </a>
-                    <a href="" class="share-link linkedin">
+                    <a onclick="scroll_element_thumb_click(event); return false;" href="https://www.linkedin.com/shareArticle?mini=true&url={{site.url}}{{page.url}}&title={{ site.title }}%20%7C%20{{ page.title }}" class="share-link linkedin">
                         <i class="fa fa-linkedin"></i>
                     </a>
-                    <a href="" class="share-link pintrest">
+                    <a onclick="scroll_element_thumb_click(event); return false;" href='https://pinterest.com/pin/create/button/?url={{site.url}}{{page.url}}&media={{site.url}}{{thumb}}' class="share-link pintrest">
                         <i class="fa fa-pinterest-p"></i>
                     </a>
-                    <a href="" class="share-link twitter">
+                    <a onclick="scroll_element_thumb_click(event); return false;" href='https://twitter.com/home?status=Check%20out%20{{site.url | replace: "http://", "" | replace: "https://", "" }}{{page.url}}' class="share-link twitter">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </div>
                 {% endif %}
                 </div>
             {% for sticker in section.stickers %}
-                <img class="sticker {{sticker.position}} {{sticker.size}} " src="../assets/stories/{{page.slug}}/stickers/{{sticker.url}}" >
+                <img class="sticker {{sticker.position}} {{sticker.size}} " src="../../assets/stories/{{page.slug}}/stickers/{{sticker.url}}" >
             {% endfor %}
         </section>
         {% endfor %}

@@ -47,7 +47,7 @@ collections:
     permalink: /project/:slug
   stories:
     output: true
-    permalink: /stories/:slug
+    permalink: /stories/:slug/
   news:
     output: false
 defaults:

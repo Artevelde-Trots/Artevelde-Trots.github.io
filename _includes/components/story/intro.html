@@ -96,25 +96,27 @@
             </g>
         </svg>
         <!-- BUTTONS PREV MOBILE -->
-        <img src="../assets/stories/intro/buttons/navigatie.svg" class="hide-on-desktop">
-        <img src="../assets/stories/intro/buttons/portfolio.svg" class="hide-on-desktop">
-        <img src="../assets/stories/intro/buttons/share.svg" class="hide-on-desktop">
-        <img src="../assets/stories/intro/buttons/fullscreen.svg" class="hide-on-desktop">
+        <img src="../../assets/stories/intro/buttons/navigatie.svg" class="hide-on-desktop">
+        <img src="../../assets/stories/intro/buttons/portfolio.svg" class="hide-on-desktop">
+        <img src="../../assets/stories/intro/buttons/share.svg" class="hide-on-desktop">
+        <img src="../../assets/stories/intro/buttons/fullscreen.svg" class="hide-on-desktop">
 
     </div>
     {% for intro in page.intro %}
-    <div class="info flex center column hide-on-mobile">
-        <h1 class="ahs__title bold green">{{intro.title}}</h1>
-        <p class="ahs__paragraph">{{intro.desktop.text}}
-        </p>
-         <img src="../assets/stories/intro/keyboard.svg" class="hide-on-mobile keyboard">
-        <div class="button">Ok, Begrepen</div>
-    </div>
-     <div class="info flex center column hide-on-desktop">
-        <h1 class="ahs__title bold green">{{intro.title}}</h1>
-        <p class="ahs__paragraph">{{intro.mobile.text}}
-        </p>
-        <div class="button">Ok</div>
-    </div>
+        <div class="info flex center column hide-on-mobile">
+            <h1 class="ahs__title bold green">{{intro.title}}</h1>
+            {% for paragraph in intro.desktop.paragraph %}
+                <p class="ahs__paragraph">{{paragraph.line}} </p>
+            {% endfor %} 
+            <img src="../../assets/stories/intro/keyboard.svg" class="hide-on-mobile keyboard">
+            <div class="button">Ok, Begrepen</div>
+        </div>
+        <div class="info flex center column hide-on-desktop">
+            <h1 class="ahs__title bold green">{{intro.title}}</h1>
+            {% for paragraph in intro.mobile.paragraph %}
+                <p class="ahs__paragraph">{{paragraph.line}}</p>
+            {% endfor %}
+            <div class="button">Ok</div>
+        </div>
     {% endfor %}
 </div>

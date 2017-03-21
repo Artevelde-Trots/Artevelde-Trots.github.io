@@ -5,6 +5,7 @@
             App.intro.init();
             App.text.init();
             App.fullscreen.init();
+            App.share.init();
         },
         "nav": {
             "state": false,
@@ -18,14 +19,9 @@
                 var items = menuItems.querySelectorAll('.nav-item > a');
                 var gridIcon = document.querySelector('.overview-toggle');
                 var menuIcon = document.querySelector('.menu-toggle');
-                var shareIcon = document.querySelector('.share-toggle');
-            
+      
                 document.addEventListener('slidechanged', function (event) {
                     App.nav.activeItem();
-                });
-
-                shareIcon.addEventListener("click", function () {
-                    App.nav.share();
                 });
 
                 menuIcon.addEventListener("click", function () {
@@ -52,14 +48,6 @@
                         items[i].setAttribute("href", "#/" + i);
                         items[i].classList.add(i);
                     }
-                }
-            },
-            "share": function () {
-                var list = document.querySelector('.share-list');
-                if (list.classList.contains("inactive")) {
-                    list.classList.remove("inactive");
-                } else {
-                    list.classList.add("inactive");
                 }
             },
             "toggleNavigation": function () {
@@ -111,6 +99,35 @@
                 }
             }
         },
+        "share": {
+            "state": false,
+            "init": function () {
+                if (document.querySelector('.intro')) {
+                    App.share.bindEventListeners();
+                }
+            },
+            "bindEventListeners": function () {
+                var shareToggle = document.querySelector('.share-toggle');
+                var shareBox = document.querySelector('.share-container');
+                var shareList = document.querySelector('.share-list');
+                var timout;
+                shareToggle.addEventListener("mouseenter", function () {
+                    if (!App.share.state) {
+                        shareList.classList.remove('inactive');
+                        App.share.state = true;
+                    }
+                });
+                shareBox.addEventListener("mouseleave", function () {
+                    timout = setTimeout(function () {
+                        shareList.classList.add('inactive');
+                           App.share.state = false;
+                       }, 3000);
+                 });
+                 shareBox.addEventListener("mouseenter", function () {
+                    clearTimeout(timout);
+                });
+            }, 
+        },
         "intro": {
             "state": false,
             "init": function () {
@@ -161,7 +178,7 @@
                     var video = document.querySelector('.present > video');
 
                     var srcImage = document.querySelector('.fullscreen');
-                    srcImage.src = "../assets/img/icons/exitFullscreenButton.svg";
+                    srcImage.src = "../../assets/stories/intro/buttons/exitfullscreen.svg";
 
                     var pointer = document.querySelector('.present > svg');
                     if (pointer != undefined) {
@@ -178,7 +195,7 @@
                     }
                 } else {
                     var srcImage = document.querySelector('.fullscreen');
-                    srcImage.src = "../assets/img/icons/fullscreenButton.svg";
+                    srcImage.src = "../../assets/img/icons/fullscreen.svg";
                     var pointer = document.querySelector('.present > svg');
                     if (pointer != undefined) {
                         pointer.classList.remove('hide-on-desktop');

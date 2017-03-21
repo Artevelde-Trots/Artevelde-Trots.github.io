@@ -1,14 +1,11 @@
 @media (min-width: 769px) {
   .reveal .menu {
-    position: inherit;
+    position: absolute;
+    right: 0;
     z-index: 60;
-    float: right;
     height: 100%;
     width: 90px;
     background-color: #F2F2F2;
-    -webkit-align-items: flex-end;
-    -ms-flex-align: end;
-    align-items: flex-end;
     .menu-toggle {
       display: none;
     }
@@ -31,17 +28,14 @@
     }
     .share-container {
       top: 145px;
-      @include opacity(0.6);
       .share-toggle {
         background: $dark-grey;
-      }
-      &:hover {
-        @include transition(all 200ms ease-in-out);
-        @include opacity(1);
+        @include opacity(0.6);
       }
     }
     .menu-items {
       position: absolute;
+      right: 0;
       height: 70%;
       top: 230px;
       overflow: scroll;

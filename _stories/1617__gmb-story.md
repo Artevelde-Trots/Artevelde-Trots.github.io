@@ -10,11 +10,14 @@ blurred:
     url: "gmb-story/thumb-blur.jpg"
     alt: "Het GMB Verhaal"
 intro: 
-  - title: "de GMB case"
+  - title: "de CMO story"
     mobile:
-      text: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snelle internetverbinding. Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal." 
-    desktop: 
-      text: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snelle internetverbinding. Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
+      paragraph:
+      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding."
+    desktop:
+      paragraph: 
+      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding. "
+      - line: Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
 sections:
   - thumb: "slide01.png"
     text:
@@ -92,11 +95,10 @@ sections:
       gradient: "gradient left"
   - thumb: "slide06.png"
     text:
-      title: "Non-profit organisatie kiezen"
+      title: "Postcampaign report"
       titlehighlight: "Stap 3"
       highlight: "white"
       position: "right"
-      title: "Postcampaign report"
       titlecolor: "pink"
       paragraph: 
       - line: "Schrijf de resultaten en conclusie van de campagne neer in een rapport."
@@ -109,9 +111,9 @@ sections:
   - thumb: "slide07.png"
     text:
       position: "left"
-      title: "Non-profit organisatie kiezen"
+      title: "Presentatie"
       titlecolor: "blue"
-      titlehighlight: "Stap 3"
+      titlehighlight: "Stap 4"
       highlight: "white"
       paragraph: 
       - line: "Schrijf de resultaten en conclusie van de campagne neer in een rapport. Noteer aanbevelingen voor de vzw met oog op hun toekomstige online campagnes."
