@@ -11,6 +11,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-weight: 500;
+  font-family: 'NeoSans',arial, sans-serif;
 }
 $title-font-size: 72;
 $title-font-size-md: 54;
@@ -19,7 +20,7 @@ $title-font-size-xsm: 36;
 
 .ahs__{
   &title {
-    font-family: 'Neo Sans Pro','NeoSans',arial, sans-serif;
+    font-family: 'NeoSans',arial, sans-serif;
     font-weight: 500;
     font-style: normal;
     line-height: normal;

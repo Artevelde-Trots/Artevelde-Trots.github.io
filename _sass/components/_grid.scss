@@ -172,7 +172,36 @@
           //font-size:percentage($self/100);
         }
       }
-
+      &.c-{
+        &1 .content {
+          color:$primary;
+          background: $primary;
+          .hover-content {
+            color:$primary;
+          }
+        }
+        &2 .content {
+          color:$blue;
+          background: $blue;
+          .hover-content {
+            color:$blue;
+          }
+        }
+        &3 .content {
+          color:$pink;
+          background: $pink;
+          .hover-content {
+            color:$pink;
+          }
+        }
+        &4 .content {
+          color:$green;
+          background: $green;
+          .hover-content {
+            color:$green;
+          }
+        }
+      }
       &.loaded {
         animation-name: fadeIn;
         -webkit-animation-name: fadeIn;
@@ -439,7 +468,118 @@
   }
 
   @media (max-width: $md){
-    padding: 0px;
+    padding: 0;
+  }
+  &.extern {
+    padding: 40px 0 0;
+    margin-bottom: 0;
+    .grid{
+      padding: 0;
+      &-item {
+        margin: 0;
+        @for $i from 1 through 3 {
+          $self: 33.334 * $i;
+          &.grid-h-#{$i} {
+            height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
+          }
+          &.grid-w-#{$i} {
+            width: percentage($self/100);
+            //font-size:percentage($self/100);
+          }
+        }
+        @include on-event{
+          .image {
+            top:0px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: $xxl){
+      padding: 0;
+      .grid {
+        &-item {
+          @for $i from 1 through 3 {
+            $self: 33.334 * $i;
+            &.grid-h-#{$i} {
+              height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
+            }
+            &.grid-w-#{$i} {
+              width: percentage($self/100);
+              //font-size:percentage($self/100);
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: $xl){
+      padding: 0;
+      .grid {
+        &-item {
+          @for $i from 1 through 3 {
+            $self: 33.334 * $i;
+            &.grid-h-#{$i} {
+              height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
+            }
+            &.grid-w-#{$i} {
+              width: percentage($self/100);
+              //font-size:percentage($self/100);
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: $lg){
+      padding: 0;
+      .grid {
+        &-item {
+          @for $i from 1 through 3 {
+            $self: 33.334 * $i;
+            &.grid-h-#{$i} {
+              height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
+            }
+            &.grid-w-#{$i} {
+              width: percentage($self/100);
+              //font-size:percentage($self/100);
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: $md){
+      padding: 0;
+      .grid {
+        &-item {
+          @for $i from 1 through 3 {
+            $self: 33.334 * $i;
+            &.grid-h-#{$i} {
+              height: calc(#{$self - ($i * 11.111)}vw + #{6px * ($i - 1)});
+            }
+            &.grid-w-#{$i} {
+              width: percentage($self/100);
+              //font-size:percentage($self/100);
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: $sm){
+      padding: 0;
+      .grid {
+        &-item {
+          @for $i from 1 through 3 {
+            $self: 50 * $i;
+            &.grid-h-#{$i} {
+              height: calc(#{33.3334 * $i}vw + #{6px * ($i - 1)});
+            }
+            &.grid-w-#{$i} {
+              width: percentage($self/100);
+              //font-size:percentage($self/100);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

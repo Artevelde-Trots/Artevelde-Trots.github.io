@@ -1,13 +1,13 @@
 ---
-title: GMB story
-slug: gmb-story
+title: GMB Case
+slug: gmb-case
 description: "Coming soon!"
 branding: "GMB"
 thumbnail:
-    url: "gmb-story/thumb.jpg"
+    url: "gmb-case/thumb.jpg"
     alt: "Het GMB verhaal"
 blurred:
-    url: "gmb-story/thumb-blur.jpg"
+    url: "gmb-case/thumb-blur.jpg"
     alt: "Het GMB Verhaal"
 intro: 
   - title: "de GMB case study"

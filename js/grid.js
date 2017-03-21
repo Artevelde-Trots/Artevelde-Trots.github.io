@@ -81,17 +81,19 @@ if(document.querySelector('.grid')){
             });
             var gridBox = document.querySelector('.grid-container');
             var bounds = gridBox.getBoundingClientRect();
-            if((bounds.top + 110) <= (window.innerHeight || html.clientHeight)){
-                //console.log("We see the grid",bounds.top);
-                var filter = document.querySelector('.grid-filters').classList.add('show');
-            } else {
-                var filter = document.querySelector('.grid-filters').classList.remove('show');
-            }
-            var bod = document.querySelector('body');
-            if (bod.offsetHeight + bod.scrollTop >= bod.scrollHeight) {
-                gridBox.classList.add('reached-bottom');
-            } else {
-                gridBox.classList.remove('reached-bottom');
+            if(document.querySelector('.grid-filters')){
+                if((bounds.top + 110) <= (window.innerHeight || html.clientHeight)){
+                    //console.log("We see the grid",bounds.top);
+                    var filter = document.querySelector('.grid-filters').classList.add('show');
+                } else {
+                    var filter = document.querySelector('.grid-filters').classList.remove('show');
+                }
+                var bod = document.querySelector('body');
+                if (bod.offsetHeight + bod.scrollTop >= bod.scrollHeight) {
+                    gridBox.classList.add('reached-bottom');
+                } else {
+                    gridBox.classList.remove('reached-bottom');
+                }
             }
         }
     }
