@@ -195,7 +195,7 @@
                     }
                 } else {
                     var srcImage = document.querySelector('.fullscreen');
-                    srcImage.src = "../../assets/img/icons/fullscreen.svg";
+                    srcImage.src = "../../assets/stories/intro/buttons/fullscreen.svg";
                     var pointer = document.querySelector('.present > svg');
                     if (pointer != undefined) {
                         pointer.classList.remove('hide-on-desktop');
