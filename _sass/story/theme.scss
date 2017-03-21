@@ -170,7 +170,7 @@ body {
       }
     }
   }
-  .text, .text-long {
+  .text {
     z-index: 100;
     @include translate(0, 0);
     top: 110px;
@@ -211,6 +211,9 @@ body {
       font-size: 2.3rem;
       text-align: left;
       line-height: 1.2;
+      .highlight {
+        font-weight: 700;
+      }
     }
     p {
       margin: 25px 0;
@@ -218,14 +221,20 @@ body {
       top: 50px;
       line-height: 1.8em;
       text-align: left;
+      .highlight {
+        font-weight: 700;
+      }
       &.dark{
         color: $text-color;
       }
-      &.xxsm {
+      &.xxxsm {
         font-size: $title-font-size*0.10+px;
       }
-      &.xsm {
+      &.sxsm {
         font-size: $title-font-size*0.25+px;
+      }
+      &.xsm {
+        font-size: $title-font-size*0.35+px;
       }
       &.sm {
         font-size: $title-font-size*0.5+px;
@@ -256,17 +265,6 @@ body {
       left: 30px;
       padding: 35px;
       top: 160px;
-    }
-  }
-  .text-long {
-    width: 430px;
-    top: 90px;
-    &.center {
-      text-align: center;
-      width: 500px;
-      left: 190px;
-      padding: 35px;
-      top: 75px;
     }
   }
 
