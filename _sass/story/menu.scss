@@ -127,25 +127,30 @@
         @include transform(translate(-22px, 10px) scale(0.5));
         @include transform-origin(50% 50%);
         @include transition(all 700ms cubic-bezier(0.4, 0.0, 0.2, 1));
-      }
-      .share-toggle {
-        width: 40px;
-        height: 40px;
-        padding: 10px 10px;
-        font-size: 20px;
-        color: $text-color;
-        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-      }
-      .share-list {
-        top: 87px;
-        right: 70px;
-        font-size: 20px;
-        .share-link {
-          padding: 8px 6px 0 6px;
-          min-width: 35px;
-          min-height: 35px;
-          top: 0;
-          margin: 3px 0;
+        .share-toggle {
+          width: 40px;
+          height: 40px;
+          padding: 10px 10px;
+          font-size: 20px;
+          background: $light-grey;
+          color: $text-color;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+        }
+        .share-list {
+          right: 70px;
+          font-size: 20px;
+          right: 90px;
+          bottom: -40px;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          .share-link {
+            padding: 8px 6px 0 6px;
+            min-width: 35px;
+            min-height: 35px;
+            top: 0;
+            margin: 3px 1px;
+          }
         }
       }
     }
