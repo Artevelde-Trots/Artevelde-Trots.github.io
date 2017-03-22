@@ -33,47 +33,52 @@
         @include opacity(0.6);
       }
     }
-    .menu-items {
-      position: absolute;
-      right: 0;
+    .overflow {
+      overflow: hidden;
       height: 70%;
-      top: 230px;
-      overflow: scroll;
-      .nav-item {
-        background-color: white;
-        cursor: pointer;
-        width: 90px;
-        max-height: 50px;
-        -webkit-flex: 1 1 auto;
-        -ms-flex: 1 1 auto;
-        flex: 1 1 auto;
-        -webkit-align-self: auto;
-        -ms-flex-item-align: auto;
-        align-self: auto;
-        z-index: 16;
+      position: absolute;
+      width: 107px;
+      top: 236px;
+      padding: 0;
+      margin: 0;
+      .menu-items {
+        position: absolute;
         right: 0;
-        margin-left: 8px;
-        color: #FFF;
-        text-align: center;
-        a {
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .nav-item {
+          background-color: white;
+          cursor: pointer;
+          width: 90px;
+          max-height: 50px;
+          -webkit-flex: 1 1 auto;
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+          -webkit-align-self: auto;
+          -ms-flex-item-align: auto;
+          align-self: auto;
+          z-index: 16;
+          right: 0;
+          margin-left: 8px;
           color: #FFF;
-          min-height: 50px;
-          max-width: 100%;
-          img {
-            height: 50px;
-            width: 90px;
-            &.active {
-              border-left: 7px solid #BC0;
-              margin: 0 0 0 -7px;
-              width: calc(90px + 7px);
-              border-left: 7px solid $green;
-              @include transition(all 500ms cubic-bezier(0.4, 0.0, 0.2, 1));
+          text-align: center;
+          a {
+            color: #FFF;
+            min-height: 50px;
+            max-width: 100%;
+            img {
+              height: 50px;
+              width: 90px;
+              &.active {
+                border-left: 7px solid #BC0;
+                margin: 0 0 0 -7px;
+                width: calc(90px + 7px);
+                border-left: 7px solid $green;
+                @include transition(all 500ms cubic-bezier(0.4, 0.0, 0.2, 1));
+              }
             }
           }
-        }
-        &.scroll-menu-items {
-          height: calc(50px * 8);
-          overflow-y: scroll;
         }
       }
     }

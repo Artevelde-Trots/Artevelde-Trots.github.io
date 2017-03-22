@@ -24,7 +24,7 @@ sections:
       position: "left"
       title: 
       - line: "Grafimediabeleid helpt sites te promoten"
-        color: "white"
+        color: "dark"
         weight: "bold"
     background:
       type: "image"
@@ -32,8 +32,8 @@ sections:
       mobile: "dark"
     stickers: 
       - url: "GMB_logo.png"
-        position: "left top"
-        size: "medium"
+        position: "left bottom"
+        size: "small"
   - thumb: "thumb2.png"
     text:
       position: "left"
@@ -85,10 +85,6 @@ sections:
       url: "slide04.jpg"
       mobile: "light"
       gradient: "gradient right"
-    stickers:
-      - url: "dreamcatchers.png"
-        position: "left bottom"
-        size: "large"
   - thumb: "thumb5.png"
     text:  
       position: "left"
