@@ -133,7 +133,7 @@ sections:
         color: "dark"
     background:
       type: "image"
-      url: "slide07.png"
+      url: "wereldkaart_cmostory.jpg"
       mobile: "light"
     stickers:
       - url: "navJ3.svg"
