@@ -10,14 +10,14 @@ blurred:
     url: "gmb-case/thumb-blur.jpg"
     alt: "Het GMB Verhaal"
 intro: 
-  - title: "de GMB case study"
+  - title: "GMB case study"
     mobile:
-      paragraph:
-      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding."
+       paragraph:
+       - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snelle internetverbinding."
     desktop:
-      paragraph: 
-      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding. "
-      - line: Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
+       paragraph:
+       - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snelle internetverbinding."
+       - line: "Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
 sections:
   - thumb: "thumb1.png"
     text:
@@ -30,7 +30,12 @@ sections:
       type: "image"
       url: "slide01.jpg"
       mobile: "dark"
-    stickers: 
+    stickers:
+      mobile:
+      - url: "GMB_logo.png"
+        position: "left bottom"
+        size: "medium"
+      desktop:
       - url: "GMB_logo.png"
         position: "left bottom"
         size: "small"

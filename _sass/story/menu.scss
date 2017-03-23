@@ -165,6 +165,7 @@
     position: absolute;
     right: 0;
     height: 100%;
+    top: 0;
     .menu-items {
       position: absolute;
       right: 0;
@@ -205,6 +206,9 @@
         .overview-toggle {
           @include transition(all 700ms cubic-bezier(0.4, 0.0, 0.2, 1));
           @include transform(translate(0px, -45px) scale(0.5));
+        }
+        .share-link {
+          display: none;
         }
       }
       .menu-items {
