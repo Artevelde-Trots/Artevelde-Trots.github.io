@@ -18,22 +18,22 @@ members:
       subdirection: "Photo Design"
       disk: "3e Schijf"
 thumbnail:
-    url: "packshot-wijn/thumbnail.jpg"
+    url: "thumbnail.jpg"
     alt: ""
     height: 1
     width: 1
     text-color: "ee655d"
     background-color: "ee655d"
 media:
-    - url: "packshot-wijn/1_logo.jpg"
+    - url: "1_logo.jpg"
       type: "image"
       text: "De studenten in de derde schijf, moesten een branding doen rond wijn. Dit houdt in: een etiket ontwerpen,
              de bijhorende verpakking en noem maar op."
-    - url: "packshot-wijn/2_packshot_wijn.jpg"
+    - url: "2_packshot_wijn.jpg"
       type: "image"
       text: "Deze samenvoegen moet voor een mooi presentatiebeeld zorgen, waarin je mooi de samenhang ziet van het
              etiket en de verpakking."
-    - url: "packshot-wijn/3_packshot_wijn_2.jpg"
+    - url: "3_packshot_wijn_2.jpg"
       type: "image"
 created: 20/01/2017
 order: 14

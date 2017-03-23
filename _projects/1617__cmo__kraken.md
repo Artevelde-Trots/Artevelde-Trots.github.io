@@ -18,39 +18,39 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "kraken/thumb.png"
+    url: "thumb.png"
     alt: ""
     height: 2
     width: 1
     text-color: "d6447a"
     background-color: "d6447a"
 media:
-    - url: "kraken/1.jpg"
+    - url: "1.jpg"
       type: "image"
-    - url: "kraken/2.jpg"
+    - url: "2.jpg"
       type: "image"
       text: "Bij het starten van een campagne, begin je met het ontwikkelen van een logo. Hier gaan vele voorstudies aan
             vooraf. Als de klant tevreden is met een van de voorstellen, dan begint de uitwerking, zoals hierboven."
-    - url: "kraken/3.jpg"
+    - url: "3.jpg"
       type: "image"
       text: "Bij de opdracht was het de bedoeling een mascotte voor de campagne te onwtikkelen, deze reflecteert waarvoor
             de onderneming of de campagne staat."
-    - url: "kraken/4.jpg"
+    - url: "4.jpg"
       type: "image"
       text: "Er moet reclame worden gemaakt. Dit doen we met behulp van allerlei toepassingen waaronder een poster.
             Deze bestaat uit een blikvanger en de informatie die nodig is om de mensen te triggeren. Eens je je idee hebt
             uitgetekend, kan de uitwerking hiervan beginnen."
-    - url: "kraken/5.jpg"
+    - url: "5.jpg"
       type: "image"
       text: "Het afgewerkte product is een poster met een blikvanger die in het oog schiet van een voorbijganger en hem
             triggert om eens een kijkje te gaan nemen in het park."
-    - url: "kraken/6.jpg"
+    - url: "6.jpg"
       type: "image"
-    - url: "kraken/7.jpg"
+    - url: "7.jpg"
       type: "image"
       text: "Je hebt natuurlijk nood aan een ticket om het park te kunnen betreden, dit moet ook ontworpen worden. Heel de
             campagne moet een samenhang hebben, dus zoek je naar een ticket dat in de stijl van de campagne ligt."    
-    - url: "kraken/8.jpg"
+    - url: "8.jpg"
       type: "image"
       text: "Uiteindelijk krijgen de bezoekers een kaart om zich te kunnen oriënteren in het park en kunnen ze genieten van
             een dag vol avontuur en adrenaline."    

@@ -9,23 +9,23 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "rockriders/thumb.png"
+    url: "thumb.png"
     alt: ""
     height: 1
     width: 1
     text-color: "06b6e1"
     background-color: "06b6e1"
 media:
-    - url: "fb-banner/1.gif"
+    - url: "1.gif"
       type: "image"
       text: "Started with an idea, worked out a sketch and digitalized it."
-    - url: "fb-banner/2.gif"
+    - url: "2.gif"
       type: "image"
       text: "Picked the colors and filled in the shades."
-    - url: "fb-banner/3.gif"
+    - url: "3.gif"
       type: "image"
       text: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
-    - url: "fb-banner/4.gif"
+    - url: "4.gif"
       type: "image"
 created: 20/01/2017
 order: 3

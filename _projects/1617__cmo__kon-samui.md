@@ -1,31 +1,24 @@
 ---
 title: Kon Samui
-slug: "samui"
+slug: "kon-samui"
 description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
 type: "intern"
 members:
-    - name: "Jonas Dermul"
+    - name: "Elena Van H"
       direction: "Cross-Media Ontwerp"
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "kon-samui/thumb.png"
+    url: "thumb.jpg"
     alt: ""
     height: 1
     width: 1
     text-color: "9cb928"
     background-color: "9cb928"
 media:
-    - url: "fb-banner/1.gif"
+    - url: "1.visual.jpg"
       type: "image"
-      text: "Started with an idea, worked out a sketch and digitalized it."
-    - url: "fb-banner/2.gif"
-      type: "image"
-      text: "Picked the colors and filled in the shades."
-    - url: "fb-banner/3.gif"
-      type: "image"
-      text: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
-    - url: "fb-banner/4.gif"
+    - url: "2.poster.jpg"
       type: "image"
 created: 20/01/2017
 order: 9

@@ -16,32 +16,32 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "dweller/thumbnail.jpg"
+    url: "thumbnail.jpg"
     alt: ""
     height: 1
     width: 1
     text-color: "482545"
     background-color: "482545"
 media:
-    - url: "dweller/balk-logo.png"
+    - url: "balk-logo.png"
       type: "image"
-    - url: "dweller/balk-logo2.png"
+    - url: "balk-logo2.png"
       type: "image"
       text: "De campagne begint met het ontwerpen van een logo. Er moet een evenwicht bestaan tussen het beeld en
              de tekst. Ook bezit het logo over enkele krachtlijnen."
-    - url: "dweller/balk-visual-poster.png"
+    - url: "balk-visual-poster.png"
       type: "image"
       text: "De klant vroeg om een poster te maken voor de campagne. Hiervoor is een visual gemaakt om als blikvanger te
              gebruiken. Zo wordt de aandacht van de voorbijganger getrokken."
-    - url: "dweller/balk-poster.png"
+    - url: "balk-poster.png"
       type: "image"
       text: "De poster is een evenwchtige combinatie van tekst en beeld. Er is een beperkt kleurenpalet gebruikt dat
              doorheen heel de campagne van toepassing is."
-    - url: "dweller/balk-visual-buswrap.png"
+    - url: "balk-visual-buswrap.png"
       type: "image"
       text: "De klant vroeg om een poster te maken voor de campagne. Hiervoor is een visual gemaakt om als blikvanger te
              gebruiken. Zo wordt de aandacht van de voorbijganger getrokken."
-    - url: "dweller/balk-buswrap.png"
+    - url: "balk-buswrap.png"
       type: "image"
 created: 20/01/2017
 order: 22

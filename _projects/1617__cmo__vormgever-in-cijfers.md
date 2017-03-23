@@ -17,7 +17,7 @@ members:
       subdirection: "Graphic Design"
       disk: "3e Schijf"
 thumbnail:
-    url: "vormgever/thumbnail.jpg"
+    url: "thumbnail.jpg"
     alt: ""
     height: 1
     width: 1

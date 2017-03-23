@@ -14,33 +14,33 @@ members:
       subdirection: "Prodev"
       disk: "3e Schijf"
 thumbnail:
-    url: "blitter/thumb_1x1.png"
+    url: "thumb_1x1.png"
     alt: ""
     height: 1
     width: 1
     text-color: "477fc1"
     background-color: "477fc1"
 media:
-    - url: "blitter/1_detail_logo.png"
+    - url: "1_detail_logo.png"
       type: "image"
       text: "Via een webapplicatie kan iedereen online zwerfvuil en sluikstorten melden, vervolgens wordt een milieuambtenaar
              gewaarschuwt door middel van een melding op het systeem."
-    - url: "blitter/2_detail_styletiles.png"
+    - url: "2_detail_styletiles.png"
       type: "image"
       text: "Styletiles worden ontworpen om het design van de website vast te leggen. Hiertoe behoren kleuren, fonts, maar
              evengoed het ontwerp van bijvoorbeeld buttons, tekstkaders of de manier waarop afbeeldingen worden toegepast
              in de website."
-    - url: "blitter/3_detail_screens.png"
+    - url: "3_detail_screens.png"
       type: "image"
       text: "De persoon laat aan de hand van een beschrijving, een locatie, een foto en een het soort vuil aan de mileuambtenaar
              van de regio weten waar hij moet optreden. Hij meldt dit aan zijn opruimers. Zo moeten de opruimers niet de
              hele stad of gemeente rond rijden op zoek naar afval. Het is dus een efficiënte manier om tijd en energie te sparen
              en van de stad toch een mooiere plaats te maken."
-    - url: "blitter/4_detail_mockup.png"
+    - url: "4_detail_mockup.png"
       type: "image"
-    - url: "blitter/5_detail_mockup.png"
+    - url: "5_detail_mockup.png"
       type: "image"
-    - url: "blitter/6_detail_poster.png"
+    - url: "6_detail_poster.png"
       type: "image"
 created: 20/01/2017
 order: 9

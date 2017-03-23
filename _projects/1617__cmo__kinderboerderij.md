@@ -1,7 +1,15 @@
 ---
 title: Kinderboerderij
 slug: "kinderboerderij"
-description: De opdracht hield in dat er een banner voor de Facebook groep van de klas moest worden gemaakt.
+description: "Als eindwerk voor de tweede
+              schijf, moesten de leerlingen van
+              Graphic Design een campagne
+              maken voor een schoolhoeve.<br><br>
+              Hiernaast ziet u hoe Jules dit
+              heeft aangepakt. Met een strak
+              uitgewerkt logo en de hulp van
+              wasco’s, heeft hij de campagne
+              tot een mooi eind gebracht!"
 type: "intern"
 members:
     - name: "Jules Vanrijsselgem"
@@ -9,23 +17,30 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "kinderboerderij/thumb.png"
+    url: "thumb.jpg"
     alt: ""
     height: 1
     width: 1
     text-color: "b20112"
     background-color: "b20112"
 media:
-    - url: "kinderboerderij/1.gif"
+    - url: "1.logo.jpg"
       type: "image"
-      text: "Started with an idea, worked out a sketch and digitalized it."
-    - url: "kinderboerderij/2.gif"
+    - url: "2.uitleglogo.jpg"
       type: "image"
-      text: "Picked the colors and filled in the shades."
-    - url: "kinderboerderij/3.gif"
+      text: "Vooraleer er van een campagne kan gesproken worden, moet er een logo ter beschikking zijn dat ter alle tijden
+             kenbaar is voor het publiek. De link met het logo en de campagne moet meteen kunnen worden gelegd."
+    - url: "3.illustraties.jpg"
       type: "image"
-      text: "And finally I made the guy who owns the cinema and made him put up the letters of the movie."
-    - url: "kinderboerderij/4.gif"
+      text: "Op de informatieborden op de boerderij moesten er beelden komen van de dieren die te zien waren. Zoals u hierboven
+             een illustratie van een eend en kip ziet, uitgewerkt in wasco."
+    - url: "4.plattegrond.jpg"
+      type: "image"
+      text: "De wasco geeft een unieke stijl aan de campagne, die dan ook wordt doorgetrokken in de rest van de toepassingen
+             zoals de plattegrond, poster, advertentie en noem maar op."
+    - url: "5.schetsposter.jpg"
+      type: "image"
+    - url: "6.poster.jpg"
       type: "image"
 created: 20/01/2017
 order: 1

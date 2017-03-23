@@ -16,20 +16,20 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "sweet-tooth/thumb.png"
+    url: "thumb.png"
     alt: ""
     height: 1
     width: 1
     text-color: "f05384"
     background-color: "f05384"
 media:
-    - url: "sweet-tooth/1.jpg"
+    - url: "1.jpg"
       type: "image"
-    - url: "sweet-tooth/2.jpg"
+    - url: "2.jpg"
       type: "image"
       text: "Bij het starten van een campagne, begin je met het ontwikkelen van een logo. Hier gaan vele voorstudies aan
             vooraf. Als de klant tevreden is met een van de voorstellen, dan begint de uitwerking, zoals hierboven."
-    - url: "sweet-tooth/3.jpg"
+    - url: "3.jpg"
       type: "image"
       text: "Bij de opdracht was het de bedoeling een mascotte voor de campagne te onwtikkelen, deze reflecteert waarvoor
             de onderneming of de campagne staat."

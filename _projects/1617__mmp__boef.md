@@ -10,18 +10,18 @@ members:
       subdirection: "Produce"
       disk: "3e Schijf"
 thumbnail:
-    url: "boef/thumb_BruwierArtuur.png"
+    url: "thumb_BruwierArtuur.png"
     alt: ""
     height: 1
     width: 2
     text-color: "285D84"
     background-color: "EF9D2D"
 media:
-    - url: "boef/detail1_BruwierArtuur.png"
+    - url: "detail1_BruwierArtuur.png"
       type: "image"
-    - url: "boef/detail2_BruwierArtuur.png"
+    - url: "detail2_BruwierArtuur.png"
       type: "image"
-    - url: "boef/detail3_BruwierArtuur.png"
+    - url: "detail3_BruwierArtuur.png"
       type: "image"
     - url: "209717168"
       type: "vimeo"

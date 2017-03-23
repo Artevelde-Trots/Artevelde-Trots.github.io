@@ -16,24 +16,24 @@ members:
       subdirection: "Graphic Design"
       disk: "2e Schijf"
 thumbnail:
-    url: "marsman/thumb.jpg"
+    url: "thumb.jpg"
     alt: ""
     height: 1
     width: 1
     text-color: "f05384"
     background-color: "f05384"
 media:
-    - url: "marsman/1.logo.jpg"
+    - url: "1.logo.jpg"
       type: "image"
-    - url: "marsman/2.logo.jpg"
+    - url: "2.logo.jpg"
       type: "image"
       text: "We beginnen met het ontwerpen van een logo voor de campagne."
-    - url: "marsman/3.mascotte.jpg"
+    - url: "3.mascotte.jpg"
       type: "image"
       text: "Je wordt doorheen de campagne geloodst door de mascotte Marsel."
-    - url: "marsman/4.poster.jpg"
+    - url: "4.poster.jpg"
       type: "image"
-    - url: "marsman/5.poster.jpg"
+    - url: "5.poster.jpg"
       type: "image"
       text: "De campagne komt volledig op gang door de poster. Er is een duidelijke blikvanger dat meteen de aandacht van
              de voorbijganger trekt. De volgende stap is de site bezoeken, registreren en up, up and away."
