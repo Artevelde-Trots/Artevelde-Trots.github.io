@@ -20,13 +20,13 @@
         {% endif %}
             <div class="text mobile-{{section.background.mobile}}-text-bg text-fade-in {{section.text.position}}">
                 {% for title in section.text.title %}
-                    <h1 class="ahs__title {{title.weight}} hide-on-{{section.text.hide}} {{title.size}} {{title.color}}">
+                    <h1 class="ahs__title {{title.weight}} hide-on-{{title.hide}} {{title.size}} {{title.color}}">
                     <span class="highlight">{{title.highlight}}</span>
                         {{title.line}}
                     </h1>
                 {% endfor %}
                 {% for paragraph in section.text.paragraph %}
-                    <p class="ahs__paragraph {{paragraph.color}} {{paragraph.size}} hide-on-{{section.text.hide}}"><span class="highlight">{{paragraph.highlight}}</span>{{paragraph.line}}</p>
+                    <p class="ahs__paragraph {{paragraph.color}} {{paragraph.size}} hide-on-{{paragraph.hide}}"><span class="highlight">{{paragraph.highlight}}</span>{{paragraph.line}}</p><a class="link hide-on-{{paragraph.hide}}" href="{{paragraph.url}}">{{paragraph.alt}}</a>
                 {% endfor %}
                 {% if section.contact %}
                  <div class="share-list flex">
@@ -45,8 +45,11 @@
                 </div>
                 {% endif %}
                 </div>
-            {% for sticker in section.stickers %}
-                <img class="sticker {{sticker.position}} {{sticker.size}} " src="../../assets/stories/{{page.slug}}/stickers/{{sticker.url}}" >
+            {% for sticker in section.stickers.desktop %}
+                <img class="sticker {{sticker.position}} hide-on-mobile {{sticker.size}}" src="../../assets/stories/{{page.slug}}/stickers/{{sticker.url}}" >
+            {% endfor %}
+            {% for sticker in section.stickers.mobile %}
+                <img class="sticker {{sticker.position}} hide-on-desktop {{sticker.size}}" src="../../assets/stories/{{page.slug}}/stickers/{{sticker.url}}" >
             {% endfor %}
         </section>
         {% endfor %}

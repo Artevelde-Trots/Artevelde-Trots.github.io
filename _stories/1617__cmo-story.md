@@ -10,14 +10,14 @@ blurred:
     url: "cmo-story/thumb-blur.jpg"
     alt: "Het CMO Verhaal"
 intro: 
-  - title: "de CMO story"
+  - title: "CMO story"
     mobile:
       paragraph:
-      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding."
+      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snelle internetverbinding."
     desktop:
       paragraph: 
-      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snellinternetverbinding. "
-      - line: Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
+      - line: "Deze website bevat audio en video. Een optimale gebruikerservaring verkrijg je met een snelle internetverbinding."
+      - line: "Je kan zowel muiswiel als pijltjestoetsen gebruiken om te navigeren door het verhaal."
 sections:
   - thumb: "slide01.png"
     text:
@@ -82,12 +82,20 @@ sections:
       url: "slide04.png"
       mobile: "light"
     stickers:
+      mobile:
+      - url: "navJ2.png"
+        position: "bottom center"
+        size: "xlarge"
+      - url: "beest.gif"
+        position: "left bottom"
+        size: "xxxlarge"
+      desktop:
+      - url: "navJ2.png"
+        position: "top center"
+        size: "xlarge"
       - url: "beest.gif"
         position: "left midden"
         size: "xxlarge"
-      - url: "navJ1.svg"
-        position: "top center"
-        size: "xlarge"
   - thumb: "slide05.png"
     text:
       position: "right"
@@ -102,9 +110,14 @@ sections:
       url: "slide05.png"
       mobile: "dark"
     stickers:
-      - url: "navJ2.svg"
-        position: "top center"
-        size: "xlarge"
+     mobile:
+     - url: "navJ2.png"
+       position: "bottom center"
+       size: "xlarge"
+     desktop:
+     - url: "navJ2.png"
+       position: "top center"
+       size: "xlarge"
   - thumb: "slide06.png"
     text:
       position: "left"
@@ -119,8 +132,14 @@ sections:
       type: "video"
       url: "project_kader_2.mp4"
       mobile: "light"
+      mobile-still: "kader.jpg"
     stickers:
-      - url: "navJ2.svg"
+      mobile:
+      - url: "navJ2.png"
+        position: "bottom center"
+        size: "xlarge"
+      desktop:
+      - url: "navJ2.png"
         position: "top center"
         size: "xlarge"
   - thumb: "slide07.png"
@@ -138,7 +157,12 @@ sections:
       url: "wereldkaart_cmostory.jpg"
       mobile: "dark"
     stickers:
-      - url: "navJ3.svg"
+      mobile:
+      - url: "navJ3.png"
+        position: "bottom center"
+        size: "xlarge"
+      desktop:
+      - url: "navJ3.png"
         position: "top center"
         size: "xlarge"
   - thumb: "slide08.png"
@@ -147,12 +171,15 @@ sections:
       - line: "Bekijk ons interview"
         color: "pink"
         weight: "bold"
-      paragraph: 
-      - line: "Bekijk inverviews met onze studenten: link naar vimeo"
-      hide: "desktop"
+        hide: "desktop"
+      paragraph:
+      - line: ""
+        url: "https://vimeo.com/209728426/685e1c6885"
+        alt: "Klik hier voor interviews met onze studenten."
+        hide: "desktop"
     background:
       type: "video"
-      url: "interview.mp4, interview.webm"
+      url: "interview.mp4, interview.webm, https://vimeo.com/209728426/685e1c6885"
       mobile: "light"
       mobile-still: "interview_mobile_still.jpg"
   - thumb: "slide09.png"
@@ -163,7 +190,9 @@ sections:
         color: "blue"
         weight: "bold"
       paragraph: 
-      - line: "Wil je meer zien van onze studenten? Bekijk dan zeker eens de GDM portfolio of breng een bezoekje tijdens een van onze infodagen."
+      - line: ""
+        url: "https://vimeo.com/209728426/685e1c6885"
+        alt: "Interview"
         color: "dark"
     background:
       type: "image"
