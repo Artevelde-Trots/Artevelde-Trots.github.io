@@ -24,15 +24,15 @@ thumbnail:
     text-color: "cb4b4a"
     background-color: "cb4b4a"
 media:
-    - url: "vormgever-in-cijfers/1.jpg"
+    - url: "1.jpg"
       type: "image"
       text: "Alles begint met een duidelijke schets waarop je kan werken. Welke objecten komen waar, hoe gaat de tekst gepositioneerd
              zijn tegenover het beeld en hoe gaat het totaalbeeld eruit zien."
-    - url: "vormgever-in-cijfers/2.jpg"
+    - url: "2.jpg"
       type: "image"
       text: "Eens de schets klaar is, begint het digitaal uitwerken. Dit is de stap waarin je alles de uiteindelijke vorm geeft en
              perfectioneerd voor de gebruiker."
-    - url: "vormgever-in-cijfers/3.jpg"
+    - url: "3.jpg"
       type: "image"
 created: 20/01/2017
 order: 13

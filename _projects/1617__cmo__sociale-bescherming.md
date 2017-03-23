@@ -16,9 +16,9 @@ thumbnail:
     text-color: "e62d28"
     background-color: "e62d28"
 media:
-    - url: "1.visual.png"
+    - url: "1.visual.jpg"
       type: "image"
-    - url: "2.kaart.png"
+    - url: "2.kaart.jpg"
       type: "image"
 created: 20/01/2017
 order: 7

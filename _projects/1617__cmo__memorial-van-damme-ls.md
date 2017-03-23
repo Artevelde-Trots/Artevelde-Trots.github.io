@@ -4,7 +4,7 @@ slug: "memorial-van-damme-ls"
 description: ""
 type: "extern"
 members:
-    - name: "Jonas Dermul"
+    - name: "Laurens Segaert"
       direction: "Cross-Media Ontwerp"
       subdirection: "Graphic Design"
       disk: "2e Schijf"
