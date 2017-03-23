@@ -14,7 +14,10 @@
       position: absolute;
       left: calc((100% - 590px)/2);
       text-align: center;
-      top: 200px;
+      overflow: hidden;
+      top: calc((100% - 365px)/2);
+      box-sizing: border-box;
+      height: 365px;
       h1 {
         text-transform: uppercase;
         margin-bottom: 35px;

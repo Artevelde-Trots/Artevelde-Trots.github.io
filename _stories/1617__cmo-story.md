@@ -33,6 +33,7 @@ sections:
       url: "drone.mp4"
       gradient: "gradient right"
       mobile: "dark"
+      mobile-still: "drone_bg_mobile.jpg"
   - thumb: "slide02.png"
     text:
       position: "left"
@@ -63,6 +64,7 @@ sections:
       url: "drukkerij.mp4, drukkerij.webm"
       gradient: "gradient right"
       mobile: "light"
+      mobile-still: "drukkerij_mobile.jpg"
   - thumb: "slide04.png"
     text:
       position: "right"
@@ -134,7 +136,7 @@ sections:
     background:
       type: "image"
       url: "wereldkaart_cmostory.jpg"
-      mobile: "light"
+      mobile: "dark"
     stickers:
       - url: "navJ3.svg"
         position: "top center"
@@ -152,6 +154,7 @@ sections:
       type: "video"
       url: "interview.mp4, interview.webm"
       mobile: "light"
+      mobile-still: "interview_mobile_still.jpg"
   - thumb: "slide09.png"
     text:
       position: "left"

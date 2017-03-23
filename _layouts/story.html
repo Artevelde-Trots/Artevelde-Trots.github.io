@@ -15,6 +15,9 @@
         {% else if section.background.type == "image" %}
             <section data-transition="fade-in fade-out" class="{{section.background.gradient}}" data-background-image="../../assets/stories/{{page.slug}}/background/{{section.background.url}}">
         {% endif %}
+        {% if section.background.mobile-still %}
+                <img src="../../assets/stories/{{page.slug}}/background/{{section.background.mobile-still}}" class="hide-on-desktop mobile-still">
+        {% endif %}
             <div class="text mobile-{{section.background.mobile}}-text-bg text-fade-in {{section.text.position}}">
                 {% for title in section.text.title %}
                     <h1 class="ahs__title {{title.weight}} hide-on-{{section.text.hide}} {{title.size}} {{title.color}}">

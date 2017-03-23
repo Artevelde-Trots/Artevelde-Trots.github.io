@@ -20,10 +20,10 @@
     }
     .fullscreen {
       top: 105px;
-      @include opacity(0.6);
       &:hover {
         @include transition(all 200ms ease-in-out);
-        @include opacity(1);
+        @include opacity(0.6);
+
       }
     }
     .share-container {
@@ -44,7 +44,8 @@
       .menu-items {
         position: absolute;
         right: 0;
-        width: 100%;
+        height: 75%;
+        width: 107px;
         overflow-y: scroll;
         overflow-x: hidden;
         .nav-item {
