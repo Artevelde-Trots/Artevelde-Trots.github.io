@@ -1,5 +1,8 @@
 .externe {
   overflow: hidden;
+  &.container.maxed {
+    max-width: 1080px;
+  }
   h1 {
     span {
       color: $dark-grey;

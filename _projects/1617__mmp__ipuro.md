@@ -37,7 +37,7 @@ media:
     - url: "ipuro/4_detail_finale_opstelling.gif"
       type: "image"
       text: "Enkel nog de gepaste animaties en muziek toevoegen zorgt ervoor dat het plaatje compleet wordt."
-    - url: "194844362"
+    - url: "209726968"
       type: "vimeo"
 created: 20/01/2017
 order: 11
