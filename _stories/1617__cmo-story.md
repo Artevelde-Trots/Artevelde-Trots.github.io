@@ -154,7 +154,7 @@ sections:
         color: "dark"
     background:
       type: "image"
-      url: "wereldkaart_cmostory.jpg"
+      url: "wereldkaart_cmostory.png"
       mobile: "dark"
     stickers:
       mobile:
