@@ -218,6 +218,7 @@
             &.active {
               border-left: 8px solid $green;
               margin-left: -8px;
+              width: 158px;
               @include transition(all 250ms ease-out);
             }
           }
@@ -245,7 +246,7 @@
           display: none;
         }
       }
-      .menu-items {
+      .overflow, .overflow-safari{
         @include transform(translate(calc(100% + 8px), 0));
         @include transition(all 700ms cubic-bezier(0.4, 0.0, 0.2, 1));
       }
@@ -272,7 +273,7 @@
           @include transform(translate(0px, 0px));
         }
       }
-      .menu-items {
+      .overflow, .overflow-safari {
         @include transform(translate(0px, 0));
         @include transition(all 1s cubic-bezier(0.4, 0.0, 0.2, 1));
       }
