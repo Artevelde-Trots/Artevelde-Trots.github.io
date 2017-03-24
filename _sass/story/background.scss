@@ -1,4 +1,4 @@
-@media (max-width: $sm) {
+@media (max-width: 768px) {
   .reveal .slide-background.present {
     @include animation(xmove 30s linear infinite);
   }
@@ -8,7 +8,7 @@
     @include animation(xmovezoom 20s linear infinite);
   }
 }
-@media (min-width: $md), (max-width: $lg) {
+@media (min-width: 768px), (max-width: 1024px) {
   .reveal section {
     padding: 0 !important;
     top: 0 !important;
@@ -43,7 +43,8 @@
     left: -15% !important;
   }
 }
-@media (min-width: $lg) {
+
+@media (min-width: 1024px) {
    .reveal .slide-background, .reveal .slide-background video {
     position: absolute;
     min-height: 100%;
@@ -75,40 +76,25 @@
     background-position: 20%, 20%;
   }
 }
-  @include keyframes(xmovezoom) {
-    0% {
-      @include transform(translate(0, 0) scale(1))
-    }
-    25% {
-       @include transform(translate(50px, 0) scale(1.2))
-    }
-    50% {
-      @include transform(translate(80px, 0) scale(1.4))
-    }
-    75% {
-     @include transform(translate(50px, 0) scale(1.2))
-    }
-    100% {
-      @include transform(translate(0, 0) scale(1))
-    }
-  }
-/*@include keyframes(zoom){
+
+@include keyframes(xmovezoom) {
   0% {
-    @include transform(scale(1));
+    @include transform(translate(0, 0) scale(1))
   }
   25% {
-    @include transform(scale(1.05));
+     @include transform(translate(50px, 0) scale(1.2))
   }
   50% {
-    @include transform(scale(1.1));
+    @include transform(translate(80px, 0) scale(1.4))
   }
   75% {
-    @include transform(scale(1.05));
+   @include transform(translate(50px, 0) scale(1.2))
   }
   100% {
-    @include transform(scale(1));
+    @include transform(translate(0, 0) scale(1))
   }
-}*/
+}
+
  @include keyframes(zoom) {
     0% {
       @include scale(1.08);
