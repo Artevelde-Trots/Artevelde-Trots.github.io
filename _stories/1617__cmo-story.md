@@ -83,14 +83,14 @@ sections:
       mobile: "light"
     stickers:
       mobile:
-      - url: "navJ2.png"
+      - url: "navJ1.png"
         position: "bottom center"
         size: "xlarge"
       - url: "beest.gif"
         position: "left bottom"
         size: "xxxlarge"
       desktop:
-      - url: "navJ2.png"
+      - url: "navJ1.png"
         position: "top center"
         size: "xlarge"
       - url: "beest.gif"

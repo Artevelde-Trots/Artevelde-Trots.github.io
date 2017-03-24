@@ -41,25 +41,6 @@ body {
       }
     }
   }
-  .reveal section {
-    padding: 0 !important;
-    top: 0 !important;
-    margin: 0 !important;
-    height: 100%;
-    &.gradient {
-      z-index: -1;
-      position: absolute;
-      top: 0 !important;
-      bottom: 0;
-      transition: all 800ms cubic-bezier(0.260, 0.860, 0.440, 0.985);
-    }
-    &.left {
-      background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #000);
-    }
-    &.right {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #000);
-    }
-  }
   .sticker {
     position: absolute;
     &.top {
@@ -154,26 +135,6 @@ body {
       min-width: 100%;
       min-height: 100% !important;
     }
-    svg {
-      z-index: 10;
-      bottom: 60px;
-      height: 45px;
-      position: fixed;
-      right: 100px;
-      .DSKfullscreen {
-        font-family: Scriptorama;
-        font-size: 57.3124px;
-        fill: $pink;
-      }
-      .arrow_pink {
-        fill: none;
-        stroke: $pink;
-        stroke-width: 6;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-      }
-    }
   }
   .text {
     z-index: 100;
@@ -235,7 +196,7 @@ body {
       &.xxxsm {
         font-size: $title-font-size*0.10+px;
       }
-      &.sxsm {
+      &.xxsm {
         font-size: $title-font-size*0.25+px;
       }
       &.xsm {
@@ -253,7 +214,7 @@ body {
       &.lg {
         font-size: $title-font-size+px;
       }
-      &.xlg {
+      &.xl {
         font-size: $title-font-size*1.25+px;
       }
     }
@@ -278,22 +239,6 @@ body {
       @include animation(change 3s cubic-bezier(0.260, 0.860, 0.440, 0.985));
     }
   }
-  .reveal .slides .present {
-    .text-long {
-      @include animation(change 3s cubic-bezier(0.260, 0.860, 0.440, 0.985));
-    }
-  }
-
-  .reveal .slide-background.present {
-    @include animation(changeBG 21s cubic-bezier(0.260, 0.860, 0.440, 0.985));
-  }
-
-  .reveal .slide-background video {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
 
   @include keyframes(change) {
     0% {
@@ -305,23 +250,15 @@ body {
       opacity: 1;
     }
   }
-  @include keyframes(changeBG) {
-    0% {
-      @include scale(1.08);
-    }
-
-    14.28% {
-      @include scale(1.03);
-    }
-    100% {
-      @include scale(1);
-    }
-  }
 }
-
 @media (max-width: 768px) {
   .hide-on-mobile {
     display: none;
+  }
+  .mobile-still {
+    height: 100%;
+    min-width: 100%;
+    @include animation(xmovezoom 20s linear infinite);
   }
   .reveal .slides {
     .branding {
@@ -507,12 +444,6 @@ body {
           opacity: 1;
         }
       }
-      .mobile-still {
-        height: 100vh;
-        min-width: 100%;
-        @include animation(move 14s linear infinite);
-      }
-
       .share-list {
         .share-link {
           border-radius: 50px;
@@ -533,18 +464,8 @@ body {
       }
     }
   }
-  .reveal .slide-background video {
-    position: absolute;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-    top: 0;
-    left: 0;
-  }
-  .reveal .slide-background.present {
-    @include animation(changeBG 50s linear infinite);
-  }
 
+  
   @include keyframes(appear) {
     0% {
       @include opacity(0);
@@ -553,34 +474,6 @@ body {
       @include opacity(1);
     }
 
-  }
-
-  @include keyframes(changeBG) {
-    0% {
-      background-position: 10%, 10%;
-    }
-    50% {
-      background-position: 65%, 65%;
-    }
-    100% {
-      background-position: 10%, 10%;
-    }
-  }
-}
-
-@include keyframes(wiggle) {
-    0% {
-      @include transform(rotate(0deg) scale(1))
-    }
-    20% {
-      @include transform(rotate(-3deg) scale(1.02))
-    }
-    80% {
-      @include transform(rotate(3deg) scale(1.02))
-    }
-    100% {
-      @include transform(rotate(0deg) scale(1))
-    }
   }
 @include keyframes(slide) {
   0% {
@@ -599,20 +492,18 @@ body {
     @include transform(translate(0px, -80px));
   }
 }
-@include keyframes(move){
-  0% {
-    @include transform(scale(1));
-  }
-  25% {
-    @include transform(scale(1.05));
-  }
-  50% {
-    @include transform(scale(1.1));
-  }
-  75% {
-    @include transform(scale(1.05));
-  }
-  100% {
-    @include transform(scale(1));
+@include keyframes(wiggle) {
+    0% {
+      @include transform(rotate(0deg) scale(1))
+    }
+    20% {
+      @include transform(rotate(-3deg) scale(1.02))
+    }
+    80% {
+      @include transform(rotate(3deg) scale(1.02))
+    }
+    100% {
+      @include transform(rotate(0deg) scale(1))
+    }
   }
 }

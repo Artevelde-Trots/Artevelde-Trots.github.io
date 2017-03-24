@@ -83,6 +83,47 @@
         }
       }
     }
+    .overflow-safari {
+      overflow: hidden;
+      height: 70%;
+      position: absolute;
+      width: 90px;
+      top: 236px;
+      padding: 0;
+      margin: 0;
+      .menu-items {
+        position: absolute;
+        right: 0;
+        height: 80%;
+        width: 90px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .nav-item {
+          background-color: white;
+          cursor: pointer;
+          width: 90px;
+          max-height: 50px;
+          -webkit-flex: 1 1 auto;
+          flex: 1 1 auto;
+          -webkit-align-self: auto;
+          a {
+            color: #FFF;
+            min-height: 50px;
+            max-width: 100%;
+            img {
+              height: 50px;
+              width: 90px;
+              &.active {
+                border-left: 7px solid #BC0;
+                width: calc(90px + 9px);
+                border-left: 9px solid $green;
+                @include transition(all 500ms cubic-bezier(0.4, 0.0, 0.2, 1));
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -161,7 +202,7 @@
       }
     }
   }
-  .overflow {
+  .overflow, .overflow-safari {
     position: absolute;
     right: 0;
     height: 100%;

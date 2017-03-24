@@ -6,6 +6,29 @@
             App.text.init();
             App.fullscreen.init();
             App.share.init();
+            function getBrowserName() {
+                var name = "Unknown";
+                if(navigator.userAgent.indexOf("MSIE")!=-1){
+                    name = "MSIE";
+                }
+                else if(navigator.userAgent.indexOf("Firefox")!=-1){
+                    name = "Firefox";
+                }
+                else if(navigator.userAgent.indexOf("Opera")!=-1){
+                    name = "Opera";
+                }
+                else if(navigator.userAgent.indexOf("Chrome") != -1){
+                    name = "Chrome";
+                }
+                else if(navigator.userAgent.indexOf("Safari")!=-1){
+                    name = "Safari";
+                }
+                return name;   
+            }
+
+            if( getBrowserName() == "Safari" ){
+                App.nav.menuForSafari();
+            }
         },
         "nav": {
             "state": false,
@@ -49,6 +72,12 @@
                         items[i].classList.add(i);
                     }
                 }
+            },
+            "menuForSafari": function (){
+                var menu = document.querySelector('.menu');
+                var divOverflow = document.querySelector('.overflow');
+                divOverflow.classList.remove('overflow');
+                divOverflow.classList.add('overflow-safari');
             },
             "toggleNavigation": function () {
                 var icon = document.querySelector('.menu-toggle');
