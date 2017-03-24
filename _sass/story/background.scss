@@ -8,7 +8,7 @@
     @include animation(xmovezoom 20s linear infinite);
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   .reveal section {
     padding: 0 !important;
     top: 0 !important;
