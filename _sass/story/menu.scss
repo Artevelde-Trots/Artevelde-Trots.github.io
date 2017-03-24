@@ -37,7 +37,7 @@
       overflow: hidden;
       height: 70%;
       position: absolute;
-      width: 107px;
+      width: 97px;
       top: 236px;
       padding: 0;
       right: 0;
@@ -46,25 +46,17 @@
         position: absolute;
         right: 0;
         height: 75%;
-        width: 107px;
+        width: 97px;
         overflow-y: scroll;
         overflow-x: hidden;
         .nav-item {
           background-color: white;
           cursor: pointer;
+          margin: 0;
+          margin-left: 8px;
+          padding: 0;
           width: 90px;
           max-height: 50px;
-          -webkit-flex: 1 1 auto;
-          -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-          -webkit-align-self: auto;
-          -ms-flex-item-align: auto;
-          align-self: auto;
-          z-index: 16;
-          right: 0;
-          margin-left: 8px;
-          color: #FFF;
-          text-align: center;
           a {
             color: #FFF;
             min-height: 50px;
