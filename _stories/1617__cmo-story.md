@@ -190,9 +190,7 @@ sections:
         color: "blue"
         weight: "bold"
       paragraph: 
-      - line: ""
-        url: "https://vimeo.com/209728426/685e1c6885"
-        alt: "Interview"
+      - line: "Wil je meer zien van onze studenten? Bekijk dan zeker eens de GDM portfolio of breng een bezoekje tijdens een van onze infodagen."
         color: "dark"
     background:
       type: "image"
