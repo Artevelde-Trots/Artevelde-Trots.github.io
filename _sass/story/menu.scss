@@ -280,6 +280,10 @@
       .overflow, .overflow-safari {
         @include transform(translate(0px, 0));
         @include transition(all 1s cubic-bezier(0.4, 0.0, 0.2, 1));
+        .menu-items {
+          @include transform(translate(0px, 0));
+          @include transition(all 1s cubic-bezier(0.4, 0.0, 0.2, 1));
+        }
       }
     }
   }
