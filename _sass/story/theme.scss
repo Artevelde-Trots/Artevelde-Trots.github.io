@@ -464,17 +464,15 @@ body {
       }
     }
   }
-
-  
-  @include keyframes(appear) {
-    0% {
-      @include opacity(0);
-    }
-    100% {
-      @include opacity(1);
-    }
-
+}
+@include keyframes(appear) {
+  0% {
+    @include opacity(0);
   }
+  100% {
+    @include opacity(1);
+  }
+}
 @include keyframes(slide) {
   0% {
     @include transform(translate(0, -80px));
@@ -506,4 +504,3 @@ body {
       @include transform(rotate(0deg) scale(1))
     }
   }
-}
