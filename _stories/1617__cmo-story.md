@@ -45,7 +45,6 @@ sections:
       - line: "Crossmedia ontwerpers zorgen ervoor dat elke boodschap van een klant een ‘branded experience’ wordt. Huisstijlen ontwikkelen, flyers en magazines vormgeven, lay-out voor web en mobile of digitale bewerking van beelden behoren tot het takenpakket."
       - line: "Je leert je ideeën visualiseren met klassieke middelen zoals potlood en papier, maar ook om ze digitaal uit te werken met de meest recente grafische software."
     background:
-      gradient: "gradient left"
       type: "image"
       url: "slide02.jpg"
       mobile: "light"
