@@ -1,6 +1,6 @@
 ---
 title: "Schoolhoeve"
-slug: "Schoolhoeve"
+slug: "schoolhoeve"
 description: ""
 type: "intern"
 members:
