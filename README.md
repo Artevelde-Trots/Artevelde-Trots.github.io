@@ -4,7 +4,7 @@
 ### 2016 - 2017
 Opdracht TROTS
 
-##Installation
+## Installation
 * Clone Repository
 * Install Jekyll
 gem install jekyll bundler
