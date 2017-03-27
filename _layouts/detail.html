@@ -13,12 +13,12 @@
             <div class="detail-item-container">
                 {% if mediaobject.type == "image" %}
                     <picture>
-                        <source
+                        <!--<source
                                 media="(max-width: 480px)"
-                                srcset="/assets/img/projects/{{ page.slug }}/{{ mediaobject.url | replace:'/','/sm/' }}">
-                        <source
+                                srcset="/assets/img/projects/{{ page.slug }}/{{ mediaobject.url | replace:'/','/sm/' }}">-->
+                        <!--<source
                                 media="(max-width: 680px)"
-                                srcset="/assets/img/projects/{{ page.slug }}/{{ mediaobject.url | replace:'/','/md/' }}">
+                                srcset="/assets/img/projects/{{ page.slug }}/{{ mediaobject.url | replace:'/','/md/' }}">-->
                         <img src="/assets/img/projects/{{ page.slug }}/{{ mediaobject.url }}" alt="{{ mediaobject.text }}">
                     </picture>
                 {% else if mediaobject.type == "vimeo" %}
