@@ -534,6 +534,7 @@
               width: percentage($self/100);
               //font-size:percentage($self/100);
               &.grid-m-f {
+                height: auto;
                 width: 100%;
               }
             }
@@ -552,7 +553,7 @@
             &.grid-h-#{$i} {
               height: 66.666vw;
               &.grid-m-f {
-                height: 133.332vw;
+                height: auto;
               }
             }
             &.grid-w-#{$i} {

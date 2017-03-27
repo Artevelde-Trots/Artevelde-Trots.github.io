@@ -5,7 +5,7 @@ description: "Ontdek de vele verhalen die onze student van Grafische Digitale Me
 ---
 <div class="container flex column">
     {% include components/bg.html %}
-    <div class="externe container flex column maxed ">
+    <div class="externe container flex column maxed stories">
         <h1 class="ahs__title padded-top-xxl blue xl padded-bottom-xl bold show-edge">
             GDM Stories
             <span class="ahs__title flex column bold lg">Experience us</span>

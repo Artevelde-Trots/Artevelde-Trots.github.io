@@ -48,6 +48,13 @@
     }
   }
 
+  @media (max-width: $sm) {
+    height: 10vw;
+    svg #m-text {
+      font-size: 0.9em;
+    }
+  }
+
   $max: 3;
   $stroke-step: 25%;
   .text-copy {

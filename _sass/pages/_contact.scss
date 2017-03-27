@@ -251,11 +251,18 @@
     &-header {
       padding: 15px 0;
     }
-    &-container {
-      padding: 75px 30px 0;
+    &-page .contact-container {
+      padding:60px 24px;
     }
     &-section {
       padding: 60px 0 30px;
+    }
+    &-details {
+      font-size: 1em;
+      line-height: 1.2em;
+      h3 {
+        font-size: 1.1em;
+      }
     }
   }
 }
