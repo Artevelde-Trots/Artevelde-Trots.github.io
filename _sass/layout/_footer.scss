@@ -87,6 +87,13 @@
         &.ahs__logo a{margin-left: auto;}
       }
     }
+    @media (max-width: $sm){
+      height: 200px;
+      > div > div {
+        width: inherit;
+        &.ahs__logo a{margin-left: 0;}
+      }
+    }
   }
   &.reached-bottom {
     .footer {

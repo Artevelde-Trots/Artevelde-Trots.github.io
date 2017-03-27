@@ -28,6 +28,13 @@
       }
     }
   }
+  @media (max-width: $sm) {
+    &.reached-bottom {
+      .grid-filters {
+        @include translate(0,-250%);
+      }
+    }
+  }
   .grid {
     font-size:16px;
 
