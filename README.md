@@ -13,5 +13,5 @@ cd Artevelde-Trots.github.io
 * bundle install
 This installs all the dependencies and such
 * bundle exec jekyll serve
-* # => Now browse to http://localhost:4000
+### => Now browse to http://localhost:4000
 
