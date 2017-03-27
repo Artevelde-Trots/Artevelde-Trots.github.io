@@ -7,11 +7,11 @@ Opdracht TROTS
 ## Installation
 * Clone Repository
 * Install Jekyll
-** gem install jekyll bundler
+* gem install jekyll bundler
 * Change directory to project folder
-** cd Artevelde-Trots.github.io
+* cd Artevelde-Trots.github.io
 * bundle install
-** This installs all the dependencies and such
+* This installs all the dependencies and such
 * bundle exec jekyll serve
 ### => Now browse to http://127.0.0.1:4000
 
