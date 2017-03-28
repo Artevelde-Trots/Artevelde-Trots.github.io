@@ -54,7 +54,7 @@
     transform: scale(1);
   }
   .reveal .slide-background.present {
-     @include animation(zoom 21s ease-in-out infinite);
+     @include animation(zoom 21s ease-in-out);
   }
 }
 
